@@ -3,167 +3,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0b1f3a">
-<title>Mi Álbum Mundial 2026</title>
+<meta name="theme-color" content="#160a36">
+<title>Mundial 26 · Álbum de Estampas</title>
 <style>
 :root{
-  --bg:#071427; --bg2:#0b1f3a; --card:#11294a; --card2:#16335c;
-  --line:#1f3f6b; --txt:#eaf2ff; --mut:#8fa9cf;
-  --grn:#22c98a; --grn2:#15a06b; --red:#ff5d6c; --gold:#ffcb45;
-  --acc:#00c2cb; --acc2:#ff3d77; --rad:16px;
+  --bg:#0a0524; --bg2:#160a36; --card:#1d1147; --card2:#261659; --line:#3a2780;
+  --txt:#f3eeff; --mut:#a99cd6;
+  --pink:#ff2d78; --teal:#00d8c8; --yellow:#ffd23f; --purple:#8b3dff; --green:#21d07a;
+  --grn:#21d07a; --red:#ff5d6c; --gold:#ffcb45;
+  --spectrum:linear-gradient(90deg,#ff2d78,#ffd23f,#21d07a,#00d8c8,#8b3dff);
+  --rad:18px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:radial-gradient(1200px 600px at 80% -10%,#143a63 0%,var(--bg2) 45%,var(--bg) 100%);
   color:var(--txt); min-height:100vh; -webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(900px 500px at 12% -8%, rgba(255,45,120,.22), transparent 60%),
+    radial-gradient(900px 500px at 95% 4%, rgba(0,216,200,.20), transparent 55%),
+    radial-gradient(700px 500px at 50% 110%, rgba(139,61,255,.25), transparent 60%),
+    linear-gradient(180deg,#160a36,#0a0524 70%);
+  background-attachment:fixed;
 }
-a{color:var(--acc)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 14px 120px}
+a{color:var(--teal)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 14px 130px}
 
-/* Header */
-header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);
-  background:linear-gradient(180deg,rgba(7,20,39,.95),rgba(7,20,39,.78));
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);
+  background:linear-gradient(180deg,rgba(10,5,36,.96),rgba(10,5,36,.74));
   border-bottom:1px solid var(--line)}
-.hbar{max-width:1080px;margin:0 auto;padding:12px 14px;display:flex;align-items:center;gap:14px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
-.logo .ball{font-size:24px}
-.logo b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.logo small{display:block;font-weight:600;color:var(--mut);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
-.ring{margin-left:auto;display:flex;align-items:center;gap:12px}
-.ring svg{transform:rotate(-90deg)}
-.ringtxt{text-align:right;line-height:1.1}
-.ringtxt b{font-size:18px}
-.ringtxt span{display:block;color:var(--mut);font-size:11px}
+.hbar{max-width:1100px;margin:0 auto;padding:11px 14px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.trophy{font-size:26px;filter:drop-shadow(0 2px 6px rgba(255,203,69,.5))}
+.wm{line-height:1;min-width:0}
+.wm .t1{font-weight:900;font-size:19px;letter-spacing:.5px;
+  background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wm .t2{display:block;font-size:10px;font-weight:700;color:var(--mut);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.hosts{font-size:13px;margin-left:2px;white-space:nowrap}
+.huser{margin-left:auto;display:flex;align-items:center;gap:10px}
+.ring{display:flex;align-items:center;gap:9px}
+.ring svg{transform:rotate(-90deg);display:block}
+.ringtxt{text-align:right;line-height:1.05}
+.ringtxt b{font-size:16px;font-variant-numeric:tabular-nums}
+.ringtxt span{display:block;color:var(--mut);font-size:10px}
+.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:15px;
+  cursor:pointer;color:#0a0524;border:2px solid rgba(255,255,255,.25)}
+.synced{font-size:9px;color:var(--mut);text-align:center;margin-top:1px;letter-spacing:.3px}
+.synced.ok{color:var(--green)} .synced.off{color:var(--gold)} .synced.err{color:var(--red)}
 
 /* Tabs */
-nav.tabs{display:flex;gap:6px;max-width:1080px;margin:0 auto;padding:0 10px 10px;overflow-x:auto}
-nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--mut);
-  padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;transition:.15s}
-nav.tabs button.on{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#06121f;border-color:transparent}
+nav.tabs{display:flex;gap:6px;max-width:1100px;margin:0 auto;padding:0 10px 10px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--mut);
+  padding:8px 15px;border-radius:999px;font-weight:800;font-size:13px;cursor:pointer;transition:.15s}
+nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transparent;box-shadow:0 4px 16px rgba(139,61,255,.4)}
 
-/* Stat strip */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:12px 14px}
-.stat b{font-size:22px;display:block;font-variant-numeric:tabular-nums}
+/* ===== Login ===== */
+.login{max-width:420px;margin:40px auto;padding:0 8px}
+.lcard{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);
+  border-radius:24px;padding:30px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);position:relative;overflow:hidden}
+.lcard::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--spectrum)}
+.lcard .big{text-align:center;font-size:54px;margin:4px 0 6px}
+.lcard h1{text-align:center;font-size:23px;margin:0 0 2px;font-weight:900}
+.lcard h1 b{background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lcard p.sub{text-align:center;color:var(--mut);margin:0 0 22px;font-size:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;font-weight:700;color:var(--mut);margin:0 0 6px;letter-spacing:.4px;text-transform:uppercase}
+.field input{width:100%;padding:13px 15px;border-radius:13px;border:1px solid var(--line);
+  background:rgba(0,0,0,.28);color:var(--txt);font-size:16px;font-weight:600}
+.field input:focus{outline:none;border-color:var(--teal)}
+.field .pinrow{display:flex;gap:10px}
+.field .pinrow input{text-align:center;letter-spacing:8px;font-size:22px}
+.btn-xl{width:100%;padding:15px;border:none;border-radius:14px;font-size:16px;font-weight:900;cursor:pointer;
+  background:var(--spectrum);color:#0a0524;box-shadow:0 8px 24px rgba(255,45,120,.32);transition:.15s}
+.btn-xl:active{transform:scale(.98)}
+.btn-xl:disabled{opacity:.5}
+.lswitch{text-align:center;margin-top:16px;color:var(--mut);font-size:14px}
+.lswitch a{font-weight:800;cursor:pointer}
+.lerr{background:rgba(255,93,108,.13);border:1px solid var(--red);color:#ffb3ba;padding:10px 14px;
+  border-radius:11px;font-size:13px;margin-bottom:14px;display:none}
+.lerr.show{display:block}
+.lguest{text-align:center;margin-top:18px}
+.lguest a{color:var(--mut);font-size:13px;cursor:pointer;text-decoration:underline}
+.users-quick{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
+.users-quick .uq{display:flex;align-items:center;gap:7px;background:rgba(0,0,0,.25);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px 5px 6px;cursor:pointer;font-weight:700;font-size:13px}
+.users-quick .uq .av{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;color:#0a0524}
+
+/* ===== Stats ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.stat{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--rad);padding:13px 15px}
+.stat b{font-size:23px;display:block;font-variant-numeric:tabular-nums}
 .stat span{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
-.stat.good b{color:var(--grn)} .stat.warn b{color:var(--gold)} .stat.rep b{color:var(--acc)}
+.stat.good b{color:var(--green)} .stat.warn b{color:var(--yellow)} .stat.rep b{color:var(--teal)}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-/* Group */
-.group{margin:14px 0;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;background:var(--card)}
-.ghead{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none}
-.gtag{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:900;
-  background:linear-gradient(135deg,var(--acc),var(--acc2));color:#06121f;font-size:16px}
-.ghead h3{margin:0;font-size:15px}
-.ghead .gp{margin-left:auto;color:var(--mut);font-size:13px;font-variant-numeric:tabular-nums}
-.gbar{height:4px;background:#0a1c34}
-.gbar i{display:block;height:100%;background:linear-gradient(90deg,var(--grn2),var(--grn))}
-.gbody{padding:6px 12px 14px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-@media(max-width:640px){.gbody{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+/* search/legend */
+.searchbar{position:relative;margin:14px 0}
+.searchbar input{width:100%;padding:13px 15px 13px 42px;border-radius:14px;border:1px solid var(--line);
+  background:var(--card);color:var(--txt);font-size:15px}
+.searchbar input:focus{outline:none;border-color:var(--teal)}
+.searchbar .ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mut)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--mut);font-size:12px;margin:8px 2px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:4px;display:inline-block}
+.dot.h{background:var(--green)} .dot.f{background:rgba(0,0,0,.3);border:1px solid var(--line)} .dot.r{background:var(--gold)}
+
+/* ===== Group ===== */
+.group{margin:14px 0;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;
+  background:linear-gradient(160deg,rgba(38,22,89,.6),rgba(29,17,71,.6))}
+.ghead{display:flex;align-items:center;gap:13px;padding:15px 16px;cursor:pointer;user-select:none}
+.gtag{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:900;
+  color:#0a0524;font-size:17px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.ghead h3{margin:0;font-size:15px;font-weight:800}
+.ghead .gp{margin-left:auto;color:var(--mut);font-size:13px;font-variant-numeric:tabular-nums;font-weight:700}
+.ghead .chev{color:var(--mut);font-size:12px;transition:.2s}
+.gbar{height:5px;background:rgba(0,0,0,.35)}
+.gbar i{display:block;height:100%;background:var(--spectrum);transition:width .3s}
+.gbody{padding:8px 12px 14px;display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+@media(max-width:640px){.gbody{grid-template-columns:1fr}}
 
 /* Team card */
-.team{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px}
-.thead{display:flex;align-items:center;gap:9px;margin-bottom:10px}
-.flag{font-size:22px;line-height:1}
-.tname{font-weight:800;font-size:14px}
-.tprog{margin-left:auto;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
-.tprog.done{color:var(--grn);font-weight:800}
-.chips{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
-.chip{position:relative;aspect-ratio:1/1.18;border-radius:9px;border:1px solid var(--line);
-  background:#0c2342;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  cursor:pointer;transition:.12s;overflow:hidden}
-.chip .n{font-size:11px;color:var(--mut);font-weight:700}
-.chip .lbl{font-size:7.5px;color:#5f7aa3;margin-top:1px;text-align:center;line-height:1;padding:0 1px}
-.chip.have{background:linear-gradient(160deg,var(--grn2),#0f7a52);border-color:var(--grn)}
-.chip.have .n{color:#eafff5}
-.chip.have .lbl{color:#bff3dd}
-.chip .check{position:absolute;top:3px;right:4px;font-size:9px;opacity:0;color:#eafff5}
+.team{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:15px;padding:13px}
+.thead{display:flex;align-items:center;gap:9px;margin-bottom:11px}
+.flag{font-size:24px;line-height:1}
+.tname{font-weight:800;font-size:14.5px}
+.tprog{margin-left:auto;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums;font-weight:700}
+.tprog.done{color:var(--green)}
+.bulk{display:flex;gap:6px;margin-bottom:9px}
+.bulk button{font-size:11px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);
+  background:rgba(0,0,0,.3);color:var(--mut);cursor:pointer;font-weight:700}
+.bulk button:hover{border-color:var(--teal);color:var(--txt)}
+.chips{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.chip{position:relative;aspect-ratio:1/1.2;border-radius:10px;border:1px solid var(--line);
+  background:linear-gradient(160deg,#241548,#190f3a);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  cursor:pointer;transition:transform .1s,box-shadow .15s;overflow:hidden}
+.chip .n{font-size:11px;color:var(--mut);font-weight:800}
+.chip .lbl{font-size:7.5px;color:#7d6fb5;margin-top:1px;text-align:center;line-height:1;padding:0 2px}
+.chip.have{background:linear-gradient(160deg,#1aa863,#0c6e42);border-color:#2fe08c;box-shadow:0 4px 14px rgba(33,208,122,.3)}
+.chip.have .n{color:#eafff5} .chip.have .lbl{color:#bff3dd}
+.chip .check{position:absolute;top:3px;right:4px;font-size:10px;opacity:0;color:#fff}
 .chip.have .check{opacity:1}
-.chip:active{transform:scale(.93)}
-.chip.special{border-style:dashed}
+.chip:active{transform:scale(.92)}
+/* foil look for badge/team/specials */
+.chip.foil{border-width:2px;border-image:var(--spectrum) 1}
+.chip.foil:not(.have){background:linear-gradient(135deg,#2a1a55,#3a2780,#241548)}
+.chip.foil .n{color:var(--yellow)}
 .repbadge{position:absolute;bottom:2px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:6px}
-.repbadge button{width:15px;height:15px;border-radius:50%;border:none;font-weight:900;font-size:11px;line-height:1;
-  background:rgba(0,0,0,.35);color:#fff;cursor:pointer;display:grid;place-items:center}
-.repbadge .rn{font-size:10px;font-weight:800;color:var(--gold);min-width:10px;text-align:center}
+.repbadge button{width:16px;height:16px;border-radius:50%;border:none;font-weight:900;font-size:12px;line-height:1;
+  background:rgba(0,0,0,.45);color:#fff;cursor:pointer;display:grid;place-items:center}
+.repbadge .rn{font-size:10px;font-weight:900;color:var(--gold);min-width:10px;text-align:center}
 .chip:not(.have) .repbadge{display:none}
 
-/* faltan / repes list */
-.listcard{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin:14px 0}
-.listcard h3{margin:0 0 4px}
+/* lists */
+.listcard{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin:14px 0}
+.listcard h3{margin:0 0 4px;font-size:16px}
 .listcard p.sub{margin:0 0 14px;color:var(--mut);font-size:13px}
-.miss-team{margin-bottom:14px}
-.miss-team .mt{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;margin-bottom:6px}
+.miss-team{margin-bottom:12px}
+.miss-team .mt{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;margin-bottom:7px}
 .miss-team .mt .c{margin-left:auto;color:var(--mut);font-weight:600;font-size:12px}
 .nums{display:flex;flex-wrap:wrap;gap:5px}
-.num{font-size:11px;font-weight:800;padding:3px 7px;border-radius:7px;background:#0c2342;border:1px solid var(--line);color:var(--mut);font-variant-numeric:tabular-nums}
-.num.rep{background:rgba(0,194,203,.13);border-color:var(--acc);color:var(--acc)}
-.copybtn{margin-top:8px;background:var(--card2);border:1px solid var(--line);color:var(--txt);
-  padding:7px 12px;border-radius:9px;font-weight:700;font-size:12px;cursor:pointer}
-.empty{text-align:center;color:var(--mut);padding:40px 10px}
-.empty .big{font-size:40px;margin-bottom:8px}
+.num{font-size:11px;font-weight:800;padding:3px 8px;border-radius:8px;background:rgba(0,0,0,.3);border:1px solid var(--line);color:var(--mut);font-variant-numeric:tabular-nums}
+.num.rep{background:rgba(0,216,200,.13);border-color:var(--teal);color:var(--teal)}
+.num.match{background:rgba(33,208,122,.16);border-color:var(--green);color:#7ff0b5}
+.copybtn{margin-top:9px;background:rgba(0,0,0,.3);border:1px solid var(--line);color:var(--txt);
+  padding:8px 13px;border-radius:10px;font-weight:800;font-size:12px;cursor:pointer}
+.copybtn:hover{border-color:var(--teal)}
+.empty{text-align:center;color:var(--mut);padding:44px 10px}
+.empty .big{font-size:46px;margin-bottom:10px}
+
+/* friends */
+.friend{display:flex;align-items:center;gap:12px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;
+  background:rgba(0,0,0,.22);margin-bottom:10px;cursor:pointer;transition:.15s}
+.friend:hover{border-color:var(--teal)}
+.friend.me{border-color:var(--purple);background:rgba(139,61,255,.12)}
+.friend .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:17px;color:#0a0524}
+.friend .fi{flex:1;min-width:0}
+.friend .fn{font-weight:800;font-size:15px}
+.friend .fbar{height:6px;border-radius:4px;background:rgba(0,0,0,.4);margin-top:5px;overflow:hidden}
+.friend .fbar i{display:block;height:100%;background:var(--spectrum)}
+.friend .fpct{font-weight:900;font-size:15px;font-variant-numeric:tabular-nums}
+.friend .arrow{color:var(--mut)}
+.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.match-cols{grid-template-columns:1fr}}
+.match-col{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:14px;padding:14px}
+.match-col h4{margin:0 0 3px;font-size:14px}
+.match-col h4 .tag{font-size:10px;padding:2px 7px;border-radius:6px;margin-left:6px;font-weight:800;vertical-align:middle}
+.tag.give{background:rgba(33,208,122,.2);color:#7ff0b5}
+.tag.get{background:rgba(0,216,200,.2);color:var(--teal)}
+.match-col .cnt{color:var(--mut);font-size:12px;margin:0 0 10px}
+.backbtn{background:none;border:none;color:var(--teal);font-weight:800;cursor:pointer;font-size:14px;padding:0;margin-bottom:6px}
 
 /* settings */
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}
-.btn{background:var(--card2);border:1px solid var(--line);color:var(--txt);padding:10px 16px;border-radius:10px;
-  font-weight:700;font-size:14px;cursor:pointer;transition:.15s}
-.btn:hover{border-color:var(--acc)}
+.btn{background:rgba(0,0,0,.3);border:1px solid var(--line);color:var(--txt);padding:10px 16px;border-radius:11px;
+  font-weight:800;font-size:14px;cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--teal)}
 .btn.danger{border-color:var(--red);color:var(--red)}
-.btn.primary{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#06121f;border:none}
-textarea{width:100%;min-height:120px;background:#0a1c34;border:1px solid var(--line);border-radius:10px;
+.btn.primary{background:var(--spectrum);color:#0a0524;border:none}
+.note{color:var(--mut);font-size:13px;line-height:1.55}
+textarea{width:100%;min-height:90px;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:11px;
   color:var(--txt);padding:10px;font-family:ui-monospace,Menlo,monospace;font-size:12px}
-.note{color:var(--mut);font-size:13px;line-height:1.5}
-.searchbar{position:relative;margin:14px 0}
-.searchbar input{width:100%;padding:12px 14px 12px 40px;border-radius:12px;border:1px solid var(--line);
-  background:var(--card);color:var(--txt);font-size:15px}
-.searchbar .ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--mut)}
-.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--mut);font-size:12px;margin:8px 2px 0}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
-.dot.h{background:var(--grn)} .dot.f{background:#0c2342;border:1px solid var(--line)} .dot.r{background:var(--gold)}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;
-  background:#06121f;border:1px solid var(--acc);color:var(--txt);padding:10px 18px;border-radius:12px;
-  font-weight:700;font-size:14px;z-index:100;transition:.25s;pointer-events:none}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);opacity:0;
+  background:#0a0524;border:1px solid var(--teal);color:var(--txt);padding:11px 20px;border-radius:13px;
+  font-weight:800;font-size:14px;z-index:200;transition:.25s;pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-footer{text-align:center;color:var(--mut);font-size:12px;padding:24px 0}
-.bulk{display:flex;gap:6px;margin-bottom:8px}
-.bulk button{font-size:11px;padding:5px 9px;border-radius:8px;border:1px solid var(--line);background:#0c2342;color:var(--mut);cursor:pointer;font-weight:700}
+footer{text-align:center;color:var(--mut);font-size:11px;padding:26px 0;line-height:1.6}
+.hide{display:none!important}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px}
+@keyframes sp{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
+
+<!-- ===== LOGIN VIEW ===== -->
+<div class="login" id="loginView">
+  <div class="lcard">
+    <div class="big">🏆</div>
+    <h1>Mi Álbum <b>Mundial 26</b></h1>
+    <p class="sub">Junta las 980 estampas. Cambia repes con tus cuates.</p>
+    <div class="lerr" id="lerr"></div>
+    <div class="users-quick" id="usersQuick"></div>
+    <div class="field"><label>Tu nombre</label>
+      <input id="lname" placeholder="Pedro" autocomplete="off" autocapitalize="words"></div>
+    <div class="field"><label>PIN de 4 dígitos</label>
+      <div class="pinrow"><input id="lpin" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off"></div></div>
+    <button class="btn-xl" id="lgo">Entrar</button>
+    <div class="lswitch" id="lswitch">¿Primera vez? <a id="toSignup">Crea tu cuenta</a></div>
+    <div class="lguest"><a id="guestBtn">Solo jugar local en este dispositivo →</a></div>
+  </div>
+</div>
+
+<!-- ===== APP VIEW ===== -->
+<div id="appView" class="hide">
 <header>
   <div class="hbar">
-    <div class="logo">
-      <span class="ball">⚽</span>
-      <div><b>Mi Álbum Mundial</b><small>Estampas 2026</small></div>
+    <div class="brand">
+      <span class="trophy">🏆</span>
+      <div class="wm"><span class="t1">MUNDIAL 26</span><span class="t2">Álbum de estampas</span></div>
+      <span class="hosts">🇨🇦🇲🇽🇺🇸</span>
     </div>
-    <div class="ring">
-      <svg width="46" height="46" viewBox="0 0 46 46">
-        <circle cx="23" cy="23" r="19" fill="none" stroke="#0a1c34" stroke-width="6"/>
-        <circle id="ringArc" cx="23" cy="23" r="19" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-dasharray="119.4" stroke-dashoffset="119.4"/>
-        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00c2cb"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs>
-      </svg>
-      <div class="ringtxt"><b id="pct">0%</b><span id="ratio">0 / 980</span></div>
+    <div class="huser">
+      <div class="ring">
+        <svg width="44" height="44" viewBox="0 0 44 44">
+          <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(0,0,0,.4)" stroke-width="5"/>
+          <circle id="ringArc" cx="22" cy="22" r="18" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff2d78"/><stop offset=".5" stop-color="#ffd23f"/><stop offset="1" stop-color="#00d8c8"/></linearGradient></defs>
+        </svg>
+        <div class="ringtxt"><b id="pct">0%</b><span id="ratio">0 / 980</span></div>
+      </div>
+      <div>
+        <div class="avatar" id="avatar" title="Cambiar de cuenta">P</div>
+        <div class="synced" id="syncState">local</div>
+      </div>
     </div>
   </div>
   <nav class="tabs" id="tabs">
     <button data-tab="album" class="on">Álbum</button>
     <button data-tab="faltan">Me faltan</button>
-    <button data-tab="repes">Repes / Cambios</button>
+    <button data-tab="repes">Mis repes</button>
+    <button data-tab="amigos">Cambios 🔁</button>
     <button data-tab="ajustes">Ajustes</button>
   </nav>
 </header>
-
-<div class="wrap">
-  <div id="view"></div>
+<div class="wrap"><div id="view"></div></div>
+<footer>Mundial 26 · 980 estampas · 48 selecciones<br>Tu progreso se sincroniza en la nube cuando entras con tu cuenta.</footer>
 </div>
 
 <div class="toast" id="toast"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
-// ====== DATA: Panini FIFA World Cup 2026 (980 estampas) ======
-// 12 grupos A-L · 48 selecciones · 20 estampas c/u (Escudo + Foto + 18 jugadores) + 20 Especiales.
-// Sorteo real del Mundial 2026. Fuente estructura: Panini / EstampaCheck.
+// =================== DATA: Panini FIFA World Cup 2026 (980) ===================
 const GROUPS = [
   ["A",[["Chequia","🇨🇿"],["México","🇲🇽"],["Sudáfrica","🇿🇦"],["Corea del Sur","🇰🇷"]]],
   ["B",[["Bosnia y Herzegovina","🇧🇦"],["Canadá","🇨🇦"],["Catar","🇶🇦"],["Suiza","🇨🇭"]]],
@@ -178,367 +292,378 @@ const GROUPS = [
   ["K",[["Colombia","🇨🇴"],["RD del Congo","🇨🇩"],["Portugal","🇵🇹"],["Uzbekistán","🇺🇿"]]],
   ["L",[["Croacia","🇭🇷"],["Inglaterra","🏴󠁧󠁢󠁥󠁮󠁧󠁿"],["Ghana","🇬🇭"],["Panamá","🇵🇦"]]],
 ];
-const PER_TEAM = 20; // Escudo + Foto del equipo + 18 jugadores
-const SPECIALS = 20; // Logo, portadas, FIFA, ilustraciones
-// labels para los 20 slots de cada equipo
-function slotLabel(i){ // i: 0..19
-  if(i===0) return "Escudo";
-  if(i===1) return "Equipo";
-  return "Jug. "+(i-1);
-}
-// Build flat list of teams in order, assign global sticker numbers.
-const TEAMS = [];
-let n = SPECIALS; // specials ocupan 1..20, equipos arrancan en 21
-GROUPS.forEach(([g,arr])=>{
-  arr.forEach(([name,flag])=>{
-    const start = n+1;
-    TEAMS.push({key:g+"|"+name, group:g, name, flag, start, count:PER_TEAM});
-    n += PER_TEAM;
-  });
-});
-const TOTAL = SPECIALS + TEAMS.length*PER_TEAM; // 20 + 48*20 = 980
+const GTAG_GRAD={A:"#ff2d78",B:"#ff7a3d",C:"#ffd23f",D:"#a7e041",E:"#21d07a",F:"#00d8c8",
+  G:"#33b6ff",H:"#5b7bff",I:"#8b3dff",J:"#c44dff",K:"#ff4dc4",L:"#ff5d6c"};
+const PER_TEAM=20, SPECIALS=20;
+function slotLabel(i){ if(i===0)return"Escudo"; if(i===1)return"Equipo"; return"Jug. "+(i-1); }
+const SPECIAL_NAMES=["Logo Mundial","Mascota","Trofeo","Balón oficial","Sedes","FIFA","Estadio","Portada","Portada","Portada","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","Ilustración","Ilustración","Ilustración","Ilustración","Ilustración"];
+const TEAMS=[]; let _n=SPECIALS;
+GROUPS.forEach(([g,arr])=>arr.forEach(([name,flag])=>{TEAMS.push({key:g+"|"+name,group:g,name,flag,start:_n+1,count:PER_TEAM});_n+=PER_TEAM;}));
+const TOTAL=SPECIALS+TEAMS.length*PER_TEAM; // 980
 
-// ====== STATE ======
-const LS_KEY = "mundial2026_album_v1";
-let DB = load();
-function load(){
-  try{const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.have) return r;}catch(e){}
-  return {have:{}, rep:{}}; // have[id]=true ; rep[id]=n
-}
-function save(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(DB)); }catch(e){ /* modo privado / file:// sin storage: el progreso vive en memoria esta sesión */ } }
-function has(id){ return !!DB.have[id]; }
-function repCount(id){ return DB.rep[id]||0; }
-function setHave(id,v){ if(v){DB.have[id]=true;} else {delete DB.have[id]; delete DB.rep[id];} save(); }
-function setRep(id,v){ v=Math.max(0,v); if(v) DB.rep[id]=v; else delete DB.rep[id]; save(); }
+// =================== CLOUD (Supabase) ===================
+const SB_URL="https://ffkruigqwgzvqhdxvgjv.supabase.co";
+const SB_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZma3J1aWdxd2d6dnFoZHh2Z2p2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIwNzMsImV4cCI6MjA5MjI4ODA3M30.KNXU54rBJxiSTBmG5oMRidgU5xg0HXQsN0dH6iYrwws";
+const TABLE="wc2026_players";
+let sb=null;
+try{ if(window.supabase) sb=window.supabase.createClient(SB_URL,SB_ANON); }catch(e){}
 
-// ====== HELPERS ======
+// =================== STATE ===================
+const SESSION_KEY="wc26_session";   // {id,name,pin,color}
+const localKey=u=>"wc26_album_"+(u?u:"_guest");
+let USER=null;          // {id,name,pin,color,guest}
+let DB={have:{},rep:{}};
+let cloudOK=null;       // null unknown, true online, false offline/error
+
+function colorFor(name){ const c=["#ff2d78","#00d8c8","#ffd23f","#8b3dff","#21d07a","#ff7a3d","#33b6ff","#ff4dc4"];
+  let h=0; for(const ch of name) h=(h*31+ch.charCodeAt(0))>>>0; return c[h%c.length]; }
+function initials(name){ const p=name.trim().split(/\s+/); return ((p[0]?.[0]||"")+(p[1]?.[0]||"")).toUpperCase()||"?"; }
+
+function loadLocal(){ try{const r=JSON.parse(localStorage.getItem(localKey(USER?.name))); if(r&&r.have)return r;}catch(e){} return {have:{},rep:{}}; }
+function saveLocal(){ try{localStorage.setItem(localKey(USER?.name),JSON.stringify(DB));}catch(e){} }
+
+let syncTimer=null;
+function save(){
+  saveLocal();
+  if(USER&&!USER.guest&&sb){ setSync("saving"); clearTimeout(syncTimer); syncTimer=setTimeout(pushCloud,700); }
+}
+async function pushCloud(){
+  if(!USER||USER.guest||!sb) return;
+  try{
+    const {error}=await sb.from(TABLE).update({have:DB.have,rep:DB.rep,updated_at:new Date().toISOString()}).eq("id",USER.id);
+    if(error) throw error;
+    cloudOK=true; setSync("ok");
+  }catch(e){ cloudOK=false; setSync("off"); }
+}
+function setSync(s){
+  const el=document.getElementById("syncState"); if(!el)return;
+  if(USER?.guest){el.textContent="local";el.className="synced";return;}
+  if(s==="saving"){el.innerHTML='<span class="spin"></span>';el.className="synced";}
+  else if(s==="ok"){el.textContent="✓ guardado";el.className="synced ok";}
+  else if(s==="off"){el.textContent="sin nube";el.className="synced off";}
+  else if(s==="err"){el.textContent="error";el.className="synced err";}
+}
+
+function has(id){return !!DB.have[id];}
+function repCount(id){return DB.rep[id]||0;}
+function setHave(id,v){ if(v)DB.have[id]=1; else {delete DB.have[id];delete DB.rep[id];} save(); }
+function setRep(id,v){ v=Math.max(0,v); if(v)DB.rep[id]=v; else delete DB.rep[id]; save(); }
+
+// =================== AUTH FLOW ===================
+let mode="login"; // login | signup
 const $=s=>document.querySelector(s);
-const view=$("#view");
-function teamHave(t){let c=0;for(let i=0;i<t.count;i++) if(has(t.start+i)) c++; return c;}
-function totalHave(){return Object.keys(DB.have).length;}
+const $$=s=>document.querySelectorAll(s);
+
+function lerr(msg){ const e=$("#lerr"); if(!msg){e.classList.remove("show");return;} e.textContent=msg; e.classList.add("show"); }
+
+async function listPlayers(){
+  if(!sb) return [];
+  try{ const {data,error}=await sb.from(TABLE).select("id,name,pin,have,rep,color"); if(error)throw error; cloudOK=true; return data||[]; }
+  catch(e){ cloudOK=false; return null; } // null = backend not ready
+}
+
+async function renderQuickUsers(){
+  const box=$("#usersQuick"); box.innerHTML="";
+  const players=await listPlayers();
+  if(players===null){ // backend missing
+    box.innerHTML='';
+    return;
+  }
+  players.slice(0,8).forEach(p=>{
+    const c=p.color||colorFor(p.name);
+    const el=document.createElement("div"); el.className="uq";
+    el.innerHTML=`<span class="av" style="background:${c}">${initials(p.name)}</span>${p.name}`;
+    el.onclick=()=>{ $("#lname").value=p.name; mode="login"; setMode(); $("#lpin").focus(); };
+    box.appendChild(el);
+  });
+}
+
+function setMode(){
+  if(mode==="signup"){ $("#lgo").textContent="Crear mi cuenta"; $("#lswitch").innerHTML='¿Ya tienes cuenta? <a id="toSignup">Entra aquí</a>'; }
+  else { $("#lgo").textContent="Entrar"; $("#lswitch").innerHTML='¿Primera vez? <a id="toSignup">Crea tu cuenta</a>'; }
+  $("#toSignup").onclick=()=>{ mode=mode==="signup"?"login":"signup"; lerr(""); setMode(); };
+}
+
+async function doAuth(){
+  lerr("");
+  const name=$("#lname").value.trim();
+  const pin=$("#lpin").value.trim();
+  if(name.length<2) return lerr("Escribe tu nombre (mín. 2 letras).");
+  if(!/^\d{4}$/.test(pin)) return lerr("El PIN debe ser de 4 dígitos.");
+  if(!sb) return lerr("No se pudo conectar a la nube. Usa 'jugar local' por ahora.");
+  $("#lgo").disabled=true; const old=$("#lgo").textContent; $("#lgo").innerHTML='<span class="spin"></span>';
+  try{
+    const {data:existing,error:e1}=await sb.from(TABLE).select("id,name,pin,color").ilike("name",name).limit(1);
+    if(e1) throw {backend:true,e:e1};
+    if(mode==="signup"){
+      if(existing&&existing.length){ throw {msg:"Ya existe alguien con ese nombre. Entra con tu PIN o usa otro nombre."}; }
+      const color=colorFor(name);
+      const {data:ins,error:e2}=await sb.from(TABLE).insert({name,pin,have:{},rep:{},color}).select("id,name,pin,color").single();
+      if(e2) throw {backend:true,e:e2};
+      enter({id:ins.id,name:ins.name,pin:ins.pin,color:ins.color});
+    } else {
+      if(!existing||!existing.length){ throw {msg:"No encontré esa cuenta. ¿Quieres crearla? Toca 'Crea tu cuenta'."}; }
+      const p=existing[0];
+      if(String(p.pin)!==pin){ throw {msg:"PIN incorrecto."}; }
+      // load full row
+      const {data:full}=await sb.from(TABLE).select("have,rep").eq("id",p.id).single();
+      enter({id:p.id,name:p.name,pin:p.pin,color:p.color||colorFor(p.name)}, full);
+    }
+  }catch(err){
+    if(err.backend){ lerr("La base de datos aún no está lista (falta crear la tabla). Mientras tanto puedes 'jugar local'."); }
+    else lerr(err.msg||"Algo salió mal. Intenta de nuevo.");
+    $("#lgo").disabled=false; $("#lgo").textContent=old; setMode();
+  }
+}
+
+function enter(user, cloudData){
+  USER=user;
+  try{localStorage.setItem(SESSION_KEY,JSON.stringify(user));}catch(e){}
+  if(cloudData){ DB={have:cloudData.have||{},rep:cloudData.rep||{}}; saveLocal(); }
+  else { DB=loadLocal(); if(!user.guest && Object.keys(DB.have).length===0){} }
+  cloudOK=true;
+  showApp();
+}
+function enterGuest(){
+  USER={name:"Invitado",guest:true,color:"#a99cd6"};
+  DB=loadLocal();
+  showApp();
+}
+function logout(){
+  try{localStorage.removeItem(SESSION_KEY);}catch(e){}
+  USER=null; DB={have:{},rep:{}};
+  $("#appView").classList.add("hide"); $("#loginView").classList.remove("hide");
+  $("#lname").value=""; $("#lpin").value=""; mode="login"; lerr(""); setMode(); renderQuickUsers();
+}
+
+function showApp(){
+  $("#loginView").classList.add("hide"); $("#appView").classList.remove("hide");
+  const av=$("#avatar"); av.textContent=USER.guest?"👤":initials(USER.name); av.style.background=USER.color||colorFor(USER.name);
+  setSync(USER.guest?"local":(cloudOK?"ok":"off"));
+  tab="album"; $$("#tabs button").forEach(b=>b.classList.toggle("on",b.dataset.tab==="album"));
+  route(); updateHeader();
+}
+
+// =================== HELPERS ===================
+const view=()=>$("#view");
+function teamHave(t){let c=0;for(let i=0;i<t.count;i++)if(has(t.start+i))c++;return c;}
+function totalHave(d){d=d||DB; return Object.keys(d.have||{}).length;}
 function totalRep(){return Object.values(DB.rep).reduce((a,b)=>a+b,0);}
 function groupTeams(g){return TEAMS.filter(t=>t.group===g);}
-function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1800);}
-
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1800);}
 function updateHeader(){
-  const h=totalHave();
-  const p=Math.round(h/TOTAL*100);
-  $("#pct").textContent=p+"%";
-  $("#ratio").textContent=h+" / "+TOTAL;
-  const circ=2*Math.PI*19;
+  const h=totalHave(),p=Math.round(h/TOTAL*100);
+  $("#pct").textContent=p+"%"; $("#ratio").textContent=h+" / "+TOTAL;
+  const circ=2*Math.PI*18;
   $("#ringArc").setAttribute("stroke-dasharray",circ);
-  $("#ringArc").setAttribute("stroke-dashoffset", circ*(1-h/TOTAL));
+  $("#ringArc").setAttribute("stroke-dashoffset",circ*(1-h/TOTAL));
+}
+function copy(txt){
+  if(navigator.clipboard?.writeText){navigator.clipboard.writeText(txt).then(()=>toast("📋 Copiado")).catch(()=>fb(txt));}
+  else fb(txt);
+  function fb(t){const ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("📋 Copiado");}catch(e){}document.body.removeChild(ta);}
 }
 
-// ====== RENDER: ALBUM ======
-let openGroups = {};
-let searchTerm = "";
+// =================== ALBUM ===================
+let openGroups={}, searchTerm="";
 function renderAlbum(){
-  const h=totalHave(), faltan=TOTAL-h, rep=totalRep();
-  let html = `
-  <div class="stats">
+  const h=totalHave(),faltan=TOTAL-h,rep=totalRep();
+  let html=`<div class="stats">
     <div class="stat good"><b>${h}</b><span>Pegadas</span></div>
     <div class="stat warn"><b>${faltan}</b><span>Me faltan</span></div>
     <div class="stat rep"><b>${rep}</b><span>Repes</span></div>
-    <div class="stat"><b>${TOTAL}</b><span>Total álbum</span></div>
-  </div>
-  <div class="searchbar"><span class="ic">🔎</span>
-    <input id="search" placeholder="Buscar selección (México, Brasil...)" value="${searchTerm}">
-  </div>
-  <div class="legend">
-    <span><i class="dot h"></i>La tengo</span>
-    <span><i class="dot f"></i>Me falta</span>
-    <span><i class="dot r"></i>Repes (toca + / − en la estampa)</span>
-  </div>`;
-
-  // Specials group
-  html += specialBlock();
-
+    <div class="stat"><b>${TOTAL}</b><span>Total</span></div></div>
+    <div class="searchbar"><span class="ic">🔎</span><input id="search" placeholder="Buscar selección (México, Brasil...)" value="${searchTerm}"></div>
+    <div class="legend"><span><i class="dot h"></i>La tengo</span><span><i class="dot f"></i>Me falta</span><span><i class="dot r"></i>Repes: toca + / −</span></div>`;
+  html+=specialBlock();
   GROUPS.forEach(([g])=>{
-    const ts = groupTeams(g).filter(t=>!searchTerm || t.name.toLowerCase().includes(searchTerm.toLowerCase()));
-    if(searchTerm && ts.length===0) return;
-    const total=groupTeams(g).length*PER_TEAM;
-    const got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
-    const open = searchTerm ? true : !!openGroups[g];
-    html+=`<div class="group">
-      <div class="ghead" data-g="${g}">
-        <div class="gtag">${g}</div>
-        <h3>Grupo ${g}</h3>
-        <span class="gp">${got}/${total}</span>
-      </div>
+    const ts=groupTeams(g).filter(t=>!searchTerm||t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    if(searchTerm&&ts.length===0)return;
+    const total=groupTeams(g).length*PER_TEAM, got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
+    const open=searchTerm?true:!!openGroups[g];
+    html+=`<div class="group"><div class="ghead" data-g="${g}">
+      <div class="gtag" style="background:${GTAG_GRAD[g]}">${g}</div><h3>Grupo ${g}</h3>
+      <span class="gp">${got}/${total}</span><span class="chev">${open?"▲":"▼"}</span></div>
       <div class="gbar"><i style="width:${got/total*100}%"></i></div>
-      <div class="gbody" style="${open?'':'display:none'}">
-        ${ts.map(teamCard).join("")}
-      </div>
-    </div>`;
+      <div class="gbody" style="${open?"":"display:none"}">${ts.map(teamCard).join("")}</div></div>`;
   });
-  view.innerHTML=html;
-  bindAlbum();
-  updateHeader();
+  view().innerHTML=html; bindAlbum(); updateHeader();
 }
-
 function specialBlock(){
-  if(searchTerm && !"especiales especial fifa logo".includes(searchTerm.toLowerCase())) return "";
-  const got = (()=>{let c=0;for(let i=1;i<=SPECIALS;i++) if(has(i)) c++; return c;})();
-  const open = searchTerm ? true : (openGroups["SP"]!==false);
-  let chips="";
-  const specialNames=["Logo Mundial","Mascota","Trofeo","Estadios","Balón oficial","FIFA","Sedes","Portada","Portada","Portada","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","Ilustración","Ilustración","Ilustración","Ilustración","Ilustración"];
-  for(let i=1;i<=SPECIALS;i++){
-    chips+=chipHTML(i, "#"+i, specialNames[i-1]||"Especial", true);
-  }
-  return `<div class="group">
-    <div class="ghead" data-g="SP">
-      <div class="gtag" style="background:linear-gradient(135deg,var(--gold),#ff9a3d)">★</div>
-      <h3>Especiales del torneo</h3>
-      <span class="gp">${got}/${SPECIALS}</span>
-    </div>
-    <div class="gbar"><i style="width:${got/SPECIALS*100}%;background:linear-gradient(90deg,#ff9a3d,var(--gold))"></i></div>
-    <div class="gbody" style="grid-template-columns:1fr;${open?'':'display:none'}">
-      <div class="team">
-        <div class="thead"><span class="flag">★</span><span class="tname">Especiales</span>
-          <span class="tprog ${got===SPECIALS?'done':''}">${got}/${SPECIALS}</span></div>
-        <div class="bulk"><button data-all="SP">Marcar todas</button><button data-none="SP">Quitar todas</button></div>
-        <div class="chips" style="grid-template-columns:repeat(5,1fr)">${chips}</div>
-      </div>
-    </div></div>`;
+  if(searchTerm&&!"especiales especial fifa logo trofeo mascota".includes(searchTerm.toLowerCase()))return"";
+  let got=0;for(let i=1;i<=SPECIALS;i++)if(has(i))got++;
+  const open=searchTerm?true:(openGroups.SP!==false);
+  let chips="";for(let i=1;i<=SPECIALS;i++)chips+=chipHTML(i,"#"+i,SPECIAL_NAMES[i-1]||"Especial",true);
+  return `<div class="group"><div class="ghead" data-g="SP">
+    <div class="gtag" style="background:linear-gradient(135deg,var(--gold),#ff9a3d)">★</div><h3>Especiales del torneo</h3>
+    <span class="gp">${got}/${SPECIALS}</span><span class="chev">${open?"▲":"▼"}</span></div>
+    <div class="gbar"><i style="width:${got/SPECIALS*100}%"></i></div>
+    <div class="gbody" style="grid-template-columns:1fr;${open?"":"display:none"}">
+      <div class="team"><div class="thead"><span class="flag">★</span><span class="tname">Especiales</span>
+      <span class="tprog ${got===SPECIALS?"done":""}">${got}/${SPECIALS}</span></div>
+      <div class="bulk"><button data-all="SP">Marcar todas</button><button data-none="SP">Quitar</button></div>
+      <div class="chips">${chips}</div></div></div></div>`;
 }
-
 function teamCard(t){
-  const got=teamHave(t), done=got===t.count;
-  let chips="";
-  for(let i=0;i<t.count;i++){
-    const id=t.start+i;
-    chips+=chipHTML(id, "#"+id, slotLabel(i), false);
-  }
-  return `<div class="team" data-team="${t.key}">
-    <div class="thead">
-      <span class="flag">${t.flag}</span>
-      <span class="tname">${t.name}</span>
-      <span class="tprog ${done?'done':''}">${done?'✓ Completo':got+'/'+t.count}</span>
-    </div>
-    <div class="bulk"><button data-all="${t.key}">Marcar todas</button><button data-none="${t.key}">Quitar todas</button></div>
-    <div class="chips">${chips}</div>
-  </div>`;
+  const got=teamHave(t),done=got===t.count;
+  let chips="";for(let i=0;i<t.count;i++)chips+=chipHTML(t.start+i,"#"+(t.start+i),slotLabel(i),i<2);
+  return `<div class="team" data-team="${t.key}"><div class="thead">
+    <span class="flag">${t.flag}</span><span class="tname">${t.name}</span>
+    <span class="tprog ${done?"done":""}">${done?"✓ Completo":got+"/"+t.count}</span></div>
+    <div class="bulk"><button data-all="${t.key}">Marcar todas</button><button data-none="${t.key}">Quitar</button></div>
+    <div class="chips">${chips}</div></div>`;
 }
-
-function chipHTML(id,numTxt,lbl,special){
-  const h=has(id), r=repCount(id);
-  return `<div class="chip ${h?'have':''} ${special?'special':''}" data-id="${id}">
-    <span class="check">✓</span>
-    <span class="n">${numTxt}</span>
-    <span class="lbl">${lbl}</span>
-    <div class="repbadge">
-      <button data-rep="-" data-id="${id}">−</button>
-      <span class="rn">${r}</span>
-      <button data-rep="+" data-id="${id}">+</button>
-    </div>
-  </div>`;
+function chipHTML(id,numTxt,lbl,foil){
+  const h=has(id),r=repCount(id);
+  return `<div class="chip ${h?"have":""} ${foil?"foil":""}" data-id="${id}"><span class="check">✓</span>
+    <span class="n">${numTxt}</span><span class="lbl">${lbl}</span>
+    <div class="repbadge"><button data-rep="-" data-id="${id}">−</button><span class="rn">${r}</span><button data-rep="+" data-id="${id}">+</button></div></div>`;
 }
-
 function bindAlbum(){
-  // toggle group
-  view.querySelectorAll(".ghead").forEach(el=>el.addEventListener("click",()=>{
-    const g=el.dataset.g;
-    if(g==="SP") openGroups["SP"]= openGroups["SP"]===false ? true : false;
-    else openGroups[g]=!openGroups[g];
-    renderAlbum();
-  }));
-  // chip toggle
-  view.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",e=>{
-    if(e.target.closest(".repbadge")) return;
-    const id=+c.dataset.id;
-    setHave(id,!has(id));
-    refreshChip(c,id);
-    refreshProgress();
-  }));
-  // rep +/-
-  view.querySelectorAll("[data-rep]").forEach(b=>b.addEventListener("click",e=>{
-    e.stopPropagation();
-    const id=+b.dataset.id;
-    if(!has(id)){ setHave(id,true); }
-    const d=b.dataset.rep==="+"?1:-1;
-    setRep(id, repCount(id)+d);
-    const chip=b.closest(".chip");
-    refreshChip(chip,id);
-    refreshProgress();
-  }));
-  // bulk
-  view.querySelectorAll("[data-all]").forEach(b=>b.addEventListener("click",e=>{
-    e.stopPropagation(); bulk(b.dataset.all,true);
-  }));
-  view.querySelectorAll("[data-none]").forEach(b=>b.addEventListener("click",e=>{
-    e.stopPropagation(); bulk(b.dataset.none,false);
-  }));
-  // search
-  const s=$("#search");
-  if(s) s.addEventListener("input",e=>{searchTerm=e.target.value; const pos=e.target.selectionStart; renderAlbum(); const ns=$("#search"); if(ns){ns.focus(); ns.setSelectionRange(pos,pos);} });
+  $$(".ghead").forEach(el=>el.onclick=()=>{const g=el.dataset.g; if(g==="SP")openGroups.SP=openGroups.SP===false?true:false; else openGroups[g]=!openGroups[g]; renderAlbum();});
+  $$(".chip").forEach(c=>c.onclick=e=>{ if(e.target.closest(".repbadge"))return; const id=+c.dataset.id; setHave(id,!has(id)); refreshChip(c,id); refreshProgress(); });
+  $$("[data-rep]").forEach(b=>b.onclick=e=>{ e.stopPropagation(); const id=+b.dataset.id; if(!has(id))setHave(id,true); setRep(id,repCount(id)+(b.dataset.rep==="+"?1:-1)); refreshChip(b.closest(".chip"),id); refreshProgress(); });
+  $$("[data-all]").forEach(b=>b.onclick=e=>{e.stopPropagation();bulk(b.dataset.all,true);});
+  $$("[data-none]").forEach(b=>b.onclick=e=>{e.stopPropagation();bulk(b.dataset.none,false);});
+  const s=$("#search"); if(s)s.oninput=e=>{searchTerm=e.target.value;const p=e.target.selectionStart;renderAlbum();const ns=$("#search");if(ns){ns.focus();ns.setSelectionRange(p,p);}};
 }
-function refreshChip(chip,id){
-  const h=has(id), r=repCount(id);
-  chip.classList.toggle("have",h);
-  chip.querySelector(".rn").textContent=r;
-}
+function refreshChip(chip,id){ chip.classList.toggle("have",has(id)); chip.querySelector(".rn").textContent=repCount(id); }
 function refreshProgress(){
-  // update group/team counters without full rerender
   updateHeader();
-  view.querySelectorAll(".group").forEach(gr=>{}); // counters refreshed on next render; do light update:
-  // team progress
-  view.querySelectorAll(".team").forEach(td=>{
-    const key=td.dataset.team;
-    const t=TEAMS.find(x=>x.key===key);
-    if(!t)return;
-    const got=teamHave(t),done=got===t.count;
-    const p=td.querySelector(".tprog");
-    p.textContent=done?'✓ Completo':got+'/'+t.count;
-    p.classList.toggle("done",done);
-  });
-  // group bars + headers
-  GROUPS.forEach(([g],idx)=>{
-    const total=groupTeams(g).length*PER_TEAM;
-    const got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
-    const gp=view.querySelectorAll(".group");
-  });
-  // simplest: update all gp spans by recomputing
-  let i=0;
-  view.querySelectorAll(".group").forEach(gr=>{
-    const head=gr.querySelector(".ghead"); const g=head.dataset.g;
-    const bar=gr.querySelector(".gbar i"); const gp=gr.querySelector(".gp");
-    if(g==="SP"){let c=0;for(let k=1;k<=SPECIALS;k++)if(has(k))c++; gp.textContent=c+"/"+SPECIALS; bar.style.width=(c/SPECIALS*100)+"%";}
-    else{const total=groupTeams(g).length*PER_TEAM; const got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0); gp.textContent=got+"/"+total; bar.style.width=(got/total*100)+"%";}
-  });
-  // stat strip
-  const st=view.querySelectorAll(".stat b");
-  if(st.length>=3){st[0].textContent=totalHave(); st[1].textContent=TOTAL-totalHave(); st[2].textContent=totalRep();}
+  $$(".team").forEach(td=>{const t=TEAMS.find(x=>x.key===td.dataset.team);if(!t)return;const got=teamHave(t),done=got===t.count;const p=td.querySelector(".tprog");p.textContent=done?"✓ Completo":got+"/"+t.count;p.classList.toggle("done",done);});
+  $$(".group").forEach(gr=>{const g=gr.querySelector(".ghead").dataset.g;const bar=gr.querySelector(".gbar i");const gp=gr.querySelector(".gp");
+    if(g==="SP"){let c=0;for(let k=1;k<=SPECIALS;k++)if(has(k))c++;gp.textContent=c+"/"+SPECIALS;bar.style.width=(c/SPECIALS*100)+"%";}
+    else{const tot=groupTeams(g).length*PER_TEAM,got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);gp.textContent=got+"/"+tot;bar.style.width=(got/tot*100)+"%";}});
+  const st=$$(".stat b"); if(st.length>=3){st[0].textContent=totalHave();st[1].textContent=TOTAL-totalHave();st[2].textContent=totalRep();}
 }
-function bulk(key,val){
-  if(key==="SP"){ for(let i=1;i<=SPECIALS;i++) setHave(i,val); }
-  else { const t=TEAMS.find(x=>x.key===key); if(t) for(let i=0;i<t.count;i++) setHave(t.start+i,val); }
-  renderAlbum();
-  toast(val?"Marcadas ✓":"Quitadas");
-}
+function bulk(key,val){ if(key==="SP"){for(let i=1;i<=SPECIALS;i++)setHave(i,val);} else {const t=TEAMS.find(x=>x.key===key);if(t)for(let i=0;i<t.count;i++)setHave(t.start+i,val);} renderAlbum(); toast(val?"Marcadas ✓":"Quitadas"); }
 
-// ====== RENDER: ME FALTAN ======
+// =================== ME FALTAN ===================
+function stickerName(id){
+  if(id<=SPECIALS) return "Especial "+id+" ("+(SPECIAL_NAMES[id-1]||"")+")";
+  const t=TEAMS.find(t=>id>=t.start&&id<t.start+t.count);
+  return t? t.name+" "+slotLabel(id-t.start) : "#"+id;
+}
 function renderFaltan(){
-  let blocks=[]; let totalMiss=0;
-  // specials
-  const spMiss=[];for(let i=1;i<=SPECIALS;i++) if(!has(i)) spMiss.push(i);
-  if(spMiss.length){totalMiss+=spMiss.length; blocks.push({flag:"★",name:"Especiales",nums:spMiss});}
-  TEAMS.forEach(t=>{
-    const miss=[];for(let i=0;i<t.count;i++) if(!has(t.start+i)) miss.push(t.start+i);
-    if(miss.length){totalMiss+=miss.length; blocks.push({flag:t.flag,name:t.name,group:t.group,nums:miss});}
-  });
-  if(totalMiss===0){
-    view.innerHTML=`<div class="empty"><div class="big">🏆</div><h3>¡Álbum completo!</h3><p>Llenaste las ${TOTAL} estampas. A presumirlo.</p></div>`;
-    updateHeader();return;
-  }
-  let html=`<div class="listcard"><h3>Me faltan ${totalMiss} estampas</h3>
-    <p class="sub">Llévalo al puesto. Toca "Copiar números" para mandar tu lista por WhatsApp.</p>
-    <button class="copybtn" id="copyAll">📋 Copiar TODA mi lista de faltantes</button></div>`;
-  blocks.forEach(b=>{
-    html+=`<div class="listcard miss-team">
-      <div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` <span style="color:var(--mut);font-weight:600">· Grupo ${b.group}</span>`:''}<span class="c">faltan ${b.nums.length}</span></div>
-      <div class="nums">${b.nums.map(x=>`<span class="num">${x}</span>`).join("")}</div>
-    </div>`;
-  });
-  view.innerHTML=html;
-  $("#copyAll").addEventListener("click",()=>{
-    const lines=blocks.map(b=>`${b.name}: ${b.nums.join(", ")}`).join("\n");
-    copy("FALTANTES (Álbum Mundial 2026):\n"+lines+`\n\nTotal: ${totalMiss}`);
-  });
-  updateHeader();
+  let blocks=[],total=0;
+  const sp=[];for(let i=1;i<=SPECIALS;i++)if(!has(i))sp.push(i);
+  if(sp.length){total+=sp.length;blocks.push({flag:"★",name:"Especiales",nums:sp});}
+  TEAMS.forEach(t=>{const m=[];for(let i=0;i<t.count;i++)if(!has(t.start+i))m.push(t.start+i);if(m.length){total+=m.length;blocks.push({flag:t.flag,name:t.name,group:t.group,nums:m});}});
+  if(total===0){view().innerHTML=`<div class="empty"><div class="big">🏆</div><h3>¡Álbum completo!</h3><p>Las ${TOTAL} estampas. A presumir.</p></div>`;updateHeader();return;}
+  let html=`<div class="listcard"><h3>Me faltan ${total} estampas</h3><p class="sub">Llévalo al puesto o mándalo por WhatsApp.</p><button class="copybtn" id="copyAll">📋 Copiar toda mi lista</button></div>`;
+  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">faltan ${b.nums.length}</span></div><div class="nums">${b.nums.map(x=>`<span class="num">${x}</span>`).join("")}</div></div>`;});
+  view().innerHTML=html; updateHeader();
+  $("#copyAll").onclick=()=>copy("FALTANTES (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.nums.join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
 }
 
-// ====== RENDER: REPES ======
+// =================== MIS REPES ===================
 function renderRepes(){
-  let blocks=[]; let totalR=0;
-  const spRep=[];for(let i=1;i<=SPECIALS;i++){const r=repCount(i); if(r>0) spRep.push([i,r]);}
-  if(spRep.length){totalR+=spRep.reduce((a,x)=>a+x[1],0); blocks.push({flag:"★",name:"Especiales",reps:spRep});}
-  TEAMS.forEach(t=>{
-    const reps=[];for(let i=0;i<t.count;i++){const id=t.start+i;const r=repCount(id); if(r>0) reps.push([id,r]);}
-    if(reps.length){totalR+=reps.reduce((a,x)=>a+x[1],0); blocks.push({flag:t.flag,name:t.name,group:t.group,reps});}
+  let blocks=[],total=0;
+  const sp=[];for(let i=1;i<=SPECIALS;i++){const r=repCount(i);if(r>0)sp.push([i,r]);}
+  if(sp.length){total+=sp.reduce((a,x)=>a+x[1],0);blocks.push({flag:"★",name:"Especiales",reps:sp});}
+  TEAMS.forEach(t=>{const reps=[];for(let i=0;i<t.count;i++){const id=t.start+i,r=repCount(id);if(r>0)reps.push([id,r]);}if(reps.length){total+=reps.reduce((a,x)=>a+x[1],0);blocks.push({flag:t.flag,name:t.name,group:t.group,reps});}});
+  if(total===0){view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repes todavía</h3><p>Cuando te salga una repetida, en el Álbum toca <b>+</b> sobre la estampa.</p></div>`;updateHeader();return;}
+  let html=`<div class="listcard"><h3>Tengo ${total} repes</h3><p class="sub">Las que te sobran para cambiar. Ve a <b>Cambios 🔁</b> para ver con quién hacen match.</p><button class="copybtn" id="copyR">📋 Copiar mis repes</button></div>`;
+  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repes</span></div><div class="nums">${b.reps.map(([id,r])=>`<span class="num rep">${id}${r>1?` ×${r}`:""}</span>`).join("")}</div></div>`;});
+  view().innerHTML=html; updateHeader();
+  $("#copyR").onclick=()=>copy("REPES PARA CAMBIO (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>id+(r>1?` (×${r})`:"")).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
+}
+
+// =================== CAMBIOS (amigos) ===================
+let friendsCache=null;
+async function renderAmigos(){
+  if(USER?.guest){ view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Entra con tu cuenta</h3><p>Los cambios con amigos necesitan que entres con tu nombre y PIN (no en modo invitado), para sincronizar en la nube.</p><button class="btn primary" onclick="logout()">Crear / entrar a mi cuenta</button></div>`; return; }
+  view().innerHTML=`<div class="empty"><div class="big"><span class="spin"></span></div><p>Cargando coleccionistas...</p></div>`;
+  const players=await listPlayers();
+  if(players===null){ view().innerHTML=`<div class="empty"><div class="big">☁️</div><h3>Nube no disponible</h3><p>La base de datos aún no está lista. Avísale a Pedro para activarla.</p></div>`; return; }
+  friendsCache=players;
+  const me=players.find(p=>p.id===USER.id);
+  let html=`<div class="listcard"><h3>Coleccionistas (${players.length})</h3><p class="sub">Toca a alguien para ver qué estampas pueden intercambiar.</p></div>`;
+  players.sort((a,b)=>totalHave(b)-totalHave(a));
+  players.forEach(p=>{
+    const c=p.color||colorFor(p.name), h=Object.keys(p.have||{}).length, pct=Math.round(h/TOTAL*100), mine=p.id===USER.id;
+    html+=`<div class="friend ${mine?"me":""}" ${mine?"":`data-fid="${p.id}"`}>
+      <span class="av" style="background:${c}">${initials(p.name)}</span>
+      <div class="fi"><div class="fn">${p.name}${mine?" (tú)":""}</div><div class="fbar"><i style="width:${pct}%"></i></div></div>
+      <span class="fpct">${pct}%</span>${mine?"":'<span class="arrow">›</span>'}</div>`;
   });
-  if(totalR===0){
-    view.innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repetidas todavía</h3><p>Cuando te salga una repe, en el Álbum toca <b>+</b> sobre la estampa para sumarla aquí y cambiarla.</p></div>`;
-    updateHeader();return;
-  }
-  let html=`<div class="listcard"><h3>Tengo ${totalR} repes para cambio</h3>
-    <p class="sub">Estas son las que te sobran. Cópialas y mándalas para hacer trueque.</p>
-    <button class="copybtn" id="copyR">📋 Copiar TODAS mis repes</button></div>`;
-  blocks.forEach(b=>{
-    html+=`<div class="listcard miss-team">
-      <div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` <span style="color:var(--mut);font-weight:600">· Grupo ${b.group}</span>`:''}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repes</span></div>
-      <div class="nums">${b.reps.map(([id,r])=>`<span class="num rep">${id}${r>1?` ×${r}`:''}</span>`).join("")}</div>
+  view().innerHTML=html;
+  $$("[data-fid]").forEach(el=>el.onclick=()=>renderMatch(el.dataset.fid));
+}
+function renderMatch(fid){
+  const me=friendsCache.find(p=>p.id===USER.id)||{have:DB.have,rep:DB.rep,name:USER.name,color:USER.color};
+  const fr=friendsCache.find(p=>p.id===fid); if(!fr)return;
+  const myHave=DB.have, myRep=DB.rep, frHave=fr.have||{}, frRep=fr.rep||{};
+  // Le doy: mis repes (rep>0) que el amigo NO tiene
+  const give=[];for(const id in myRep){if(myRep[id]>0 && !frHave[id])give.push(+id);} give.sort((a,b)=>a-b);
+  // Me da: sus repes que yo NO tengo
+  const get=[];for(const id in frRep){if(frRep[id]>0 && !myHave[id])get.push(+id);} get.sort((a,b)=>a-b);
+  const c=fr.color||colorFor(fr.name);
+  let html=`<button class="backbtn" onclick="route()">‹ Volver a coleccionistas</button>
+    <div class="listcard"><h3 style="display:flex;align-items:center;gap:10px"><span class="av" style="background:${c};width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#0a0524">${initials(fr.name)}</span>Cambio con ${fr.name}</h3>
+    <p class="sub">${give.length+get.length===0?"Por ahora no hay match. Cuando alguno tenga repes que el otro necesite, aparecen aquí.":`${give.length} para darle · ${get.length} que te puede dar`}</p></div>
+    <div class="match-cols">
+      <div class="match-col"><h4>Le das<span class="tag give">${give.length}</span></h4><p class="cnt">Tus repes que ${fr.name} necesita</p>
+        ${give.length?`<div class="nums">${give.map(id=>`<span class="num match" title="${stickerName(id)}">${id}</span>`).join("")}</div><button class="copybtn" id="cgive">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
+      <div class="match-col"><h4>Te da<span class="tag get">${get.length}</span></h4><p class="cnt">Sus repes que tú necesitas</p>
+        ${get.length?`<div class="nums">${get.map(id=>`<span class="num rep" title="${stickerName(id)}">${id}</span>`).join("")}</div><button class="copybtn" id="cget">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
     </div>`;
-  });
-  view.innerHTML=html;
-  $("#copyR").addEventListener("click",()=>{
-    const lines=blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>id+(r>1?` (×${r})`:"")).join(", ")}`).join("\n");
-    copy("REPES PARA CAMBIO (Álbum Mundial 2026):\n"+lines+`\n\nTotal: ${totalR}`);
-  });
-  updateHeader();
+  view().innerHTML=html;
+  if(give.length)$("#cgive").onclick=()=>copy(`Le doy a ${fr.name} (Mundial 26):\n`+give.map(id=>`${id} · ${stickerName(id)}`).join("\n"));
+  if(get.length)$("#cget").onclick=()=>copy(`${fr.name} me da (Mundial 26):\n`+get.map(id=>`${id} · ${stickerName(id)}`).join("\n"));
 }
 
-// ====== RENDER: AJUSTES ======
+// =================== AJUSTES ===================
 function renderAjustes(){
-  view.innerHTML=`
-  <div class="listcard">
-    <h3>Respaldo y traspaso</h3>
-    <p class="note">Tu progreso se guarda solo en este navegador/dispositivo. Para pasarlo a tu celular o respaldarlo, exporta el código y pégalo en el otro dispositivo.</p>
-    <div class="row">
-      <button class="btn primary" id="exp">⬇️ Exportar mi progreso</button>
-      <button class="btn" id="impBtn">⬆️ Importar progreso</button>
-    </div>
-    <textarea id="io" placeholder="Aquí aparece tu código al exportar. Para importar, pega un código y dale Importar."></textarea>
+  const guest=USER?.guest;
+  view().innerHTML=`
+  <div class="listcard"><h3>Tu cuenta</h3>
+    <p class="note">${guest?"Estás en <b>modo invitado</b> (solo este dispositivo, sin nube). Crea una cuenta para sincronizar y hacer cambios con amigos.":`Conectado como <b>${USER.name}</b>. Tu progreso se sincroniza en la nube — entra con tu nombre y PIN desde cualquier celular.`}</p>
+    <div class="row"><button class="btn ${guest?"primary":""}" onclick="logout()">${guest?"Crear cuenta / entrar":"Cambiar de cuenta / salir"}</button></div>
   </div>
-  <div class="listcard">
-    <h3>Sobre el álbum</h3>
-    <p class="note"><b>${TOTAL}</b> estampas en total · <b>48</b> selecciones en 12 grupos (A–L) · 20 estampas por equipo (escudo + foto + 18 jugadores) + 20 especiales del torneo.<br>
-    Estructura basada en la colección oficial Panini FIFA World Cup 2026™.</p>
+  <div class="listcard"><h3>Respaldo manual</h3>
+    <p class="note">Exporta un código con tu progreso (extra al respaldo en la nube).</p>
+    <div class="row"><button class="btn primary" id="exp">⬇️ Exportar</button><button class="btn" id="imp">⬆️ Importar</button></div>
+    <textarea id="io" placeholder="Aquí sale tu código. Para importar, pega uno y dale Importar."></textarea>
   </div>
-  <div class="listcard">
-    <h3>Zona de peligro</h3>
-    <p class="note">Borra todo tu progreso y empieza de cero.</p>
-    <button class="btn danger" id="reset">🗑️ Reiniciar álbum</button>
-  </div>`;
-  $("#exp").addEventListener("click",()=>{$("#io").value=btoa(unescape(encodeURIComponent(JSON.stringify(DB)))); copy($("#io").value); toast("Copiado al portapapeles");});
-  $("#impBtn").addEventListener("click",()=>{
-    try{const raw=$("#io").value.trim(); if(!raw)return toast("Pega un código primero");
-      const d=JSON.parse(decodeURIComponent(escape(atob(raw))));
-      if(!d.have)throw 0; DB=d; if(!DB.rep)DB.rep={}; save(); toast("¡Progreso importado!"); updateHeader();
-    }catch(e){toast("Código inválido");}
-  });
-  $("#reset").addEventListener("click",()=>{
-    if(confirm("¿Seguro? Esto borra TODAS las estampas marcadas y no se puede deshacer.")){
-      DB={have:{},rep:{}}; save(); toast("Álbum reiniciado"); updateHeader();
-    }
-  });
-  updateHeader();
+  <div class="listcard"><h3>Sobre el álbum</h3>
+    <p class="note"><b>${TOTAL}</b> estampas · <b>48</b> selecciones en 12 grupos (A–L) · 20 por equipo (escudo + foto + 18 jugadores) + 20 especiales. Colección oficial Panini FIFA World Cup 2026™.</p></div>
+  <div class="listcard"><h3>Zona de peligro</h3><p class="note">Borra tu progreso ${guest?"local":"(local y en la nube)"}.</p>
+    <button class="btn danger" id="reset">🗑️ Reiniciar mi álbum</button></div>`;
+  $("#exp").onclick=()=>{$("#io").value=btoa(unescape(encodeURIComponent(JSON.stringify(DB))));copy($("#io").value);};
+  $("#imp").onclick=()=>{try{const raw=$("#io").value.trim();if(!raw)return toast("Pega un código");const d=JSON.parse(decodeURIComponent(escape(atob(raw))));if(!d.have)throw 0;DB={have:d.have||{},rep:d.rep||{}};save();toast("¡Importado!");updateHeader();}catch(e){toast("Código inválido");}};
+  $("#reset").onclick=()=>{if(confirm("¿Seguro? Borra TODAS tus estampas marcadas.")){DB={have:{},rep:{}};save();toast("Reiniciado");updateHeader();}};
 }
 
-// ====== utils ======
-function copy(txt){
-  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(()=>toast("📋 Copiado")).catch(()=>fallbackCopy(txt));}
-  else fallbackCopy(txt);
-}
-function fallbackCopy(txt){const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("📋 Copiado");}catch(e){toast("No se pudo copiar");}document.body.removeChild(ta);}
-
-// ====== router ======
+// =================== ROUTER ===================
 let tab="album";
 function route(){
   if(tab==="album")renderAlbum();
   else if(tab==="faltan")renderFaltan();
   else if(tab==="repes")renderRepes();
+  else if(tab==="amigos")renderAmigos();
   else renderAjustes();
 }
-$("#tabs").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
-  tab=b.dataset.tab;
-  $("#tabs").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));
-  window.scrollTo(0,0);
-  route();
-}));
+$$("#tabs button").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;$$("#tabs button").forEach(x=>x.classList.toggle("on",x===b));window.scrollTo(0,0);route();});
+$("#avatar").onclick=()=>{tab="ajustes";$$("#tabs button").forEach(x=>x.classList.toggle("on",x.dataset.tab==="ajustes"));route();};
 
-route();
+// =================== BOOT ===================
+$("#lgo").onclick=doAuth;
+$("#lpin").addEventListener("keydown",e=>{if(e.key==="Enter")doAuth();});
+$("#guestBtn").onclick=enterGuest;
+setMode();
+renderQuickUsers();
+// resume session if any
+(function(){
+  let s=null; try{s=JSON.parse(localStorage.getItem(SESSION_KEY));}catch(e){}
+  if(s&&s.id&&sb){
+    // try to refresh from cloud
+    sb.from(TABLE).select("have,rep,color").eq("id",s.id).single().then(({data,error})=>{
+      if(!error&&data){ enter({id:s.id,name:s.name,pin:s.pin,color:data.color||s.color},data); }
+      else { /* offline or row gone: use local cache */ USER=s; DB=loadLocal(); cloudOK=false; showApp(); }
+    });
+  }
+})();
 </script>
-<footer>Mi Álbum Mundial 2026 · funciona offline · tu progreso vive en este dispositivo</footer>
 </body>
 </html>
