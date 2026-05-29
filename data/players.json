@@ -1,0 +1,6050 @@
+{
+"A|Chequia": {
+"slug": "czechia",
+"prefix": "CZE",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "CZE 1",
+"prefix": "CZE"
+},
+{
+"n": 2,
+"label": "Matej Kovar",
+"code": "CZE 2",
+"prefix": "CZE"
+},
+{
+"n": 3,
+"label": "Jindrich Stanek",
+"code": "CZE 3",
+"prefix": "CZE"
+},
+{
+"n": 4,
+"label": "Ladislav Krejci",
+"code": "CZE 4",
+"prefix": "CZE"
+},
+{
+"n": 5,
+"label": "Vladimir Coufal",
+"code": "CZE 5",
+"prefix": "CZE"
+},
+{
+"n": 6,
+"label": "Jaroslav Zeleny",
+"code": "CZE 6",
+"prefix": "CZE"
+},
+{
+"n": 7,
+"label": "Tomas Holes",
+"code": "CZE 7",
+"prefix": "CZE"
+},
+{
+"n": 8,
+"label": "David Zima",
+"code": "CZE 8",
+"prefix": "CZE"
+},
+{
+"n": 9,
+"label": "Michal Sadilek",
+"code": "CZE 9",
+"prefix": "CZE"
+},
+{
+"n": 10,
+"label": "Lukas Provod",
+"code": "CZE 10",
+"prefix": "CZE"
+},
+{
+"n": 11,
+"label": "Lukas Cerv",
+"code": "CZE 11",
+"prefix": "CZE"
+},
+{
+"n": 12,
+"label": "Tomas Soucek",
+"code": "CZE 12",
+"prefix": "CZE"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "CZE 13",
+"prefix": "CZE"
+},
+{
+"n": 14,
+"label": "Pavel Sulc",
+"code": "CZE 14",
+"prefix": "CZE"
+},
+{
+"n": 15,
+"label": "Matej Vydra",
+"code": "CZE 15",
+"prefix": "CZE"
+},
+{
+"n": 16,
+"label": "Vasil Kusej",
+"code": "CZE 16",
+"prefix": "CZE"
+},
+{
+"n": 17,
+"label": "Tomas Chory",
+"code": "CZE 17",
+"prefix": "CZE"
+},
+{
+"n": 18,
+"label": "Vaclav Cerny",
+"code": "CZE 18",
+"prefix": "CZE"
+},
+{
+"n": 19,
+"label": "Adam Hlozek",
+"code": "CZE 19",
+"prefix": "CZE"
+},
+{
+"n": 20,
+"label": "Patrik Schick",
+"code": "CZE 20",
+"prefix": "CZE"
+}
+]
+},
+"A|México": {
+"slug": "mexico",
+"prefix": "MEX",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "MEX 1",
+"prefix": "MEX"
+},
+{
+"n": 2,
+"label": "Luis Malagón",
+"code": "MEX 2",
+"prefix": "MEX"
+},
+{
+"n": 3,
+"label": "Johan Vasquez",
+"code": "MEX 3",
+"prefix": "MEX"
+},
+{
+"n": 4,
+"label": "Jorge Sánchez",
+"code": "MEX 4",
+"prefix": "MEX"
+},
+{
+"n": 5,
+"label": "Cesar Montes",
+"code": "MEX 5",
+"prefix": "MEX"
+},
+{
+"n": 6,
+"label": "Jesus Gallardo",
+"code": "MEX 6",
+"prefix": "MEX"
+},
+{
+"n": 7,
+"label": "Israel Reyes",
+"code": "MEX 7",
+"prefix": "MEX"
+},
+{
+"n": 8,
+"label": "Diego Lainez",
+"code": "MEX 8",
+"prefix": "MEX"
+},
+{
+"n": 9,
+"label": "Carlos Rodriguez",
+"code": "MEX 9",
+"prefix": "MEX"
+},
+{
+"n": 10,
+"label": "Edson Alvarez",
+"code": "MEX 10",
+"prefix": "MEX"
+},
+{
+"n": 11,
+"label": "Orbelin Pineda",
+"code": "MEX 11",
+"prefix": "MEX"
+},
+{
+"n": 12,
+"label": "Marcel Ruiz",
+"code": "MEX 12",
+"prefix": "MEX"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "MEX 13",
+"prefix": "MEX"
+},
+{
+"n": 14,
+"label": "Érick Sánchez",
+"code": "MEX 14",
+"prefix": "MEX"
+},
+{
+"n": 15,
+"label": "Hirving Lozano",
+"code": "MEX 15",
+"prefix": "MEX"
+},
+{
+"n": 16,
+"label": "Santiago Giménez",
+"code": "MEX 16",
+"prefix": "MEX"
+},
+{
+"n": 17,
+"label": "Raúl Jiménez",
+"code": "MEX 17",
+"prefix": "MEX"
+},
+{
+"n": 18,
+"label": "Alexis Vega",
+"code": "MEX 18",
+"prefix": "MEX"
+},
+{
+"n": 19,
+"label": "Roberto Alvarado",
+"code": "MEX 19",
+"prefix": "MEX"
+},
+{
+"n": 20,
+"label": "Cesar Huerta",
+"code": "MEX 20",
+"prefix": "MEX"
+}
+]
+},
+"A|Sudáfrica": {
+"slug": "south-africa",
+"prefix": "RSA",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "RSA 1",
+"prefix": "RSA"
+},
+{
+"n": 2,
+"label": "Ronwen Williams",
+"code": "RSA 2",
+"prefix": "RSA"
+},
+{
+"n": 3,
+"label": "Sipho Chaine",
+"code": "RSA 3",
+"prefix": "RSA"
+},
+{
+"n": 4,
+"label": "Aubrey Modiba",
+"code": "RSA 4",
+"prefix": "RSA"
+},
+{
+"n": 5,
+"label": "Samukele Kabini",
+"code": "RSA 5",
+"prefix": "RSA"
+},
+{
+"n": 6,
+"label": "Mbekezeli Mbokazi",
+"code": "RSA 6",
+"prefix": "RSA"
+},
+{
+"n": 7,
+"label": "Khulumani Ndamane",
+"code": "RSA 7",
+"prefix": "RSA"
+},
+{
+"n": 8,
+"label": "Siyabonga Ngezana",
+"code": "RSA 8",
+"prefix": "RSA"
+},
+{
+"n": 9,
+"label": "Khuliso Mudau",
+"code": "RSA 9",
+"prefix": "RSA"
+},
+{
+"n": 10,
+"label": "Nkosinathi Sibisi",
+"code": "RSA 10",
+"prefix": "RSA"
+},
+{
+"n": 11,
+"label": "Teboho Mokoena",
+"code": "RSA 11",
+"prefix": "RSA"
+},
+{
+"n": 12,
+"label": "Thalente Mbatha",
+"code": "RSA 12",
+"prefix": "RSA"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "RSA 13",
+"prefix": "RSA"
+},
+{
+"n": 14,
+"label": "Bathasi Aubaas",
+"code": "RSA 14",
+"prefix": "RSA"
+},
+{
+"n": 15,
+"label": "Yaya Sithole",
+"code": "RSA 15",
+"prefix": "RSA"
+},
+{
+"n": 16,
+"label": "Sipho Mbule",
+"code": "RSA 16",
+"prefix": "RSA"
+},
+{
+"n": 17,
+"label": "Lyle Foster",
+"code": "RSA 17",
+"prefix": "RSA"
+},
+{
+"n": 18,
+"label": "Iqraam Rayners",
+"code": "RSA 18",
+"prefix": "RSA"
+},
+{
+"n": 19,
+"label": "Mohau Nkota",
+"code": "RSA 19",
+"prefix": "RSA"
+},
+{
+"n": 20,
+"label": "Oswin Appollis",
+"code": "RSA 20",
+"prefix": "RSA"
+}
+]
+},
+"A|Corea del Sur": {
+"slug": "south-korea",
+"prefix": "KOR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "KOR 1",
+"prefix": "KOR"
+},
+{
+"n": 2,
+"label": "Hyeon-woo Jo",
+"code": "KOR 2",
+"prefix": "KOR"
+},
+{
+"n": 3,
+"label": "Seung-Gyu Kim",
+"code": "KOR 3",
+"prefix": "KOR"
+},
+{
+"n": 4,
+"label": "Min-jae Kim",
+"code": "KOR 4",
+"prefix": "KOR"
+},
+{
+"n": 5,
+"label": "Yu-min Cho",
+"code": "KOR 5",
+"prefix": "KOR"
+},
+{
+"n": 6,
+"label": "Young-woo Seol",
+"code": "KOR 6",
+"prefix": "KOR"
+},
+{
+"n": 7,
+"label": "Han-beom Lee",
+"code": "KOR 7",
+"prefix": "KOR"
+},
+{
+"n": 8,
+"label": "Tae-seok Lee",
+"code": "KOR 8",
+"prefix": "KOR"
+},
+{
+"n": 9,
+"label": "Myung-jae Lee",
+"code": "KOR 9",
+"prefix": "KOR"
+},
+{
+"n": 10,
+"label": "Jae-sung Lee",
+"code": "KOR 10",
+"prefix": "KOR"
+},
+{
+"n": 11,
+"label": "In-beom Hwang",
+"code": "KOR 11",
+"prefix": "KOR"
+},
+{
+"n": 12,
+"label": "Kang-in Lee",
+"code": "KOR 12",
+"prefix": "KOR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "KOR 13",
+"prefix": "KOR"
+},
+{
+"n": 14,
+"label": "Seung-ho Paik",
+"code": "KOR 14",
+"prefix": "KOR"
+},
+{
+"n": 15,
+"label": "Jens Castrop",
+"code": "KOR 15",
+"prefix": "KOR"
+},
+{
+"n": 16,
+"label": "Dongg-yeong Lee",
+"code": "KOR 16",
+"prefix": "KOR"
+},
+{
+"n": 17,
+"label": "Gue-sung Cho",
+"code": "KOR 17",
+"prefix": "KOR"
+},
+{
+"n": 18,
+"label": "Heung-min Son",
+"code": "KOR 18",
+"prefix": "KOR"
+},
+{
+"n": 19,
+"label": "Hee-chan Hwang",
+"code": "KOR 19",
+"prefix": "KOR"
+},
+{
+"n": 20,
+"label": "Hyeon-Gyu Oh",
+"code": "KOR 20",
+"prefix": "KOR"
+}
+]
+},
+"B|Bosnia y Herzegovina": {
+"slug": "bosnia-and-herzegovina",
+"prefix": "BIH",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "BIH 1",
+"prefix": "BIH"
+},
+{
+"n": 2,
+"label": "Nikola Vasilj",
+"code": "BIH 2",
+"prefix": "BIH"
+},
+{
+"n": 3,
+"label": "Amer Dedic",
+"code": "BIH 3",
+"prefix": "BIH"
+},
+{
+"n": 4,
+"label": "Sead Kolasinac",
+"code": "BIH 4",
+"prefix": "BIH"
+},
+{
+"n": 5,
+"label": "Tarik Muharemovic",
+"code": "BIH 5",
+"prefix": "BIH"
+},
+{
+"n": 6,
+"label": "Nihad Mujakic",
+"code": "BIH 6",
+"prefix": "BIH"
+},
+{
+"n": 7,
+"label": "Nikola Katic",
+"code": "BIH 7",
+"prefix": "BIH"
+},
+{
+"n": 8,
+"label": "Amir Hadziahmetovic",
+"code": "BIH 8",
+"prefix": "BIH"
+},
+{
+"n": 9,
+"label": "Benjamin Tahirovic",
+"code": "BIH 9",
+"prefix": "BIH"
+},
+{
+"n": 10,
+"label": "Armin Gigovic",
+"code": "BIH 10",
+"prefix": "BIH"
+},
+{
+"n": 11,
+"label": "Ivan Sunjic",
+"code": "BIH 11",
+"prefix": "BIH"
+},
+{
+"n": 12,
+"label": "Ivan Basic",
+"code": "BIH 12",
+"prefix": "BIH"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "BIH 13",
+"prefix": "BIH"
+},
+{
+"n": 14,
+"label": "Dzenis Burnic",
+"code": "BIH 14",
+"prefix": "BIH"
+},
+{
+"n": 15,
+"label": "Esmir Bajraktarevic",
+"code": "BIH 15",
+"prefix": "BIH"
+},
+{
+"n": 16,
+"label": "Amar Memic",
+"code": "BIH 16",
+"prefix": "BIH"
+},
+{
+"n": 17,
+"label": "Ermedin Demirovic",
+"code": "BIH 17",
+"prefix": "BIH"
+},
+{
+"n": 18,
+"label": "Edin Dzeko",
+"code": "BIH 18",
+"prefix": "BIH"
+},
+{
+"n": 19,
+"label": "Samed Bazdar",
+"code": "BIH 19",
+"prefix": "BIH"
+},
+{
+"n": 20,
+"label": "Haris Tabakovic",
+"code": "BIH 20",
+"prefix": "BIH"
+}
+]
+},
+"B|Canadá": {
+"slug": "canada",
+"prefix": "CAN",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "CAN 1",
+"prefix": "CAN"
+},
+{
+"n": 2,
+"label": "Dayne St.Clair",
+"code": "CAN 2",
+"prefix": "CAN"
+},
+{
+"n": 3,
+"label": "Alphonso Davies",
+"code": "CAN 3",
+"prefix": "CAN"
+},
+{
+"n": 4,
+"label": "Alistair Johnston",
+"code": "CAN 4",
+"prefix": "CAN"
+},
+{
+"n": 5,
+"label": "Samuel Adekugbe",
+"code": "CAN 5",
+"prefix": "CAN"
+},
+{
+"n": 6,
+"label": "Riche Larvea",
+"code": "CAN 6",
+"prefix": "CAN"
+},
+{
+"n": 7,
+"label": "Derek Cornelius",
+"code": "CAN 7",
+"prefix": "CAN"
+},
+{
+"n": 8,
+"label": "Moïse Bombito",
+"code": "CAN 8",
+"prefix": "CAN"
+},
+{
+"n": 9,
+"label": "Kamal Miller",
+"code": "CAN 9",
+"prefix": "CAN"
+},
+{
+"n": 10,
+"label": "Stephen Eustáquio",
+"code": "CAN 10",
+"prefix": "CAN"
+},
+{
+"n": 11,
+"label": "Ismaël Koné",
+"code": "CAN 11",
+"prefix": "CAN"
+},
+{
+"n": 12,
+"label": "Jonathan Osorio",
+"code": "CAN 12",
+"prefix": "CAN"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "CAN 13",
+"prefix": "CAN"
+},
+{
+"n": 14,
+"label": "Jacob Shaffelburg",
+"code": "CAN 14",
+"prefix": "CAN"
+},
+{
+"n": 15,
+"label": "Mathieu Choinière",
+"code": "CAN 15",
+"prefix": "CAN"
+},
+{
+"n": 16,
+"label": "Niko Sigur",
+"code": "CAN 16",
+"prefix": "CAN"
+},
+{
+"n": 17,
+"label": "Tajon Buchanan",
+"code": "CAN 17",
+"prefix": "CAN"
+},
+{
+"n": 18,
+"label": "Liam Millar",
+"code": "CAN 18",
+"prefix": "CAN"
+},
+{
+"n": 19,
+"label": "Cyle Larin",
+"code": "CAN 19",
+"prefix": "CAN"
+},
+{
+"n": 20,
+"label": "Jonathan David",
+"code": "CAN 20",
+"prefix": "CAN"
+}
+]
+},
+"B|Catar": {
+"slug": "qatar",
+"prefix": "QAT",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "QAT 1",
+"prefix": "QAT"
+},
+{
+"n": 2,
+"label": "Meshaal Barsham",
+"code": "QAT 2",
+"prefix": "QAT"
+},
+{
+"n": 3,
+"label": "Sultan Albrake",
+"code": "QAT 3",
+"prefix": "QAT"
+},
+{
+"n": 4,
+"label": "Lucas Mendes",
+"code": "QAT 4",
+"prefix": "QAT"
+},
+{
+"n": 5,
+"label": "Homam Ahmed",
+"code": "QAT 5",
+"prefix": "QAT"
+},
+{
+"n": 6,
+"label": "Boualem Khoukhi",
+"code": "QAT 6",
+"prefix": "QAT"
+},
+{
+"n": 7,
+"label": "Pedro Miguel",
+"code": "QAT 7",
+"prefix": "QAT"
+},
+{
+"n": 8,
+"label": "Tarek Salman",
+"code": "QAT 8",
+"prefix": "QAT"
+},
+{
+"n": 9,
+"label": "Mohamed Al-Mannai",
+"code": "QAT 9",
+"prefix": "QAT"
+},
+{
+"n": 10,
+"label": "Karim Boudiaf",
+"code": "QAT 10",
+"prefix": "QAT"
+},
+{
+"n": 11,
+"label": "Assim Madibo",
+"code": "QAT 11",
+"prefix": "QAT"
+},
+{
+"n": 12,
+"label": "Ahmed Fatehi",
+"code": "QAT 12",
+"prefix": "QAT"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "QAT 13",
+"prefix": "QAT"
+},
+{
+"n": 14,
+"label": "Mohammed Waad",
+"code": "QAT 14",
+"prefix": "QAT"
+},
+{
+"n": 15,
+"label": "Abdulaziz Hatem",
+"code": "QAT 15",
+"prefix": "QAT"
+},
+{
+"n": 16,
+"label": "Hassan Al-Haydos",
+"code": "QAT 16",
+"prefix": "QAT"
+},
+{
+"n": 17,
+"label": "Edmilson Junior",
+"code": "QAT 17",
+"prefix": "QAT"
+},
+{
+"n": 18,
+"label": "Akram Hassan Afif",
+"code": "QAT 18",
+"prefix": "QAT"
+},
+{
+"n": 19,
+"label": "Ahmed Al Ganehi",
+"code": "QAT 19",
+"prefix": "QAT"
+},
+{
+"n": 20,
+"label": "Almoez Ali",
+"code": "QAT 20",
+"prefix": "QAT"
+}
+]
+},
+"B|Suiza": {
+"slug": "switzerland",
+"prefix": "SUI",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "SUI 1",
+"prefix": "SUI"
+},
+{
+"n": 2,
+"label": "Gregor Kobel",
+"code": "SUI 2",
+"prefix": "SUI"
+},
+{
+"n": 3,
+"label": "Yvon Mvogo",
+"code": "SUI 3",
+"prefix": "SUI"
+},
+{
+"n": 4,
+"label": "Manuel Akanji",
+"code": "SUI 4",
+"prefix": "SUI"
+},
+{
+"n": 5,
+"label": "Ricardo Rodriguez",
+"code": "SUI 5",
+"prefix": "SUI"
+},
+{
+"n": 6,
+"label": "Nico Elvedi",
+"code": "SUI 6",
+"prefix": "SUI"
+},
+{
+"n": 7,
+"label": "Aurèle Amenda",
+"code": "SUI 7",
+"prefix": "SUI"
+},
+{
+"n": 8,
+"label": "Silvan Widmer",
+"code": "SUI 8",
+"prefix": "SUI"
+},
+{
+"n": 9,
+"label": "Granit Xhaka",
+"code": "SUI 9",
+"prefix": "SUI"
+},
+{
+"n": 10,
+"label": "Denis Zakaria",
+"code": "SUI 10",
+"prefix": "SUI"
+},
+{
+"n": 11,
+"label": "Remo Freuler",
+"code": "SUI 11",
+"prefix": "SUI"
+},
+{
+"n": 12,
+"label": "Fabian Rieder",
+"code": "SUI 12",
+"prefix": "SUI"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "SUI 13",
+"prefix": "SUI"
+},
+{
+"n": 14,
+"label": "Ardon Jashari",
+"code": "SUI 14",
+"prefix": "SUI"
+},
+{
+"n": 15,
+"label": "Johan Manzambi",
+"code": "SUI 15",
+"prefix": "SUI"
+},
+{
+"n": 16,
+"label": "Michel Aebischer",
+"code": "SUI 16",
+"prefix": "SUI"
+},
+{
+"n": 17,
+"label": "Breel Embolo",
+"code": "SUI 17",
+"prefix": "SUI"
+},
+{
+"n": 18,
+"label": "Ruben Vargas",
+"code": "SUI 18",
+"prefix": "SUI"
+},
+{
+"n": 19,
+"label": "Dan Ndoye",
+"code": "SUI 19",
+"prefix": "SUI"
+},
+{
+"n": 20,
+"label": "Zeki Amdouni",
+"code": "SUI 20",
+"prefix": "SUI"
+}
+]
+},
+"C|Brasil": {
+"slug": "brazil",
+"prefix": "BRA",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "BRA 1",
+"prefix": "BRA"
+},
+{
+"n": 2,
+"label": "Alisson",
+"code": "BRA 2",
+"prefix": "BRA"
+},
+{
+"n": 3,
+"label": "Bento",
+"code": "BRA 3",
+"prefix": "BRA"
+},
+{
+"n": 4,
+"label": "Marquinhos",
+"code": "BRA 4",
+"prefix": "BRA"
+},
+{
+"n": 5,
+"label": "Éder Militão",
+"code": "BRA 5",
+"prefix": "BRA"
+},
+{
+"n": 6,
+"label": "Gabriel Magalhães",
+"code": "BRA 6",
+"prefix": "BRA"
+},
+{
+"n": 7,
+"label": "Danilo",
+"code": "BRA 7",
+"prefix": "BRA"
+},
+{
+"n": 8,
+"label": "Wesley",
+"code": "BRA 8",
+"prefix": "BRA"
+},
+{
+"n": 9,
+"label": "Lucas Paquetá",
+"code": "BRA 9",
+"prefix": "BRA"
+},
+{
+"n": 10,
+"label": "Casemiro",
+"code": "BRA 10",
+"prefix": "BRA"
+},
+{
+"n": 11,
+"label": "Bruno Guimarães",
+"code": "BRA 11",
+"prefix": "BRA"
+},
+{
+"n": 12,
+"label": "Luiz Henrique",
+"code": "BRA 12",
+"prefix": "BRA"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "BRA 13",
+"prefix": "BRA"
+},
+{
+"n": 14,
+"label": "Vinicius Júnior",
+"code": "BRA 14",
+"prefix": "BRA"
+},
+{
+"n": 15,
+"label": "Rodrygo",
+"code": "BRA 15",
+"prefix": "BRA"
+},
+{
+"n": 16,
+"label": "João Pedro",
+"code": "BRA 16",
+"prefix": "BRA"
+},
+{
+"n": 17,
+"label": "Matheus Cunha",
+"code": "BRA 17",
+"prefix": "BRA"
+},
+{
+"n": 18,
+"label": "Gabriel Martinelli",
+"code": "BRA 18",
+"prefix": "BRA"
+},
+{
+"n": 19,
+"label": "Raphinha",
+"code": "BRA 19",
+"prefix": "BRA"
+},
+{
+"n": 20,
+"label": "Estévão",
+"code": "BRA 20",
+"prefix": "BRA"
+}
+]
+},
+"C|Haití": {
+"slug": "haiti",
+"prefix": "HAI",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "HAI 1",
+"prefix": "HAI"
+},
+{
+"n": 2,
+"label": "Johny Placide",
+"code": "HAI 2",
+"prefix": "HAI"
+},
+{
+"n": 3,
+"label": "Carlens Arcus",
+"code": "HAI 3",
+"prefix": "HAI"
+},
+{
+"n": 4,
+"label": "Martin Expérience",
+"code": "HAI 4",
+"prefix": "HAI"
+},
+{
+"n": 5,
+"label": "Jean-Kevin Duverne",
+"code": "HAI 5",
+"prefix": "HAI"
+},
+{
+"n": 6,
+"label": "Ricardo Adé",
+"code": "HAI 6",
+"prefix": "HAI"
+},
+{
+"n": 7,
+"label": "Duke Lacroix",
+"code": "HAI 7",
+"prefix": "HAI"
+},
+{
+"n": 8,
+"label": "Garven Metusala",
+"code": "HAI 8",
+"prefix": "HAI"
+},
+{
+"n": 9,
+"label": "Hannes Delcroix",
+"code": "HAI 9",
+"prefix": "HAI"
+},
+{
+"n": 10,
+"label": "Leverton Pierre",
+"code": "HAI 10",
+"prefix": "HAI"
+},
+{
+"n": 11,
+"label": "Danley Jean Jacques",
+"code": "HAI 11",
+"prefix": "HAI"
+},
+{
+"n": 12,
+"label": "Jean-Ricner Bellegarde",
+"code": "HAI 12",
+"prefix": "HAI"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "HAI 13",
+"prefix": "HAI"
+},
+{
+"n": 14,
+"label": "Christopher Attys",
+"code": "HAI 14",
+"prefix": "HAI"
+},
+{
+"n": 15,
+"label": "Derrick Etienne Jr",
+"code": "HAI 15",
+"prefix": "HAI"
+},
+{
+"n": 16,
+"label": "Josue Casimir",
+"code": "HAI 16",
+"prefix": "HAI"
+},
+{
+"n": 17,
+"label": "Ruben Providence",
+"code": "HAI 17",
+"prefix": "HAI"
+},
+{
+"n": 18,
+"label": "Duckens Nazon",
+"code": "HAI 18",
+"prefix": "HAI"
+},
+{
+"n": 19,
+"label": "Louicius Deedson",
+"code": "HAI 19",
+"prefix": "HAI"
+},
+{
+"n": 20,
+"label": "Frantzdy Pierrot",
+"code": "HAI 20",
+"prefix": "HAI"
+}
+]
+},
+"C|Marruecos": {
+"slug": "morocco",
+"prefix": "MAR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "MAR 1",
+"prefix": "MAR"
+},
+{
+"n": 2,
+"label": "Yassine Bounou",
+"code": "MAR 2",
+"prefix": "MAR"
+},
+{
+"n": 3,
+"label": "Munir El Kajoui",
+"code": "MAR 3",
+"prefix": "MAR"
+},
+{
+"n": 4,
+"label": "Achraf Hakimi",
+"code": "MAR 4",
+"prefix": "MAR"
+},
+{
+"n": 5,
+"label": "Noussair Mazraoui",
+"code": "MAR 5",
+"prefix": "MAR"
+},
+{
+"n": 6,
+"label": "Nayef Aguerd",
+"code": "MAR 6",
+"prefix": "MAR"
+},
+{
+"n": 7,
+"label": "Roman Saiss",
+"code": "MAR 7",
+"prefix": "MAR"
+},
+{
+"n": 8,
+"label": "Jawad El Yamio",
+"code": "MAR 8",
+"prefix": "MAR"
+},
+{
+"n": 9,
+"label": "Adam Masina",
+"code": "MAR 9",
+"prefix": "MAR"
+},
+{
+"n": 10,
+"label": "Sofyan Amrabat",
+"code": "MAR 10",
+"prefix": "MAR"
+},
+{
+"n": 11,
+"label": "Azzedine Ounahi",
+"code": "MAR 11",
+"prefix": "MAR"
+},
+{
+"n": 12,
+"label": "Eliesse Ben Seghir",
+"code": "MAR 12",
+"prefix": "MAR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "MAR 13",
+"prefix": "MAR"
+},
+{
+"n": 14,
+"label": "Bilal El Khannouss",
+"code": "MAR 14",
+"prefix": "MAR"
+},
+{
+"n": 15,
+"label": "Ismael Saibari",
+"code": "MAR 15",
+"prefix": "MAR"
+},
+{
+"n": 16,
+"label": "Youssef En-Nesyri",
+"code": "MAR 16",
+"prefix": "MAR"
+},
+{
+"n": 17,
+"label": "Abde Ezzalzouli",
+"code": "MAR 17",
+"prefix": "MAR"
+},
+{
+"n": 18,
+"label": "Soufiane Rahimi",
+"code": "MAR 18",
+"prefix": "MAR"
+},
+{
+"n": 19,
+"label": "Brahim Diaz",
+"code": "MAR 19",
+"prefix": "MAR"
+},
+{
+"n": 20,
+"label": "Ayoub El Kaabi",
+"code": "MAR 20",
+"prefix": "MAR"
+}
+]
+},
+"C|Escocia": {
+"slug": "scotland",
+"prefix": "SCO",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "SCO 1",
+"prefix": "SCO"
+},
+{
+"n": 2,
+"label": "Angus Gunn",
+"code": "SCO 2",
+"prefix": "SCO"
+},
+{
+"n": 3,
+"label": "Jack Hendry",
+"code": "SCO 3",
+"prefix": "SCO"
+},
+{
+"n": 4,
+"label": "Kieran Tierney",
+"code": "SCO 4",
+"prefix": "SCO"
+},
+{
+"n": 5,
+"label": "Aaron Hickey",
+"code": "SCO 5",
+"prefix": "SCO"
+},
+{
+"n": 6,
+"label": "Andrew Robertson",
+"code": "SCO 6",
+"prefix": "SCO"
+},
+{
+"n": 7,
+"label": "Scott McKenna",
+"code": "SCO 7",
+"prefix": "SCO"
+},
+{
+"n": 8,
+"label": "John Souttar",
+"code": "SCO 8",
+"prefix": "SCO"
+},
+{
+"n": 9,
+"label": "Anthony Ralston",
+"code": "SCO 9",
+"prefix": "SCO"
+},
+{
+"n": 10,
+"label": "Grant Hanley",
+"code": "SCO 10",
+"prefix": "SCO"
+},
+{
+"n": 11,
+"label": "Scott McTominay",
+"code": "SCO 11",
+"prefix": "SCO"
+},
+{
+"n": 12,
+"label": "Billy Gilmour",
+"code": "SCO 12",
+"prefix": "SCO"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "SCO 13",
+"prefix": "SCO"
+},
+{
+"n": 14,
+"label": "Lewis Ferguson",
+"code": "SCO 14",
+"prefix": "SCO"
+},
+{
+"n": 15,
+"label": "Ryan Christie",
+"code": "SCO 15",
+"prefix": "SCO"
+},
+{
+"n": 16,
+"label": "Kenny McLean",
+"code": "SCO 16",
+"prefix": "SCO"
+},
+{
+"n": 17,
+"label": "John McGinn",
+"code": "SCO 17",
+"prefix": "SCO"
+},
+{
+"n": 18,
+"label": "Lyndon Dykes",
+"code": "SCO 18",
+"prefix": "SCO"
+},
+{
+"n": 19,
+"label": "Che Adams",
+"code": "SCO 19",
+"prefix": "SCO"
+},
+{
+"n": 20,
+"label": "Ben Gannon-Doak",
+"code": "SCO 20",
+"prefix": "SCO"
+}
+]
+},
+"D|Australia": {
+"slug": "australia",
+"prefix": "AUS",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "AUS 1",
+"prefix": "AUS"
+},
+{
+"n": 2,
+"label": "Mathew Ryan",
+"code": "AUS 2",
+"prefix": "AUS"
+},
+{
+"n": 3,
+"label": "Joe Gauci",
+"code": "AUS 3",
+"prefix": "AUS"
+},
+{
+"n": 4,
+"label": "Harry Souttar",
+"code": "AUS 4",
+"prefix": "AUS"
+},
+{
+"n": 5,
+"label": "Alessandro Circati",
+"code": "AUS 5",
+"prefix": "AUS"
+},
+{
+"n": 6,
+"label": "Jordan Bos",
+"code": "AUS 6",
+"prefix": "AUS"
+},
+{
+"n": 7,
+"label": "Aziz Behich",
+"code": "AUS 7",
+"prefix": "AUS"
+},
+{
+"n": 8,
+"label": "Cameron Burgess",
+"code": "AUS 8",
+"prefix": "AUS"
+},
+{
+"n": 9,
+"label": "Lewis Miller",
+"code": "AUS 9",
+"prefix": "AUS"
+},
+{
+"n": 10,
+"label": "Milos Degenek",
+"code": "AUS 10",
+"prefix": "AUS"
+},
+{
+"n": 11,
+"label": "Jackson Irvine",
+"code": "AUS 11",
+"prefix": "AUS"
+},
+{
+"n": 12,
+"label": "Riley McGree",
+"code": "AUS 12",
+"prefix": "AUS"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "AUS 13",
+"prefix": "AUS"
+},
+{
+"n": 14,
+"label": "Aiden O'Neill",
+"code": "AUS 14",
+"prefix": "AUS"
+},
+{
+"n": 15,
+"label": "Connor Metcalfe",
+"code": "AUS 15",
+"prefix": "AUS"
+},
+{
+"n": 16,
+"label": "Patrick Yazbek",
+"code": "AUS 16",
+"prefix": "AUS"
+},
+{
+"n": 17,
+"label": "Craig Goodwin",
+"code": "AUS 17",
+"prefix": "AUS"
+},
+{
+"n": 18,
+"label": "Kusini Vengi",
+"code": "AUS 18",
+"prefix": "AUS"
+},
+{
+"n": 19,
+"label": "Nestory Irankunda",
+"code": "AUS 19",
+"prefix": "AUS"
+},
+{
+"n": 20,
+"label": "Mohamed Touré",
+"code": "AUS 20",
+"prefix": "AUS"
+}
+]
+},
+"D|Paraguay": {
+"slug": "paraguay",
+"prefix": "PAR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "PAR 1",
+"prefix": "PAR"
+},
+{
+"n": 2,
+"label": "Roberto Fernandez",
+"code": "PAR 2",
+"prefix": "PAR"
+},
+{
+"n": 3,
+"label": "Orlando Gill",
+"code": "PAR 3",
+"prefix": "PAR"
+},
+{
+"n": 4,
+"label": "Gustavo Gomez",
+"code": "PAR 4",
+"prefix": "PAR"
+},
+{
+"n": 5,
+"label": "Fabián Balbuena",
+"code": "PAR 5",
+"prefix": "PAR"
+},
+{
+"n": 6,
+"label": "Juan José Cáceres",
+"code": "PAR 6",
+"prefix": "PAR"
+},
+{
+"n": 7,
+"label": "Omar Alderete",
+"code": "PAR 7",
+"prefix": "PAR"
+},
+{
+"n": 8,
+"label": "Junior Alonso",
+"code": "PAR 8",
+"prefix": "PAR"
+},
+{
+"n": 9,
+"label": "Mathías Villasanti",
+"code": "PAR 9",
+"prefix": "PAR"
+},
+{
+"n": 10,
+"label": "Diego Gomez",
+"code": "PAR 10",
+"prefix": "PAR"
+},
+{
+"n": 11,
+"label": "Damián Bobadilla",
+"code": "PAR 11",
+"prefix": "PAR"
+},
+{
+"n": 12,
+"label": "Andres Cubas",
+"code": "PAR 12",
+"prefix": "PAR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "PAR 13",
+"prefix": "PAR"
+},
+{
+"n": 14,
+"label": "Matias Galarza Fonda",
+"code": "PAR 14",
+"prefix": "PAR"
+},
+{
+"n": 15,
+"label": "Julio Enciso",
+"code": "PAR 15",
+"prefix": "PAR"
+},
+{
+"n": 16,
+"label": "Alejandro Romero Gamarra",
+"code": "PAR 16",
+"prefix": "PAR"
+},
+{
+"n": 17,
+"label": "Miguel Almirón",
+"code": "PAR 17",
+"prefix": "PAR"
+},
+{
+"n": 18,
+"label": "Ramon Sosa",
+"code": "PAR 18",
+"prefix": "PAR"
+},
+{
+"n": 19,
+"label": "Angel Romero",
+"code": "PAR 19",
+"prefix": "PAR"
+},
+{
+"n": 20,
+"label": "Antonio Sanabria",
+"code": "PAR 20",
+"prefix": "PAR"
+}
+]
+},
+"D|Turquía": {
+"slug": "turkey",
+"prefix": "TUR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "TUR 1",
+"prefix": "TUR"
+},
+{
+"n": 2,
+"label": "Ugurcan Cakir",
+"code": "TUR 2",
+"prefix": "TUR"
+},
+{
+"n": 3,
+"label": "Mert Muldur",
+"code": "TUR 3",
+"prefix": "TUR"
+},
+{
+"n": 4,
+"label": "Zeki Celik",
+"code": "TUR 4",
+"prefix": "TUR"
+},
+{
+"n": 5,
+"label": "Abdulkerim Bardakci",
+"code": "TUR 5",
+"prefix": "TUR"
+},
+{
+"n": 6,
+"label": "Caglar Soyuncu",
+"code": "TUR 6",
+"prefix": "TUR"
+},
+{
+"n": 7,
+"label": "Merih Demiral",
+"code": "TUR 7",
+"prefix": "TUR"
+},
+{
+"n": 8,
+"label": "Ferdi Kadioglu",
+"code": "TUR 8",
+"prefix": "TUR"
+},
+{
+"n": 9,
+"label": "Kaan Ayhan",
+"code": "TUR 9",
+"prefix": "TUR"
+},
+{
+"n": 10,
+"label": "Ismail Yuksek",
+"code": "TUR 10",
+"prefix": "TUR"
+},
+{
+"n": 11,
+"label": "Hakan Calhanoglu",
+"code": "TUR 11",
+"prefix": "TUR"
+},
+{
+"n": 12,
+"label": "Orkun Kokcu",
+"code": "TUR 12",
+"prefix": "TUR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "TUR 13",
+"prefix": "TUR"
+},
+{
+"n": 14,
+"label": "Arda Guler",
+"code": "TUR 14",
+"prefix": "TUR"
+},
+{
+"n": 15,
+"label": "Irfan Can Kahveci",
+"code": "TUR 15",
+"prefix": "TUR"
+},
+{
+"n": 16,
+"label": "Yunus Akgun",
+"code": "TUR 16",
+"prefix": "TUR"
+},
+{
+"n": 17,
+"label": "Can Uzun",
+"code": "TUR 17",
+"prefix": "TUR"
+},
+{
+"n": 18,
+"label": "Baris Alper Yilmaz",
+"code": "TUR 18",
+"prefix": "TUR"
+},
+{
+"n": 19,
+"label": "Kerem Akturkoglu",
+"code": "TUR 19",
+"prefix": "TUR"
+},
+{
+"n": 20,
+"label": "Kenan Yildiz",
+"code": "TUR 20",
+"prefix": "TUR"
+}
+]
+},
+"D|Estados Unidos": {
+"slug": "united-states",
+"prefix": "USA",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "USA 1",
+"prefix": "USA"
+},
+{
+"n": 2,
+"label": "Math Freese",
+"code": "USA 2",
+"prefix": "USA"
+},
+{
+"n": 3,
+"label": "Chris Richards",
+"code": "USA 3",
+"prefix": "USA"
+},
+{
+"n": 4,
+"label": "Tim Ream",
+"code": "USA 4",
+"prefix": "USA"
+},
+{
+"n": 5,
+"label": "Mark McKenzie",
+"code": "USA 5",
+"prefix": "USA"
+},
+{
+"n": 6,
+"label": "Alex Freeman",
+"code": "USA 6",
+"prefix": "USA"
+},
+{
+"n": 7,
+"label": "Antonee Robinson",
+"code": "USA 7",
+"prefix": "USA"
+},
+{
+"n": 8,
+"label": "Tyler Adams",
+"code": "USA 8",
+"prefix": "USA"
+},
+{
+"n": 9,
+"label": "Tanner Tessmann",
+"code": "USA 9",
+"prefix": "USA"
+},
+{
+"n": 10,
+"label": "Weston McKenny",
+"code": "USA 10",
+"prefix": "USA"
+},
+{
+"n": 11,
+"label": "Christian Roldan",
+"code": "USA 11",
+"prefix": "USA"
+},
+{
+"n": 12,
+"label": "Timothy Weah",
+"code": "USA 12",
+"prefix": "USA"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "USA 13",
+"prefix": "USA"
+},
+{
+"n": 14,
+"label": "Diego Luna",
+"code": "USA 14",
+"prefix": "USA"
+},
+{
+"n": 15,
+"label": "Malik Tillman",
+"code": "USA 15",
+"prefix": "USA"
+},
+{
+"n": 16,
+"label": "Christian Pulisic",
+"code": "USA 16",
+"prefix": "USA"
+},
+{
+"n": 17,
+"label": "Brenden Aaronson",
+"code": "USA 17",
+"prefix": "USA"
+},
+{
+"n": 18,
+"label": "Ricardo Pepi",
+"code": "USA 18",
+"prefix": "USA"
+},
+{
+"n": 19,
+"label": "Haji Wright",
+"code": "USA 19",
+"prefix": "USA"
+},
+{
+"n": 20,
+"label": "Folarin Balogun",
+"code": "USA 20",
+"prefix": "USA"
+}
+]
+},
+"E|Curazao": {
+"slug": "curacao",
+"prefix": "CUW",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "CUW 1",
+"prefix": "CUW"
+},
+{
+"n": 2,
+"label": "Eloy Room",
+"code": "CUW 2",
+"prefix": "CUW"
+},
+{
+"n": 3,
+"label": "Armando Obispo",
+"code": "CUW 3",
+"prefix": "CUW"
+},
+{
+"n": 4,
+"label": "Sherel Floranus",
+"code": "CUW 4",
+"prefix": "CUW"
+},
+{
+"n": 5,
+"label": "Jurien Gaari",
+"code": "CUW 5",
+"prefix": "CUW"
+},
+{
+"n": 6,
+"label": "Joshua Brenet",
+"code": "CUW 6",
+"prefix": "CUW"
+},
+{
+"n": 7,
+"label": "Roshon Van Eijma",
+"code": "CUW 7",
+"prefix": "CUW"
+},
+{
+"n": 8,
+"label": "Shurandy Sambo",
+"code": "CUW 8",
+"prefix": "CUW"
+},
+{
+"n": 9,
+"label": "Livano Comenencia",
+"code": "CUW 9",
+"prefix": "CUW"
+},
+{
+"n": 10,
+"label": "Godfried Roemeratoe",
+"code": "CUW 10",
+"prefix": "CUW"
+},
+{
+"n": 11,
+"label": "Juninho Bacuna",
+"code": "CUW 11",
+"prefix": "CUW"
+},
+{
+"n": 12,
+"label": "Leandro Bacuna",
+"code": "CUW 12",
+"prefix": "CUW"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "CUW 13",
+"prefix": "CUW"
+},
+{
+"n": 14,
+"label": "Tahith Chong",
+"code": "CUW 14",
+"prefix": "CUW"
+},
+{
+"n": 15,
+"label": "Kenji Gorre",
+"code": "CUW 15",
+"prefix": "CUW"
+},
+{
+"n": 16,
+"label": "Jearl Margaritha",
+"code": "CUW 16",
+"prefix": "CUW"
+},
+{
+"n": 17,
+"label": "Jurgen Locadia",
+"code": "CUW 17",
+"prefix": "CUW"
+},
+{
+"n": 18,
+"label": "Jeremy Antonisse",
+"code": "CUW 18",
+"prefix": "CUW"
+},
+{
+"n": 19,
+"label": "Gervane Kastaneer",
+"code": "CUW 19",
+"prefix": "CUW"
+},
+{
+"n": 20,
+"label": "Sontje Hansen",
+"code": "CUW 20",
+"prefix": "CUW"
+}
+]
+},
+"E|Ecuador": {
+"slug": "ecuador",
+"prefix": "ECU",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "ECU 1",
+"prefix": "ECU"
+},
+{
+"n": 2,
+"label": "Hernán Galíndez",
+"code": "ECU 2",
+"prefix": "ECU"
+},
+{
+"n": 3,
+"label": "Gonzalo Valle",
+"code": "ECU 3",
+"prefix": "ECU"
+},
+{
+"n": 4,
+"label": "Piero Hincapié",
+"code": "ECU 4",
+"prefix": "ECU"
+},
+{
+"n": 5,
+"label": "Pervis Estupiñán",
+"code": "ECU 5",
+"prefix": "ECU"
+},
+{
+"n": 6,
+"label": "Willian Pacho",
+"code": "ECU 6",
+"prefix": "ECU"
+},
+{
+"n": 7,
+"label": "Ángelo Preciado",
+"code": "ECU 7",
+"prefix": "ECU"
+},
+{
+"n": 8,
+"label": "Joel Ordóñez",
+"code": "ECU 8",
+"prefix": "ECU"
+},
+{
+"n": 9,
+"label": "Moises Caicedo",
+"code": "ECU 9",
+"prefix": "ECU"
+},
+{
+"n": 10,
+"label": "Alan Franco",
+"code": "ECU 10",
+"prefix": "ECU"
+},
+{
+"n": 11,
+"label": "Kendry Paez",
+"code": "ECU 11",
+"prefix": "ECU"
+},
+{
+"n": 12,
+"label": "Pedro Vite",
+"code": "ECU 12",
+"prefix": "ECU"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "ECU 13",
+"prefix": "ECU"
+},
+{
+"n": 14,
+"label": "John Veboah",
+"code": "ECU 14",
+"prefix": "ECU"
+},
+{
+"n": 15,
+"label": "Leonardo Campana",
+"code": "ECU 15",
+"prefix": "ECU"
+},
+{
+"n": 16,
+"label": "Gonzalo Plata",
+"code": "ECU 16",
+"prefix": "ECU"
+},
+{
+"n": 17,
+"label": "Nilson Angulo",
+"code": "ECU 17",
+"prefix": "ECU"
+},
+{
+"n": 18,
+"label": "Alan Minda",
+"code": "ECU 18",
+"prefix": "ECU"
+},
+{
+"n": 19,
+"label": "Kevin Rodriguez",
+"code": "ECU 19",
+"prefix": "ECU"
+},
+{
+"n": 20,
+"label": "Enner Valencia",
+"code": "ECU 20",
+"prefix": "ECU"
+}
+]
+},
+"E|Alemania": {
+"slug": "germany",
+"prefix": "GER",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "GER 1",
+"prefix": "GER"
+},
+{
+"n": 2,
+"label": "Marc-André ter Stegen",
+"code": "GER 2",
+"prefix": "GER"
+},
+{
+"n": 3,
+"label": "Jonathan Tah",
+"code": "GER 3",
+"prefix": "GER"
+},
+{
+"n": 4,
+"label": "David Raum",
+"code": "GER 4",
+"prefix": "GER"
+},
+{
+"n": 5,
+"label": "Nico Schlotterbeck",
+"code": "GER 5",
+"prefix": "GER"
+},
+{
+"n": 6,
+"label": "Antonio Rüdiger",
+"code": "GER 6",
+"prefix": "GER"
+},
+{
+"n": 7,
+"label": "Waldemar Anton",
+"code": "GER 7",
+"prefix": "GER"
+},
+{
+"n": 8,
+"label": "Ridle Baku",
+"code": "GER 8",
+"prefix": "GER"
+},
+{
+"n": 9,
+"label": "Maximilian Mittelstadt",
+"code": "GER 9",
+"prefix": "GER"
+},
+{
+"n": 10,
+"label": "Joshua Kimmich",
+"code": "GER 10",
+"prefix": "GER"
+},
+{
+"n": 11,
+"label": "Florian Wirtz",
+"code": "GER 11",
+"prefix": "GER"
+},
+{
+"n": 12,
+"label": "Felix Nmecha",
+"code": "GER 12",
+"prefix": "GER"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "GER 13",
+"prefix": "GER"
+},
+{
+"n": 14,
+"label": "Leon Goretzka",
+"code": "GER 14",
+"prefix": "GER"
+},
+{
+"n": 15,
+"label": "Jamal Musiala",
+"code": "GER 15",
+"prefix": "GER"
+},
+{
+"n": 16,
+"label": "Serge Gnabry",
+"code": "GER 16",
+"prefix": "GER"
+},
+{
+"n": 17,
+"label": "Kai Havertz",
+"code": "GER 17",
+"prefix": "GER"
+},
+{
+"n": 18,
+"label": "Leroy Sane",
+"code": "GER 18",
+"prefix": "GER"
+},
+{
+"n": 19,
+"label": "Karim Adeyemi",
+"code": "GER 19",
+"prefix": "GER"
+},
+{
+"n": 20,
+"label": "Nick Woltemade",
+"code": "GER 20",
+"prefix": "GER"
+}
+]
+},
+"E|Costa de Marfil": {
+"slug": "cote-divoire",
+"prefix": "CIV",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "CIV 1",
+"prefix": "CIV"
+},
+{
+"n": 2,
+"label": "Yahia Fofana",
+"code": "CIV 2",
+"prefix": "CIV"
+},
+{
+"n": 3,
+"label": "Ghislain Konan",
+"code": "CIV 3",
+"prefix": "CIV"
+},
+{
+"n": 4,
+"label": "Wilfried Singo",
+"code": "CIV 4",
+"prefix": "CIV"
+},
+{
+"n": 5,
+"label": "Odilon Kossounou",
+"code": "CIV 5",
+"prefix": "CIV"
+},
+{
+"n": 6,
+"label": "Evan Ndicka",
+"code": "CIV 6",
+"prefix": "CIV"
+},
+{
+"n": 7,
+"label": "Willy Boly",
+"code": "CIV 7",
+"prefix": "CIV"
+},
+{
+"n": 8,
+"label": "Emmanuel Agbadou",
+"code": "CIV 8",
+"prefix": "CIV"
+},
+{
+"n": 9,
+"label": "Ousmane Diomande",
+"code": "CIV 9",
+"prefix": "CIV"
+},
+{
+"n": 10,
+"label": "Franck Kessie",
+"code": "CIV 10",
+"prefix": "CIV"
+},
+{
+"n": 11,
+"label": "Seko Fofana",
+"code": "CIV 11",
+"prefix": "CIV"
+},
+{
+"n": 12,
+"label": "Ibrahim Sangare",
+"code": "CIV 12",
+"prefix": "CIV"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "CIV 13",
+"prefix": "CIV"
+},
+{
+"n": 14,
+"label": "Jean-Philippe Gbamin",
+"code": "CIV 14",
+"prefix": "CIV"
+},
+{
+"n": 15,
+"label": "Amad Diallo",
+"code": "CIV 15",
+"prefix": "CIV"
+},
+{
+"n": 16,
+"label": "Sébastien Haller",
+"code": "CIV 16",
+"prefix": "CIV"
+},
+{
+"n": 17,
+"label": "Simon Adingra",
+"code": "CIV 17",
+"prefix": "CIV"
+},
+{
+"n": 18,
+"label": "Yan Diomande",
+"code": "CIV 18",
+"prefix": "CIV"
+},
+{
+"n": 19,
+"label": "Evann Guessand",
+"code": "CIV 19",
+"prefix": "CIV"
+},
+{
+"n": 20,
+"label": "Oumar Diakite",
+"code": "CIV 20",
+"prefix": "CIV"
+}
+]
+},
+"F|Japón": {
+"slug": "japan",
+"prefix": "JPN",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "JPN 1",
+"prefix": "JPN"
+},
+{
+"n": 2,
+"label": "Zion Suzuki",
+"code": "JPN 2",
+"prefix": "JPN"
+},
+{
+"n": 3,
+"label": "Henry Heroki Mochizuki",
+"code": "JPN 3",
+"prefix": "JPN"
+},
+{
+"n": 4,
+"label": "Ayumu Seko",
+"code": "JPN 4",
+"prefix": "JPN"
+},
+{
+"n": 5,
+"label": "Junnosuke Suzuki",
+"code": "JPN 5",
+"prefix": "JPN"
+},
+{
+"n": 6,
+"label": "Shogo Taniguchi",
+"code": "JPN 6",
+"prefix": "JPN"
+},
+{
+"n": 7,
+"label": "Tsuyoshi Watanabe",
+"code": "JPN 7",
+"prefix": "JPN"
+},
+{
+"n": 8,
+"label": "Kaishu Sano",
+"code": "JPN 8",
+"prefix": "JPN"
+},
+{
+"n": 9,
+"label": "Yuki Soma",
+"code": "JPN 9",
+"prefix": "JPN"
+},
+{
+"n": 10,
+"label": "Ao Tanaka",
+"code": "JPN 10",
+"prefix": "JPN"
+},
+{
+"n": 11,
+"label": "Daichi Kamada",
+"code": "JPN 11",
+"prefix": "JPN"
+},
+{
+"n": 12,
+"label": "Takefusa Kubo",
+"code": "JPN 12",
+"prefix": "JPN"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "JPN 13",
+"prefix": "JPN"
+},
+{
+"n": 14,
+"label": "Ritsu Doan",
+"code": "JPN 14",
+"prefix": "JPN"
+},
+{
+"n": 15,
+"label": "Keito Nakamura",
+"code": "JPN 15",
+"prefix": "JPN"
+},
+{
+"n": 16,
+"label": "Takumi Minamino",
+"code": "JPN 16",
+"prefix": "JPN"
+},
+{
+"n": 17,
+"label": "Shuto Machino",
+"code": "JPN 17",
+"prefix": "JPN"
+},
+{
+"n": 18,
+"label": "Junya Ito",
+"code": "JPN 18",
+"prefix": "JPN"
+},
+{
+"n": 19,
+"label": "Koki Ogawa",
+"code": "JPN 19",
+"prefix": "JPN"
+},
+{
+"n": 20,
+"label": "Ayase Ueda",
+"code": "JPN 20",
+"prefix": "JPN"
+}
+]
+},
+"F|Países Bajos": {
+"slug": "netherlands",
+"prefix": "NED",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "NED 1",
+"prefix": "NED"
+},
+{
+"n": 2,
+"label": "Bart Verbruggen",
+"code": "NED 2",
+"prefix": "NED"
+},
+{
+"n": 3,
+"label": "Virgil van Dijk",
+"code": "NED 3",
+"prefix": "NED"
+},
+{
+"n": 4,
+"label": "Micky van de Ven",
+"code": "NED 4",
+"prefix": "NED"
+},
+{
+"n": 5,
+"label": "Jurrien Timber",
+"code": "NED 5",
+"prefix": "NED"
+},
+{
+"n": 6,
+"label": "Denzel Dumfries",
+"code": "NED 6",
+"prefix": "NED"
+},
+{
+"n": 7,
+"label": "Nathan Aké",
+"code": "NED 7",
+"prefix": "NED"
+},
+{
+"n": 8,
+"label": "Jeremie Frimpong",
+"code": "NED 8",
+"prefix": "NED"
+},
+{
+"n": 9,
+"label": "Jan Paul van Hecke",
+"code": "NED 9",
+"prefix": "NED"
+},
+{
+"n": 10,
+"label": "Tijjani Reijnders",
+"code": "NED 10",
+"prefix": "NED"
+},
+{
+"n": 11,
+"label": "Ryan Gravenberch",
+"code": "NED 11",
+"prefix": "NED"
+},
+{
+"n": 12,
+"label": "Teun Koopmeiners",
+"code": "NED 12",
+"prefix": "NED"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "NED 13",
+"prefix": "NED"
+},
+{
+"n": 14,
+"label": "Frenkie de Jong",
+"code": "NED 14",
+"prefix": "NED"
+},
+{
+"n": 15,
+"label": "Xavi Simons",
+"code": "NED 15",
+"prefix": "NED"
+},
+{
+"n": 16,
+"label": "Justin Kluivert",
+"code": "NED 16",
+"prefix": "NED"
+},
+{
+"n": 17,
+"label": "Memphis Depay",
+"code": "NED 17",
+"prefix": "NED"
+},
+{
+"n": 18,
+"label": "Donyell Malen",
+"code": "NED 18",
+"prefix": "NED"
+},
+{
+"n": 19,
+"label": "Wout Weghorst",
+"code": "NED 19",
+"prefix": "NED"
+},
+{
+"n": 20,
+"label": "Cody Gakpo",
+"code": "NED 20",
+"prefix": "NED"
+}
+]
+},
+"F|Suecia": {
+"slug": "sweden",
+"prefix": "SWE",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "SWE 1",
+"prefix": "SWE"
+},
+{
+"n": 2,
+"label": "Victor Johansson",
+"code": "SWE 2",
+"prefix": "SWE"
+},
+{
+"n": 3,
+"label": "Isak Hien",
+"code": "SWE 3",
+"prefix": "SWE"
+},
+{
+"n": 4,
+"label": "Gabriel Gudmundsson",
+"code": "SWE 4",
+"prefix": "SWE"
+},
+{
+"n": 5,
+"label": "Emil Holm",
+"code": "SWE 5",
+"prefix": "SWE"
+},
+{
+"n": 6,
+"label": "Victor Nilsson Lindelöf",
+"code": "SWE 6",
+"prefix": "SWE"
+},
+{
+"n": 7,
+"label": "Gustaf Lagerbielke",
+"code": "SWE 7",
+"prefix": "SWE"
+},
+{
+"n": 8,
+"label": "Lucas Bergvall",
+"code": "SWE 8",
+"prefix": "SWE"
+},
+{
+"n": 9,
+"label": "Hugo Larsson",
+"code": "SWE 9",
+"prefix": "SWE"
+},
+{
+"n": 10,
+"label": "Jesper Karlström",
+"code": "SWE 10",
+"prefix": "SWE"
+},
+{
+"n": 11,
+"label": "Yasin Ayari",
+"code": "SWE 11",
+"prefix": "SWE"
+},
+{
+"n": 12,
+"label": "Mattias Svanberg",
+"code": "SWE 12",
+"prefix": "SWE"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "SWE 13",
+"prefix": "SWE"
+},
+{
+"n": 14,
+"label": "Daniel Svensson",
+"code": "SWE 14",
+"prefix": "SWE"
+},
+{
+"n": 15,
+"label": "Ken Sema",
+"code": "SWE 15",
+"prefix": "SWE"
+},
+{
+"n": 16,
+"label": "Roony Bardghji",
+"code": "SWE 16",
+"prefix": "SWE"
+},
+{
+"n": 17,
+"label": "Dejan Kulusevski",
+"code": "SWE 17",
+"prefix": "SWE"
+},
+{
+"n": 18,
+"label": "Anthony Elanga",
+"code": "SWE 18",
+"prefix": "SWE"
+},
+{
+"n": 19,
+"label": "Alexander Isak",
+"code": "SWE 19",
+"prefix": "SWE"
+},
+{
+"n": 20,
+"label": "Viktor Gyökeres",
+"code": "SWE 20",
+"prefix": "SWE"
+}
+]
+},
+"F|Túnez": {
+"slug": "tunisia",
+"prefix": "TUN",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "TUN 1",
+"prefix": "TUN"
+},
+{
+"n": 2,
+"label": "Bechir Ben Said",
+"code": "TUN 2",
+"prefix": "TUN"
+},
+{
+"n": 3,
+"label": "Aymen Dahmen",
+"code": "TUN 3",
+"prefix": "TUN"
+},
+{
+"n": 4,
+"label": "Yan Valery",
+"code": "TUN 4",
+"prefix": "TUN"
+},
+{
+"n": 5,
+"label": "Montassar Talbi",
+"code": "TUN 5",
+"prefix": "TUN"
+},
+{
+"n": 6,
+"label": "Yassine Meriah",
+"code": "TUN 6",
+"prefix": "TUN"
+},
+{
+"n": 7,
+"label": "Ali Abdi",
+"code": "TUN 7",
+"prefix": "TUN"
+},
+{
+"n": 8,
+"label": "Dylan Bronn",
+"code": "TUN 8",
+"prefix": "TUN"
+},
+{
+"n": 9,
+"label": "Ellyes Skhiri",
+"code": "TUN 9",
+"prefix": "TUN"
+},
+{
+"n": 10,
+"label": "Aissa Laidouni",
+"code": "TUN 10",
+"prefix": "TUN"
+},
+{
+"n": 11,
+"label": "Ferjani Sassi",
+"code": "TUN 11",
+"prefix": "TUN"
+},
+{
+"n": 12,
+"label": "Mohamed Ali Ben Romdhane",
+"code": "TUN 12",
+"prefix": "TUN"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "TUN 13",
+"prefix": "TUN"
+},
+{
+"n": 14,
+"label": "Hannibal Mejbri",
+"code": "TUN 14",
+"prefix": "TUN"
+},
+{
+"n": 15,
+"label": "Elias Achouri",
+"code": "TUN 15",
+"prefix": "TUN"
+},
+{
+"n": 16,
+"label": "Elias Saad",
+"code": "TUN 16",
+"prefix": "TUN"
+},
+{
+"n": 17,
+"label": "Hazem Mastouri",
+"code": "TUN 17",
+"prefix": "TUN"
+},
+{
+"n": 18,
+"label": "Ismael Gharbi",
+"code": "TUN 18",
+"prefix": "TUN"
+},
+{
+"n": 19,
+"label": "Sayfallah Ltaief",
+"code": "TUN 19",
+"prefix": "TUN"
+},
+{
+"n": 20,
+"label": "Naim Sliti",
+"code": "TUN 20",
+"prefix": "TUN"
+}
+]
+},
+"G|Bélgica": {
+"slug": "belgium",
+"prefix": "BEL",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "BEL 1",
+"prefix": "BEL"
+},
+{
+"n": 2,
+"label": "Thibaut Courtois",
+"code": "BEL 2",
+"prefix": "BEL"
+},
+{
+"n": 3,
+"label": "Arthur Theate",
+"code": "BEL 3",
+"prefix": "BEL"
+},
+{
+"n": 4,
+"label": "Timothy Castagne",
+"code": "BEL 4",
+"prefix": "BEL"
+},
+{
+"n": 5,
+"label": "Zeno Debast",
+"code": "BEL 5",
+"prefix": "BEL"
+},
+{
+"n": 6,
+"label": "Brandon Mechele",
+"code": "BEL 6",
+"prefix": "BEL"
+},
+{
+"n": 7,
+"label": "Maxim De Cuyper",
+"code": "BEL 7",
+"prefix": "BEL"
+},
+{
+"n": 8,
+"label": "Thomas Meunier",
+"code": "BEL 8",
+"prefix": "BEL"
+},
+{
+"n": 9,
+"label": "Youri Tielemans",
+"code": "BEL 9",
+"prefix": "BEL"
+},
+{
+"n": 10,
+"label": "Amadou Onana",
+"code": "BEL 10",
+"prefix": "BEL"
+},
+{
+"n": 11,
+"label": "Nicolas Raskin",
+"code": "BEL 11",
+"prefix": "BEL"
+},
+{
+"n": 12,
+"label": "Alexis Saelemaekers",
+"code": "BEL 12",
+"prefix": "BEL"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "BEL 13",
+"prefix": "BEL"
+},
+{
+"n": 14,
+"label": "Hans Vanaken",
+"code": "BEL 14",
+"prefix": "BEL"
+},
+{
+"n": 15,
+"label": "Kevin De Bruyne",
+"code": "BEL 15",
+"prefix": "BEL"
+},
+{
+"n": 16,
+"label": "Jérémy Doku",
+"code": "BEL 16",
+"prefix": "BEL"
+},
+{
+"n": 17,
+"label": "Charles De Ketelaere",
+"code": "BEL 17",
+"prefix": "BEL"
+},
+{
+"n": 18,
+"label": "Leandro Trossard",
+"code": "BEL 18",
+"prefix": "BEL"
+},
+{
+"n": 19,
+"label": "Loïs Openda",
+"code": "BEL 19",
+"prefix": "BEL"
+},
+{
+"n": 20,
+"label": "Romelu Lukaku",
+"code": "BEL 20",
+"prefix": "BEL"
+}
+]
+},
+"G|Egipto": {
+"slug": "egypt",
+"prefix": "EGY",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "EGY 1",
+"prefix": "EGY"
+},
+{
+"n": 2,
+"label": "Mohamed El Shenawy",
+"code": "EGY 2",
+"prefix": "EGY"
+},
+{
+"n": 3,
+"label": "Mohamed Hany",
+"code": "EGY 3",
+"prefix": "EGY"
+},
+{
+"n": 4,
+"label": "Mohamed Hamdy",
+"code": "EGY 4",
+"prefix": "EGY"
+},
+{
+"n": 5,
+"label": "Yasser Ibrahim",
+"code": "EGY 5",
+"prefix": "EGY"
+},
+{
+"n": 6,
+"label": "Khaled Sobhi",
+"code": "EGY 6",
+"prefix": "EGY"
+},
+{
+"n": 7,
+"label": "Ramy Rabia",
+"code": "EGY 7",
+"prefix": "EGY"
+},
+{
+"n": 8,
+"label": "Hossam Abdelmaguid",
+"code": "EGY 8",
+"prefix": "EGY"
+},
+{
+"n": 9,
+"label": "Ahmed Fatouh",
+"code": "EGY 9",
+"prefix": "EGY"
+},
+{
+"n": 10,
+"label": "Marwan Attia",
+"code": "EGY 10",
+"prefix": "EGY"
+},
+{
+"n": 11,
+"label": "Zizo",
+"code": "EGY 11",
+"prefix": "EGY"
+},
+{
+"n": 12,
+"label": "Hamdy Fathy",
+"code": "EGY 12",
+"prefix": "EGY"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "EGY 13",
+"prefix": "EGY"
+},
+{
+"n": 14,
+"label": "Mohamed Lasheen",
+"code": "EGY 14",
+"prefix": "EGY"
+},
+{
+"n": 15,
+"label": "Emam Ashour",
+"code": "EGY 15",
+"prefix": "EGY"
+},
+{
+"n": 16,
+"label": "Osama Faisal",
+"code": "EGY 16",
+"prefix": "EGY"
+},
+{
+"n": 17,
+"label": "Mohamed Salah",
+"code": "EGY 17",
+"prefix": "EGY"
+},
+{
+"n": 18,
+"label": "Mostafa Mohamed",
+"code": "EGY 18",
+"prefix": "EGY"
+},
+{
+"n": 19,
+"label": "Trezeguet",
+"code": "EGY 19",
+"prefix": "EGY"
+},
+{
+"n": 20,
+"label": "Omar Marmoush",
+"code": "EGY 20",
+"prefix": "EGY"
+}
+]
+},
+"G|Irán": {
+"slug": "iran",
+"prefix": "IRN",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "IRN 1",
+"prefix": "IRN"
+},
+{
+"n": 2,
+"label": "Alireza Beiranvand",
+"code": "IRN 2",
+"prefix": "IRN"
+},
+{
+"n": 3,
+"label": "Morteza Pouraliganji",
+"code": "IRN 3",
+"prefix": "IRN"
+},
+{
+"n": 4,
+"label": "Ehsan Hajsafi",
+"code": "IRN 4",
+"prefix": "IRN"
+},
+{
+"n": 5,
+"label": "Milad Mohammadi",
+"code": "IRN 5",
+"prefix": "IRN"
+},
+{
+"n": 6,
+"label": "Shojae Khalilzadeh",
+"code": "IRN 6",
+"prefix": "IRN"
+},
+{
+"n": 7,
+"label": "Ramin Rezaeian",
+"code": "IRN 7",
+"prefix": "IRN"
+},
+{
+"n": 8,
+"label": "Hossein Kanaani",
+"code": "IRN 8",
+"prefix": "IRN"
+},
+{
+"n": 9,
+"label": "Sadegh Moharrami",
+"code": "IRN 9",
+"prefix": "IRN"
+},
+{
+"n": 10,
+"label": "Saleh Hardani",
+"code": "IRN 10",
+"prefix": "IRN"
+},
+{
+"n": 11,
+"label": "Saeed Ezatolahi",
+"code": "IRN 11",
+"prefix": "IRN"
+},
+{
+"n": 12,
+"label": "Saman Ghoddos",
+"code": "IRN 12",
+"prefix": "IRN"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "IRN 13",
+"prefix": "IRN"
+},
+{
+"n": 14,
+"label": "Omid Noorafkan",
+"code": "IRN 14",
+"prefix": "IRN"
+},
+{
+"n": 15,
+"label": "Roozbeh Cheshmi",
+"code": "IRN 15",
+"prefix": "IRN"
+},
+{
+"n": 16,
+"label": "Mohammad Mohebi",
+"code": "IRN 16",
+"prefix": "IRN"
+},
+{
+"n": 17,
+"label": "Sardar Azmoun",
+"code": "IRN 17",
+"prefix": "IRN"
+},
+{
+"n": 18,
+"label": "Mehdi Taremi",
+"code": "IRN 18",
+"prefix": "IRN"
+},
+{
+"n": 19,
+"label": "Alireza Jahanbakhsh",
+"code": "IRN 19",
+"prefix": "IRN"
+},
+{
+"n": 20,
+"label": "Ali Gholizadeh",
+"code": "IRN 20",
+"prefix": "IRN"
+}
+]
+},
+"G|Nueva Zelanda": {
+"slug": "new-zealand",
+"prefix": "NZL",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "NZL 1",
+"prefix": "NZL"
+},
+{
+"n": 2,
+"label": "Max Crocombe Payne",
+"code": "NZL 2",
+"prefix": "NZL"
+},
+{
+"n": 3,
+"label": "Alex Paulsen",
+"code": "NZL 3",
+"prefix": "NZL"
+},
+{
+"n": 4,
+"label": "Michael Boxall",
+"code": "NZL 4",
+"prefix": "NZL"
+},
+{
+"n": 5,
+"label": "Liberato Cacace",
+"code": "NZL 5",
+"prefix": "NZL"
+},
+{
+"n": 6,
+"label": "Tim Payne",
+"code": "NZL 6",
+"prefix": "NZL"
+},
+{
+"n": 7,
+"label": "Tyler Bindon",
+"code": "NZL 7",
+"prefix": "NZL"
+},
+{
+"n": 8,
+"label": "Francis de Vries",
+"code": "NZL 8",
+"prefix": "NZL"
+},
+{
+"n": 9,
+"label": "Finn Surman",
+"code": "NZL 9",
+"prefix": "NZL"
+},
+{
+"n": 10,
+"label": "Joe Bell",
+"code": "NZL 10",
+"prefix": "NZL"
+},
+{
+"n": 11,
+"label": "Sarpreet Singh",
+"code": "NZL 11",
+"prefix": "NZL"
+},
+{
+"n": 12,
+"label": "Ryan Thomas",
+"code": "NZL 12",
+"prefix": "NZL"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "NZL 13",
+"prefix": "NZL"
+},
+{
+"n": 14,
+"label": "Matthew Garbett",
+"code": "NZL 14",
+"prefix": "NZL"
+},
+{
+"n": 15,
+"label": "Marko Stamenić",
+"code": "NZL 15",
+"prefix": "NZL"
+},
+{
+"n": 16,
+"label": "Ben Old",
+"code": "NZL 16",
+"prefix": "NZL"
+},
+{
+"n": 17,
+"label": "Chris Wood",
+"code": "NZL 17",
+"prefix": "NZL"
+},
+{
+"n": 18,
+"label": "Elijah Just",
+"code": "NZL 18",
+"prefix": "NZL"
+},
+{
+"n": 19,
+"label": "Callum McCowatt",
+"code": "NZL 19",
+"prefix": "NZL"
+},
+{
+"n": 20,
+"label": "Kosta Barbarouses",
+"code": "NZL 20",
+"prefix": "NZL"
+}
+]
+},
+"H|Cabo Verde": {
+"slug": "cape-verde",
+"prefix": "CPV",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "CPV 1",
+"prefix": "CPV"
+},
+{
+"n": 2,
+"label": "Vozinha",
+"code": "CPV 2",
+"prefix": "CPV"
+},
+{
+"n": 3,
+"label": "Logan Costa",
+"code": "CPV 3",
+"prefix": "CPV"
+},
+{
+"n": 4,
+"label": "Pico",
+"code": "CPV 4",
+"prefix": "CPV"
+},
+{
+"n": 5,
+"label": "Diney",
+"code": "CPV 5",
+"prefix": "CPV"
+},
+{
+"n": 6,
+"label": "Steven Moreira",
+"code": "CPV 6",
+"prefix": "CPV"
+},
+{
+"n": 7,
+"label": "Wagner Pina",
+"code": "CPV 7",
+"prefix": "CPV"
+},
+{
+"n": 8,
+"label": "Joao Paulo",
+"code": "CPV 8",
+"prefix": "CPV"
+},
+{
+"n": 9,
+"label": "Yannick Semedo",
+"code": "CPV 9",
+"prefix": "CPV"
+},
+{
+"n": 10,
+"label": "Kevin Pina",
+"code": "CPV 10",
+"prefix": "CPV"
+},
+{
+"n": 11,
+"label": "Patrick Andrade",
+"code": "CPV 11",
+"prefix": "CPV"
+},
+{
+"n": 12,
+"label": "Jamiro Monteiro",
+"code": "CPV 12",
+"prefix": "CPV"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "CPV 13",
+"prefix": "CPV"
+},
+{
+"n": 14,
+"label": "Deroy Duarte",
+"code": "CPV 14",
+"prefix": "CPV"
+},
+{
+"n": 15,
+"label": "Garry Rodrigues",
+"code": "CPV 15",
+"prefix": "CPV"
+},
+{
+"n": 16,
+"label": "Jovane Cabral",
+"code": "CPV 16",
+"prefix": "CPV"
+},
+{
+"n": 17,
+"label": "Ryan Mendes",
+"code": "CPV 17",
+"prefix": "CPV"
+},
+{
+"n": 18,
+"label": "Dailon Livramento",
+"code": "CPV 18",
+"prefix": "CPV"
+},
+{
+"n": 19,
+"label": "Willy Semedo",
+"code": "CPV 19",
+"prefix": "CPV"
+},
+{
+"n": 20,
+"label": "Bebe",
+"code": "CPV 20",
+"prefix": "CPV"
+}
+]
+},
+"H|Arabia Saudita": {
+"slug": "saudi-arabia",
+"prefix": "KSA",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "KSA 1",
+"prefix": "KSA"
+},
+{
+"n": 2,
+"label": "Nawaf Alaqidi",
+"code": "KSA 2",
+"prefix": "KSA"
+},
+{
+"n": 3,
+"label": "Abdulrahman Al-Sanbi",
+"code": "KSA 3",
+"prefix": "KSA"
+},
+{
+"n": 4,
+"label": "Saud Abdulhamid",
+"code": "KSA 4",
+"prefix": "KSA"
+},
+{
+"n": 5,
+"label": "Nawaf Bouwashl",
+"code": "KSA 5",
+"prefix": "KSA"
+},
+{
+"n": 6,
+"label": "Jihad Thakri",
+"code": "KSA 6",
+"prefix": "KSA"
+},
+{
+"n": 7,
+"label": "Moteb Al-Harbi",
+"code": "KSA 7",
+"prefix": "KSA"
+},
+{
+"n": 8,
+"label": "Hassan Altambakti",
+"code": "KSA 8",
+"prefix": "KSA"
+},
+{
+"n": 9,
+"label": "Musab Aljuwayr",
+"code": "KSA 9",
+"prefix": "KSA"
+},
+{
+"n": 10,
+"label": "Ziyad Aljohani",
+"code": "KSA 10",
+"prefix": "KSA"
+},
+{
+"n": 11,
+"label": "Abdullah Alkhaibari",
+"code": "KSA 11",
+"prefix": "KSA"
+},
+{
+"n": 12,
+"label": "Nasser Aldawsari",
+"code": "KSA 12",
+"prefix": "KSA"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "KSA 13",
+"prefix": "KSA"
+},
+{
+"n": 14,
+"label": "Saleh Abu Alshamat",
+"code": "KSA 14",
+"prefix": "KSA"
+},
+{
+"n": 15,
+"label": "Marwan Alsahafi",
+"code": "KSA 15",
+"prefix": "KSA"
+},
+{
+"n": 16,
+"label": "Salem Aldawsari",
+"code": "KSA 16",
+"prefix": "KSA"
+},
+{
+"n": 17,
+"label": "Abdulrahman Al-Aboud",
+"code": "KSA 17",
+"prefix": "KSA"
+},
+{
+"n": 18,
+"label": "Feras Akbrikan",
+"code": "KSA 18",
+"prefix": "KSA"
+},
+{
+"n": 19,
+"label": "Saleh Alshehri",
+"code": "KSA 19",
+"prefix": "KSA"
+},
+{
+"n": 20,
+"label": "Abdullah Al-Hamdan",
+"code": "KSA 20",
+"prefix": "KSA"
+}
+]
+},
+"H|España": {
+"slug": "spain",
+"prefix": "ESP",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "ESP 1",
+"prefix": "ESP"
+},
+{
+"n": 2,
+"label": "Unai Simon",
+"code": "ESP 2",
+"prefix": "ESP"
+},
+{
+"n": 3,
+"label": "Robin Le Normand",
+"code": "ESP 3",
+"prefix": "ESP"
+},
+{
+"n": 4,
+"label": "Aymeric Laporte",
+"code": "ESP 4",
+"prefix": "ESP"
+},
+{
+"n": 5,
+"label": "Dean Huijsen",
+"code": "ESP 5",
+"prefix": "ESP"
+},
+{
+"n": 6,
+"label": "Pedro Porro",
+"code": "ESP 6",
+"prefix": "ESP"
+},
+{
+"n": 7,
+"label": "Dani Carvajal",
+"code": "ESP 7",
+"prefix": "ESP"
+},
+{
+"n": 8,
+"label": "Marc Cucurella",
+"code": "ESP 8",
+"prefix": "ESP"
+},
+{
+"n": 9,
+"label": "Martín Zubimendi",
+"code": "ESP 9",
+"prefix": "ESP"
+},
+{
+"n": 10,
+"label": "Rodri",
+"code": "ESP 10",
+"prefix": "ESP"
+},
+{
+"n": 11,
+"label": "Pedri",
+"code": "ESP 11",
+"prefix": "ESP"
+},
+{
+"n": 12,
+"label": "Fabian Ruiz",
+"code": "ESP 12",
+"prefix": "ESP"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "ESP 13",
+"prefix": "ESP"
+},
+{
+"n": 14,
+"label": "Mikel Merino",
+"code": "ESP 14",
+"prefix": "ESP"
+},
+{
+"n": 15,
+"label": "Lamine Yamal",
+"code": "ESP 15",
+"prefix": "ESP"
+},
+{
+"n": 16,
+"label": "Dani Olmo",
+"code": "ESP 16",
+"prefix": "ESP"
+},
+{
+"n": 17,
+"label": "Nico Williams",
+"code": "ESP 17",
+"prefix": "ESP"
+},
+{
+"n": 18,
+"label": "Ferran Torres",
+"code": "ESP 18",
+"prefix": "ESP"
+},
+{
+"n": 19,
+"label": "Álvaro Morata",
+"code": "ESP 19",
+"prefix": "ESP"
+},
+{
+"n": 20,
+"label": "Mikel Oyarzabal",
+"code": "ESP 20",
+"prefix": "ESP"
+}
+]
+},
+"H|Uruguay": {
+"slug": "uruguay",
+"prefix": "URU",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "URU 1",
+"prefix": "URU"
+},
+{
+"n": 2,
+"label": "Sergio Rochet",
+"code": "URU 2",
+"prefix": "URU"
+},
+{
+"n": 3,
+"label": "Santiago Mele",
+"code": "URU 3",
+"prefix": "URU"
+},
+{
+"n": 4,
+"label": "Ronald Araujo",
+"code": "URU 4",
+"prefix": "URU"
+},
+{
+"n": 5,
+"label": "José María Giménez",
+"code": "URU 5",
+"prefix": "URU"
+},
+{
+"n": 6,
+"label": "Sebastian Caceres",
+"code": "URU 6",
+"prefix": "URU"
+},
+{
+"n": 7,
+"label": "Mathias Olivera",
+"code": "URU 7",
+"prefix": "URU"
+},
+{
+"n": 8,
+"label": "Guillermo Varela",
+"code": "URU 8",
+"prefix": "URU"
+},
+{
+"n": 9,
+"label": "Nahitan Nandez",
+"code": "URU 9",
+"prefix": "URU"
+},
+{
+"n": 10,
+"label": "Federico Valverde",
+"code": "URU 10",
+"prefix": "URU"
+},
+{
+"n": 11,
+"label": "Giorgian De Arrascaeta",
+"code": "URU 11",
+"prefix": "URU"
+},
+{
+"n": 12,
+"label": "Rodrigo Bentancur",
+"code": "URU 12",
+"prefix": "URU"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "URU 13",
+"prefix": "URU"
+},
+{
+"n": 14,
+"label": "Manuel Ugarte",
+"code": "URU 14",
+"prefix": "URU"
+},
+{
+"n": 15,
+"label": "Nicolás de la Cruz",
+"code": "URU 15",
+"prefix": "URU"
+},
+{
+"n": 16,
+"label": "Maxi Araujo",
+"code": "URU 16",
+"prefix": "URU"
+},
+{
+"n": 17,
+"label": "Darwin Núñez",
+"code": "URU 17",
+"prefix": "URU"
+},
+{
+"n": 18,
+"label": "Federico Viñas",
+"code": "URU 18",
+"prefix": "URU"
+},
+{
+"n": 19,
+"label": "Rodrigo Aguirre",
+"code": "URU 19",
+"prefix": "URU"
+},
+{
+"n": 20,
+"label": "Facundo Pellistri",
+"code": "URU 20",
+"prefix": "URU"
+}
+]
+},
+"I|Francia": {
+"slug": "france",
+"prefix": "FRA",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "FRA 1",
+"prefix": "FRA"
+},
+{
+"n": 2,
+"label": "Mike Maignan",
+"code": "FRA 2",
+"prefix": "FRA"
+},
+{
+"n": 3,
+"label": "Theo Hernandez",
+"code": "FRA 3",
+"prefix": "FRA"
+},
+{
+"n": 4,
+"label": "William Saliba",
+"code": "FRA 4",
+"prefix": "FRA"
+},
+{
+"n": 5,
+"label": "Jules Kounde",
+"code": "FRA 5",
+"prefix": "FRA"
+},
+{
+"n": 6,
+"label": "Ibrahima Konate",
+"code": "FRA 6",
+"prefix": "FRA"
+},
+{
+"n": 7,
+"label": "Dayot Upamecano",
+"code": "FRA 7",
+"prefix": "FRA"
+},
+{
+"n": 8,
+"label": "Lucas Digne",
+"code": "FRA 8",
+"prefix": "FRA"
+},
+{
+"n": 9,
+"label": "Aurélien Tchouaméni",
+"code": "FRA 9",
+"prefix": "FRA"
+},
+{
+"n": 10,
+"label": "Eduardo Camavinga",
+"code": "FRA 10",
+"prefix": "FRA"
+},
+{
+"n": 11,
+"label": "Manu Kone",
+"code": "FRA 11",
+"prefix": "FRA"
+},
+{
+"n": 12,
+"label": "Adrien Rabiot",
+"code": "FRA 12",
+"prefix": "FRA"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "FRA 13",
+"prefix": "FRA"
+},
+{
+"n": 14,
+"label": "Michael Olise",
+"code": "FRA 14",
+"prefix": "FRA"
+},
+{
+"n": 15,
+"label": "Ousmane Dembele",
+"code": "FRA 15",
+"prefix": "FRA"
+},
+{
+"n": 16,
+"label": "Bradley Barcola",
+"code": "FRA 16",
+"prefix": "FRA"
+},
+{
+"n": 17,
+"label": "Désiré Doué",
+"code": "FRA 17",
+"prefix": "FRA"
+},
+{
+"n": 18,
+"label": "Kingsley Coman",
+"code": "FRA 18",
+"prefix": "FRA"
+},
+{
+"n": 19,
+"label": "Hugo Ekitike",
+"code": "FRA 19",
+"prefix": "FRA"
+},
+{
+"n": 20,
+"label": "Kylian Mbappe",
+"code": "FRA 20",
+"prefix": "FRA"
+}
+]
+},
+"I|Irak": {
+"slug": "iraq",
+"prefix": "IRQ",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "IRQ 1",
+"prefix": "IRQ"
+},
+{
+"n": 2,
+"label": "Jalal Hassan",
+"code": "IRQ 2",
+"prefix": "IRQ"
+},
+{
+"n": 3,
+"label": "Rebin Sulaka",
+"code": "IRQ 3",
+"prefix": "IRQ"
+},
+{
+"n": 4,
+"label": "Hussein Ali",
+"code": "IRQ 4",
+"prefix": "IRQ"
+},
+{
+"n": 5,
+"label": "Akam Hashem",
+"code": "IRQ 5",
+"prefix": "IRQ"
+},
+{
+"n": 6,
+"label": "Merchas Doski",
+"code": "IRQ 6",
+"prefix": "IRQ"
+},
+{
+"n": 7,
+"label": "Zaid Tahseen",
+"code": "IRQ 7",
+"prefix": "IRQ"
+},
+{
+"n": 8,
+"label": "Manaf Younis",
+"code": "IRQ 8",
+"prefix": "IRQ"
+},
+{
+"n": 9,
+"label": "Zidane Iqbal",
+"code": "IRQ 9",
+"prefix": "IRQ"
+},
+{
+"n": 10,
+"label": "Amir Al-Ammari",
+"code": "IRQ 10",
+"prefix": "IRQ"
+},
+{
+"n": 11,
+"label": "Ibrahim Bavesh",
+"code": "IRQ 11",
+"prefix": "IRQ"
+},
+{
+"n": 12,
+"label": "Ali Jasim",
+"code": "IRQ 12",
+"prefix": "IRQ"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "IRQ 13",
+"prefix": "IRQ"
+},
+{
+"n": 14,
+"label": "Youssef Amyn",
+"code": "IRQ 14",
+"prefix": "IRQ"
+},
+{
+"n": 15,
+"label": "Aimar Sher",
+"code": "IRQ 15",
+"prefix": "IRQ"
+},
+{
+"n": 16,
+"label": "Marko Farji",
+"code": "IRQ 16",
+"prefix": "IRQ"
+},
+{
+"n": 17,
+"label": "Osama Rashid",
+"code": "IRQ 17",
+"prefix": "IRQ"
+},
+{
+"n": 18,
+"label": "Ali Al-Hamadi",
+"code": "IRQ 18",
+"prefix": "IRQ"
+},
+{
+"n": 19,
+"label": "Aymen Hussein",
+"code": "IRQ 19",
+"prefix": "IRQ"
+},
+{
+"n": 20,
+"label": "Mohanad Ali",
+"code": "IRQ 20",
+"prefix": "IRQ"
+}
+]
+},
+"I|Noruega": {
+"slug": "norway",
+"prefix": "NOR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "NOR 1",
+"prefix": "NOR"
+},
+{
+"n": 2,
+"label": "Orjan Nyland",
+"code": "NOR 2",
+"prefix": "NOR"
+},
+{
+"n": 3,
+"label": "Julian Ryerson",
+"code": "NOR 3",
+"prefix": "NOR"
+},
+{
+"n": 4,
+"label": "Leo Ostigård",
+"code": "NOR 4",
+"prefix": "NOR"
+},
+{
+"n": 5,
+"label": "Kristoffer Vassbakk Ajer",
+"code": "NOR 5",
+"prefix": "NOR"
+},
+{
+"n": 6,
+"label": "Marcus Holmgren Pedersen",
+"code": "NOR 6",
+"prefix": "NOR"
+},
+{
+"n": 7,
+"label": "David Møller Wolfe",
+"code": "NOR 7",
+"prefix": "NOR"
+},
+{
+"n": 8,
+"label": "Torbjørn Heggem",
+"code": "NOR 8",
+"prefix": "NOR"
+},
+{
+"n": 9,
+"label": "Morten Thorsby",
+"code": "NOR 9",
+"prefix": "NOR"
+},
+{
+"n": 10,
+"label": "Martin Ødegaard",
+"code": "NOR 10",
+"prefix": "NOR"
+},
+{
+"n": 11,
+"label": "Sander Berge",
+"code": "NOR 11",
+"prefix": "NOR"
+},
+{
+"n": 12,
+"label": "Andreas Schjelderup",
+"code": "NOR 12",
+"prefix": "NOR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "NOR 13",
+"prefix": "NOR"
+},
+{
+"n": 14,
+"label": "Patrick Berg",
+"code": "NOR 14",
+"prefix": "NOR"
+},
+{
+"n": 15,
+"label": "Erling Haaland",
+"code": "NOR 15",
+"prefix": "NOR"
+},
+{
+"n": 16,
+"label": "Alexander Sørloth",
+"code": "NOR 16",
+"prefix": "NOR"
+},
+{
+"n": 17,
+"label": "Aron Dønnum",
+"code": "NOR 17",
+"prefix": "NOR"
+},
+{
+"n": 18,
+"label": "Jorgen Strand Larsen",
+"code": "NOR 18",
+"prefix": "NOR"
+},
+{
+"n": 19,
+"label": "Antonio Nusa",
+"code": "NOR 19",
+"prefix": "NOR"
+},
+{
+"n": 20,
+"label": "Oscar Bobb",
+"code": "NOR 20",
+"prefix": "NOR"
+}
+]
+},
+"I|Senegal": {
+"slug": "senegal",
+"prefix": "SEN",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "SEN 1",
+"prefix": "SEN"
+},
+{
+"n": 2,
+"label": "Edouard Mendy",
+"code": "SEN 2",
+"prefix": "SEN"
+},
+{
+"n": 3,
+"label": "Yehvann Diouf",
+"code": "SEN 3",
+"prefix": "SEN"
+},
+{
+"n": 4,
+"label": "Moussa Niakhaté",
+"code": "SEN 4",
+"prefix": "SEN"
+},
+{
+"n": 5,
+"label": "Abdoulaye Seck",
+"code": "SEN 5",
+"prefix": "SEN"
+},
+{
+"n": 6,
+"label": "Ismail Jakobs",
+"code": "SEN 6",
+"prefix": "SEN"
+},
+{
+"n": 7,
+"label": "El Hadji Malick Diouf",
+"code": "SEN 7",
+"prefix": "SEN"
+},
+{
+"n": 8,
+"label": "Kalidou Koulibaly",
+"code": "SEN 8",
+"prefix": "SEN"
+},
+{
+"n": 9,
+"label": "Idrissa Gana Gueye",
+"code": "SEN 9",
+"prefix": "SEN"
+},
+{
+"n": 10,
+"label": "Pape Matar Sarr",
+"code": "SEN 10",
+"prefix": "SEN"
+},
+{
+"n": 11,
+"label": "Pape Gueye",
+"code": "SEN 11",
+"prefix": "SEN"
+},
+{
+"n": 12,
+"label": "Habib Diarra",
+"code": "SEN 12",
+"prefix": "SEN"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "SEN 13",
+"prefix": "SEN"
+},
+{
+"n": 14,
+"label": "Lamine Camara",
+"code": "SEN 14",
+"prefix": "SEN"
+},
+{
+"n": 15,
+"label": "Sadio Mane",
+"code": "SEN 15",
+"prefix": "SEN"
+},
+{
+"n": 16,
+"label": "Ismaïla Sarr",
+"code": "SEN 16",
+"prefix": "SEN"
+},
+{
+"n": 17,
+"label": "Boulaye Dia",
+"code": "SEN 17",
+"prefix": "SEN"
+},
+{
+"n": 18,
+"label": "Iliman Ndiaye",
+"code": "SEN 18",
+"prefix": "SEN"
+},
+{
+"n": 19,
+"label": "Nicolas Jackson",
+"code": "SEN 19",
+"prefix": "SEN"
+},
+{
+"n": 20,
+"label": "Krepin Diatta",
+"code": "SEN 20",
+"prefix": "SEN"
+}
+]
+},
+"J|Argelia": {
+"slug": "algeria",
+"prefix": "ALG",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "ALG 1",
+"prefix": "ALG"
+},
+{
+"n": 2,
+"label": "Alexis Guendouz",
+"code": "ALG 2",
+"prefix": "ALG"
+},
+{
+"n": 3,
+"label": "Ramy Bensebaini",
+"code": "ALG 3",
+"prefix": "ALG"
+},
+{
+"n": 4,
+"label": "Youcef Atal",
+"code": "ALG 4",
+"prefix": "ALG"
+},
+{
+"n": 5,
+"label": "Rayan Aït-Nouri",
+"code": "ALG 5",
+"prefix": "ALG"
+},
+{
+"n": 6,
+"label": "Mohamed Amine Tougai",
+"code": "ALG 6",
+"prefix": "ALG"
+},
+{
+"n": 7,
+"label": "Aïssa Mandi",
+"code": "ALG 7",
+"prefix": "ALG"
+},
+{
+"n": 8,
+"label": "Ismael Bennacer",
+"code": "ALG 8",
+"prefix": "ALG"
+},
+{
+"n": 9,
+"label": "Houssem Aquar",
+"code": "ALG 9",
+"prefix": "ALG"
+},
+{
+"n": 10,
+"label": "Hicham Boudaoui",
+"code": "ALG 10",
+"prefix": "ALG"
+},
+{
+"n": 11,
+"label": "Ramiz Zerrouki",
+"code": "ALG 11",
+"prefix": "ALG"
+},
+{
+"n": 12,
+"label": "Nabil Bentalab",
+"code": "ALG 12",
+"prefix": "ALG"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "ALG 13",
+"prefix": "ALG"
+},
+{
+"n": 14,
+"label": "Farés Chaibi",
+"code": "ALG 14",
+"prefix": "ALG"
+},
+{
+"n": 15,
+"label": "Riyad Mahrez",
+"code": "ALG 15",
+"prefix": "ALG"
+},
+{
+"n": 16,
+"label": "Said Benrahma",
+"code": "ALG 16",
+"prefix": "ALG"
+},
+{
+"n": 17,
+"label": "Anis Hadj Moussa",
+"code": "ALG 17",
+"prefix": "ALG"
+},
+{
+"n": 18,
+"label": "Amine Gouiri",
+"code": "ALG 18",
+"prefix": "ALG"
+},
+{
+"n": 19,
+"label": "Baghdad Bounedjah",
+"code": "ALG 19",
+"prefix": "ALG"
+},
+{
+"n": 20,
+"label": "Mohammed Amoura",
+"code": "ALG 20",
+"prefix": "ALG"
+}
+]
+},
+"J|Argentina": {
+"slug": "argentina",
+"prefix": "ARG",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "ARG 1",
+"prefix": "ARG"
+},
+{
+"n": 2,
+"label": "Emiliano Martinez",
+"code": "ARG 2",
+"prefix": "ARG"
+},
+{
+"n": 3,
+"label": "Nahuel Molina",
+"code": "ARG 3",
+"prefix": "ARG"
+},
+{
+"n": 4,
+"label": "Cristian Romero",
+"code": "ARG 4",
+"prefix": "ARG"
+},
+{
+"n": 5,
+"label": "Nicolas Otamendi",
+"code": "ARG 5",
+"prefix": "ARG"
+},
+{
+"n": 6,
+"label": "Nicolas Tagliafico",
+"code": "ARG 6",
+"prefix": "ARG"
+},
+{
+"n": 7,
+"label": "Leonardo Balerdi",
+"code": "ARG 7",
+"prefix": "ARG"
+},
+{
+"n": 8,
+"label": "Enzo Fernandez",
+"code": "ARG 8",
+"prefix": "ARG"
+},
+{
+"n": 9,
+"label": "Alexis Mac Allister",
+"code": "ARG 9",
+"prefix": "ARG"
+},
+{
+"n": 10,
+"label": "Rodrigo De Paul",
+"code": "ARG 10",
+"prefix": "ARG"
+},
+{
+"n": 11,
+"label": "Exequiel Palacios",
+"code": "ARG 11",
+"prefix": "ARG"
+},
+{
+"n": 12,
+"label": "Leandro Paredes",
+"code": "ARG 12",
+"prefix": "ARG"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "ARG 13",
+"prefix": "ARG"
+},
+{
+"n": 14,
+"label": "Nico Paz",
+"code": "ARG 14",
+"prefix": "ARG"
+},
+{
+"n": 15,
+"label": "Franco Mastantuono",
+"code": "ARG 15",
+"prefix": "ARG"
+},
+{
+"n": 16,
+"label": "Nico Gonzalez",
+"code": "ARG 16",
+"prefix": "ARG"
+},
+{
+"n": 17,
+"label": "Lionel Messi",
+"code": "ARG 17",
+"prefix": "ARG"
+},
+{
+"n": 18,
+"label": "Lautaro Martinez",
+"code": "ARG 18",
+"prefix": "ARG"
+},
+{
+"n": 19,
+"label": "Julian Alvarez",
+"code": "ARG 19",
+"prefix": "ARG"
+},
+{
+"n": 20,
+"label": "Giuliano Simeone",
+"code": "ARG 20",
+"prefix": "ARG"
+}
+]
+},
+"J|Austria": {
+"slug": "austria",
+"prefix": "AUT",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "AUT 1",
+"prefix": "AUT"
+},
+{
+"n": 2,
+"label": "Alexander Schlager",
+"code": "AUT 2",
+"prefix": "AUT"
+},
+{
+"n": 3,
+"label": "Patrick Pentz",
+"code": "AUT 3",
+"prefix": "AUT"
+},
+{
+"n": 4,
+"label": "David Alaba",
+"code": "AUT 4",
+"prefix": "AUT"
+},
+{
+"n": 5,
+"label": "Kevin Danso",
+"code": "AUT 5",
+"prefix": "AUT"
+},
+{
+"n": 6,
+"label": "Philipp Lienhart",
+"code": "AUT 6",
+"prefix": "AUT"
+},
+{
+"n": 7,
+"label": "Stefan Posch",
+"code": "AUT 7",
+"prefix": "AUT"
+},
+{
+"n": 8,
+"label": "Phillipp Mwene",
+"code": "AUT 8",
+"prefix": "AUT"
+},
+{
+"n": 9,
+"label": "Alexander Prass",
+"code": "AUT 9",
+"prefix": "AUT"
+},
+{
+"n": 10,
+"label": "Xaver Schlager",
+"code": "AUT 10",
+"prefix": "AUT"
+},
+{
+"n": 11,
+"label": "Marcel Sabitzer",
+"code": "AUT 11",
+"prefix": "AUT"
+},
+{
+"n": 12,
+"label": "Konrad Laimer",
+"code": "AUT 12",
+"prefix": "AUT"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "AUT 13",
+"prefix": "AUT"
+},
+{
+"n": 14,
+"label": "Florian Grillitsch",
+"code": "AUT 14",
+"prefix": "AUT"
+},
+{
+"n": 15,
+"label": "Nicolas Seiwald",
+"code": "AUT 15",
+"prefix": "AUT"
+},
+{
+"n": 16,
+"label": "Romano Schmid",
+"code": "AUT 16",
+"prefix": "AUT"
+},
+{
+"n": 17,
+"label": "Patrick Wimmer",
+"code": "AUT 17",
+"prefix": "AUT"
+},
+{
+"n": 18,
+"label": "Christoph Baumgartner",
+"code": "AUT 18",
+"prefix": "AUT"
+},
+{
+"n": 19,
+"label": "Michael Gregoritsch",
+"code": "AUT 19",
+"prefix": "AUT"
+},
+{
+"n": 20,
+"label": "Marko Arnautović",
+"code": "AUT 20",
+"prefix": "AUT"
+}
+]
+},
+"J|Jordania": {
+"slug": "jordan",
+"prefix": "JOR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "JOR 1",
+"prefix": "JOR"
+},
+{
+"n": 2,
+"label": "Yazeed Abulaila",
+"code": "JOR 2",
+"prefix": "JOR"
+},
+{
+"n": 3,
+"label": "Ihsan Haddad",
+"code": "JOR 3",
+"prefix": "JOR"
+},
+{
+"n": 4,
+"label": "Mohammad Abu Hashish",
+"code": "JOR 4",
+"prefix": "JOR"
+},
+{
+"n": 5,
+"label": "Yazan Al-Arab",
+"code": "JOR 5",
+"prefix": "JOR"
+},
+{
+"n": 6,
+"label": "Abdallah Nasib",
+"code": "JOR 6",
+"prefix": "JOR"
+},
+{
+"n": 7,
+"label": "Saleem Obaid",
+"code": "JOR 7",
+"prefix": "JOR"
+},
+{
+"n": 8,
+"label": "Mohammad Abualnadi",
+"code": "JOR 8",
+"prefix": "JOR"
+},
+{
+"n": 9,
+"label": "Ibrahim Saadeh",
+"code": "JOR 9",
+"prefix": "JOR"
+},
+{
+"n": 10,
+"label": "Nizar Al-Rashdan",
+"code": "JOR 10",
+"prefix": "JOR"
+},
+{
+"n": 11,
+"label": "Noor Al-Rawabdeh",
+"code": "JOR 11",
+"prefix": "JOR"
+},
+{
+"n": 12,
+"label": "Mohannad Abu Taha",
+"code": "JOR 12",
+"prefix": "JOR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "JOR 13",
+"prefix": "JOR"
+},
+{
+"n": 14,
+"label": "Amer Jamous",
+"code": "JOR 14",
+"prefix": "JOR"
+},
+{
+"n": 15,
+"label": "Musa Al-Taamari",
+"code": "JOR 15",
+"prefix": "JOR"
+},
+{
+"n": 16,
+"label": "Yazan Al-Naimat",
+"code": "JOR 16",
+"prefix": "JOR"
+},
+{
+"n": 17,
+"label": "Mahmoud Al-Mardi",
+"code": "JOR 17",
+"prefix": "JOR"
+},
+{
+"n": 18,
+"label": "Ali Olwan",
+"code": "JOR 18",
+"prefix": "JOR"
+},
+{
+"n": 19,
+"label": "Mohammad Abu Zrayq",
+"code": "JOR 19",
+"prefix": "JOR"
+},
+{
+"n": 20,
+"label": "Ibrahim Sabra",
+"code": "JOR 20",
+"prefix": "JOR"
+}
+]
+},
+"K|Colombia": {
+"slug": "colombia",
+"prefix": "COL",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "COL 1",
+"prefix": "COL"
+},
+{
+"n": 2,
+"label": "Camilo Vargas",
+"code": "COL 2",
+"prefix": "COL"
+},
+{
+"n": 3,
+"label": "David Ospina",
+"code": "COL 3",
+"prefix": "COL"
+},
+{
+"n": 4,
+"label": "Dávinson Sánchez",
+"code": "COL 4",
+"prefix": "COL"
+},
+{
+"n": 5,
+"label": "Yerry Mina",
+"code": "COL 5",
+"prefix": "COL"
+},
+{
+"n": 6,
+"label": "Daniel Munoz",
+"code": "COL 6",
+"prefix": "COL"
+},
+{
+"n": 7,
+"label": "Johan Mojica",
+"code": "COL 7",
+"prefix": "COL"
+},
+{
+"n": 8,
+"label": "Jhon Lucumí",
+"code": "COL 8",
+"prefix": "COL"
+},
+{
+"n": 9,
+"label": "Santiago Arias",
+"code": "COL 9",
+"prefix": "COL"
+},
+{
+"n": 10,
+"label": "Jefferson Lerma",
+"code": "COL 10",
+"prefix": "COL"
+},
+{
+"n": 11,
+"label": "Kevin Castaño",
+"code": "COL 11",
+"prefix": "COL"
+},
+{
+"n": 12,
+"label": "Richard Rios",
+"code": "COL 12",
+"prefix": "COL"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "COL 13",
+"prefix": "COL"
+},
+{
+"n": 14,
+"label": "James Rodriguez",
+"code": "COL 14",
+"prefix": "COL"
+},
+{
+"n": 15,
+"label": "Juan Fernando Quintero",
+"code": "COL 15",
+"prefix": "COL"
+},
+{
+"n": 16,
+"label": "Jorge Carrascal",
+"code": "COL 16",
+"prefix": "COL"
+},
+{
+"n": 17,
+"label": "Jon Arias",
+"code": "COL 17",
+"prefix": "COL"
+},
+{
+"n": 18,
+"label": "Jhon Cordova",
+"code": "COL 18",
+"prefix": "COL"
+},
+{
+"n": 19,
+"label": "Luis Suarez",
+"code": "COL 19",
+"prefix": "COL"
+},
+{
+"n": 20,
+"label": "Luis Diaz",
+"code": "COL 20",
+"prefix": "COL"
+}
+]
+},
+"K|RD del Congo": {
+"slug": "dr-congo",
+"prefix": "COD",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "COD 1",
+"prefix": "COD"
+},
+{
+"n": 2,
+"label": "Lionel Mpasi",
+"code": "COD 2",
+"prefix": "COD"
+},
+{
+"n": 3,
+"label": "Aaron Wan-Bissaka",
+"code": "COD 3",
+"prefix": "COD"
+},
+{
+"n": 4,
+"label": "Axel Tuanzebe",
+"code": "COD 4",
+"prefix": "COD"
+},
+{
+"n": 5,
+"label": "Arthur Masuaku",
+"code": "COD 5",
+"prefix": "COD"
+},
+{
+"n": 6,
+"label": "Chancel Mbemba",
+"code": "COD 6",
+"prefix": "COD"
+},
+{
+"n": 7,
+"label": "Joris Kayembe",
+"code": "COD 7",
+"prefix": "COD"
+},
+{
+"n": 8,
+"label": "Charles Pickel",
+"code": "COD 8",
+"prefix": "COD"
+},
+{
+"n": 9,
+"label": "Ngal'ayel Mukau",
+"code": "COD 9",
+"prefix": "COD"
+},
+{
+"n": 10,
+"label": "Edo Kayembe",
+"code": "COD 10",
+"prefix": "COD"
+},
+{
+"n": 11,
+"label": "Samuel Moutoussamy",
+"code": "COD 11",
+"prefix": "COD"
+},
+{
+"n": 12,
+"label": "Noah Sadiki",
+"code": "COD 12",
+"prefix": "COD"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "COD 13",
+"prefix": "COD"
+},
+{
+"n": 14,
+"label": "Théo Bongonda",
+"code": "COD 14",
+"prefix": "COD"
+},
+{
+"n": 15,
+"label": "Meschak Elia",
+"code": "COD 15",
+"prefix": "COD"
+},
+{
+"n": 16,
+"label": "Yoane Wissa",
+"code": "COD 16",
+"prefix": "COD"
+},
+{
+"n": 17,
+"label": "Brian Cipenga",
+"code": "COD 17",
+"prefix": "COD"
+},
+{
+"n": 18,
+"label": "Fiston Mayele",
+"code": "COD 18",
+"prefix": "COD"
+},
+{
+"n": 19,
+"label": "Cédric Bakambu",
+"code": "COD 19",
+"prefix": "COD"
+},
+{
+"n": 20,
+"label": "Nathanaël Mbuku",
+"code": "COD 20",
+"prefix": "COD"
+}
+]
+},
+"K|Portugal": {
+"slug": "portugal",
+"prefix": "POR",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "POR 1",
+"prefix": "POR"
+},
+{
+"n": 2,
+"label": "Diogo Costa",
+"code": "POR 2",
+"prefix": "POR"
+},
+{
+"n": 3,
+"label": "Jose Sa",
+"code": "POR 3",
+"prefix": "POR"
+},
+{
+"n": 4,
+"label": "Ruben Dias",
+"code": "POR 4",
+"prefix": "POR"
+},
+{
+"n": 5,
+"label": "João Cancelo",
+"code": "POR 5",
+"prefix": "POR"
+},
+{
+"n": 6,
+"label": "Diogo Dalot",
+"code": "POR 6",
+"prefix": "POR"
+},
+{
+"n": 7,
+"label": "Nuno Mendes",
+"code": "POR 7",
+"prefix": "POR"
+},
+{
+"n": 8,
+"label": "Gonçalo Inácio",
+"code": "POR 8",
+"prefix": "POR"
+},
+{
+"n": 9,
+"label": "Bernardo Silva",
+"code": "POR 9",
+"prefix": "POR"
+},
+{
+"n": 10,
+"label": "Bruno Fernandes",
+"code": "POR 10",
+"prefix": "POR"
+},
+{
+"n": 11,
+"label": "Ruben Neves",
+"code": "POR 11",
+"prefix": "POR"
+},
+{
+"n": 12,
+"label": "Vitinha",
+"code": "POR 12",
+"prefix": "POR"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "POR 13",
+"prefix": "POR"
+},
+{
+"n": 14,
+"label": "João Neves",
+"code": "POR 14",
+"prefix": "POR"
+},
+{
+"n": 15,
+"label": "Cristiano Ronaldo",
+"code": "POR 15",
+"prefix": "POR"
+},
+{
+"n": 16,
+"label": "Francisco Trincao",
+"code": "POR 16",
+"prefix": "POR"
+},
+{
+"n": 17,
+"label": "João Felix",
+"code": "POR 17",
+"prefix": "POR"
+},
+{
+"n": 18,
+"label": "Gonçalo Ramos",
+"code": "POR 18",
+"prefix": "POR"
+},
+{
+"n": 19,
+"label": "Pedro Neto",
+"code": "POR 19",
+"prefix": "POR"
+},
+{
+"n": 20,
+"label": "Rafael Leão",
+"code": "POR 20",
+"prefix": "POR"
+}
+]
+},
+"K|Uzbekistán": {
+"slug": "uzbekistan",
+"prefix": "UZB",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "UZB 1",
+"prefix": "UZB"
+},
+{
+"n": 2,
+"label": "Utkir Yusupov",
+"code": "UZB 2",
+"prefix": "UZB"
+},
+{
+"n": 3,
+"label": "Farrukh Savfiev",
+"code": "UZB 3",
+"prefix": "UZB"
+},
+{
+"n": 4,
+"label": "Sherzod Nasrullaev",
+"code": "UZB 4",
+"prefix": "UZB"
+},
+{
+"n": 5,
+"label": "Umar Eshmurodov",
+"code": "UZB 5",
+"prefix": "UZB"
+},
+{
+"n": 6,
+"label": "Husniddin Aliqulov",
+"code": "UZB 6",
+"prefix": "UZB"
+},
+{
+"n": 7,
+"label": "Rustamjon Ashurmatov",
+"code": "UZB 7",
+"prefix": "UZB"
+},
+{
+"n": 8,
+"label": "Khojiakbar Alijonov",
+"code": "UZB 8",
+"prefix": "UZB"
+},
+{
+"n": 9,
+"label": "Abdukodir Khusanov",
+"code": "UZB 9",
+"prefix": "UZB"
+},
+{
+"n": 10,
+"label": "Odiljon Hamrobekov",
+"code": "UZB 10",
+"prefix": "UZB"
+},
+{
+"n": 11,
+"label": "Otabek Shukurov",
+"code": "UZB 11",
+"prefix": "UZB"
+},
+{
+"n": 12,
+"label": "Jamshid Iskanderov",
+"code": "UZB 12",
+"prefix": "UZB"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "UZB 13",
+"prefix": "UZB"
+},
+{
+"n": 14,
+"label": "Azizbek Turgunboev",
+"code": "UZB 14",
+"prefix": "UZB"
+},
+{
+"n": 15,
+"label": "Khojimat Erkinov",
+"code": "UZB 15",
+"prefix": "UZB"
+},
+{
+"n": 16,
+"label": "Eldor Shomurodov",
+"code": "UZB 16",
+"prefix": "UZB"
+},
+{
+"n": 17,
+"label": "Oston Urunov",
+"code": "UZB 17",
+"prefix": "UZB"
+},
+{
+"n": 18,
+"label": "Jaloliddin Masharipov",
+"code": "UZB 18",
+"prefix": "UZB"
+},
+{
+"n": 19,
+"label": "Igor Sergeev",
+"code": "UZB 19",
+"prefix": "UZB"
+},
+{
+"n": 20,
+"label": "Abbosbek Fayzullaev",
+"code": "UZB 20",
+"prefix": "UZB"
+}
+]
+},
+"L|Croacia": {
+"slug": "croatia",
+"prefix": "CRO",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "CRO 1",
+"prefix": "CRO"
+},
+{
+"n": 2,
+"label": "Dominik Livaković",
+"code": "CRO 2",
+"prefix": "CRO"
+},
+{
+"n": 3,
+"label": "Duje Caleta-Car",
+"code": "CRO 3",
+"prefix": "CRO"
+},
+{
+"n": 4,
+"label": "Josko Gvardiol",
+"code": "CRO 4",
+"prefix": "CRO"
+},
+{
+"n": 5,
+"label": "Josip Stanišić",
+"code": "CRO 5",
+"prefix": "CRO"
+},
+{
+"n": 6,
+"label": "Luka Vušković",
+"code": "CRO 6",
+"prefix": "CRO"
+},
+{
+"n": 7,
+"label": "Josip Sutalo",
+"code": "CRO 7",
+"prefix": "CRO"
+},
+{
+"n": 8,
+"label": "Kristijan Jakic",
+"code": "CRO 8",
+"prefix": "CRO"
+},
+{
+"n": 9,
+"label": "Luka Modrić",
+"code": "CRO 9",
+"prefix": "CRO"
+},
+{
+"n": 10,
+"label": "Mateo Kovacic",
+"code": "CRO 10",
+"prefix": "CRO"
+},
+{
+"n": 11,
+"label": "Martin Baturina",
+"code": "CRO 11",
+"prefix": "CRO"
+},
+{
+"n": 12,
+"label": "Lovro Majer",
+"code": "CRO 12",
+"prefix": "CRO"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "CRO 13",
+"prefix": "CRO"
+},
+{
+"n": 14,
+"label": "Mario Pasalic",
+"code": "CRO 14",
+"prefix": "CRO"
+},
+{
+"n": 15,
+"label": "Petar Sucic",
+"code": "CRO 15",
+"prefix": "CRO"
+},
+{
+"n": 16,
+"label": "Ivan Perišić",
+"code": "CRO 16",
+"prefix": "CRO"
+},
+{
+"n": 17,
+"label": "Marco Pasalic",
+"code": "CRO 17",
+"prefix": "CRO"
+},
+{
+"n": 18,
+"label": "Ante Budimir",
+"code": "CRO 18",
+"prefix": "CRO"
+},
+{
+"n": 19,
+"label": "Andrej Kramarić",
+"code": "CRO 19",
+"prefix": "CRO"
+},
+{
+"n": 20,
+"label": "Franjo Ivanovic",
+"code": "CRO 20",
+"prefix": "CRO"
+}
+]
+},
+"L|Inglaterra": {
+"slug": "england",
+"prefix": "ENG",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "ENG 1",
+"prefix": "ENG"
+},
+{
+"n": 2,
+"label": "Jordan Pickford",
+"code": "ENG 2",
+"prefix": "ENG"
+},
+{
+"n": 3,
+"label": "John Stones",
+"code": "ENG 3",
+"prefix": "ENG"
+},
+{
+"n": 4,
+"label": "Marc Guéhi",
+"code": "ENG 4",
+"prefix": "ENG"
+},
+{
+"n": 5,
+"label": "Ezri Konsa",
+"code": "ENG 5",
+"prefix": "ENG"
+},
+{
+"n": 6,
+"label": "Trent Alexander-Arnold",
+"code": "ENG 6",
+"prefix": "ENG"
+},
+{
+"n": 7,
+"label": "Reece James",
+"code": "ENG 7",
+"prefix": "ENG"
+},
+{
+"n": 8,
+"label": "Dan Burn",
+"code": "ENG 8",
+"prefix": "ENG"
+},
+{
+"n": 9,
+"label": "Jordan Henderson",
+"code": "ENG 9",
+"prefix": "ENG"
+},
+{
+"n": 10,
+"label": "Declan Rice",
+"code": "ENG 10",
+"prefix": "ENG"
+},
+{
+"n": 11,
+"label": "Jude Bellingham",
+"code": "ENG 11",
+"prefix": "ENG"
+},
+{
+"n": 12,
+"label": "Cole Palmer",
+"code": "ENG 12",
+"prefix": "ENG"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "ENG 13",
+"prefix": "ENG"
+},
+{
+"n": 14,
+"label": "Morgan Rogers",
+"code": "ENG 14",
+"prefix": "ENG"
+},
+{
+"n": 15,
+"label": "Anthony Gordon",
+"code": "ENG 15",
+"prefix": "ENG"
+},
+{
+"n": 16,
+"label": "Phil Foden",
+"code": "ENG 16",
+"prefix": "ENG"
+},
+{
+"n": 17,
+"label": "Bukayo Saka",
+"code": "ENG 17",
+"prefix": "ENG"
+},
+{
+"n": 18,
+"label": "Harry Kane",
+"code": "ENG 18",
+"prefix": "ENG"
+},
+{
+"n": 19,
+"label": "Marcus Rashford",
+"code": "ENG 19",
+"prefix": "ENG"
+},
+{
+"n": 20,
+"label": "Ollie Watkins",
+"code": "ENG 20",
+"prefix": "ENG"
+}
+]
+},
+"L|Ghana": {
+"slug": "ghana",
+"prefix": "GHA",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "GHA 1",
+"prefix": "GHA"
+},
+{
+"n": 2,
+"label": "Lawrence Ati Zigi",
+"code": "GHA 2",
+"prefix": "GHA"
+},
+{
+"n": 3,
+"label": "Tariq Lamptey",
+"code": "GHA 3",
+"prefix": "GHA"
+},
+{
+"n": 4,
+"label": "Mohammed Salisu",
+"code": "GHA 4",
+"prefix": "GHA"
+},
+{
+"n": 5,
+"label": "Alidu Seidu",
+"code": "GHA 5",
+"prefix": "GHA"
+},
+{
+"n": 6,
+"label": "Alexander Djiku",
+"code": "GHA 6",
+"prefix": "GHA"
+},
+{
+"n": 7,
+"label": "Gideon Mensah",
+"code": "GHA 7",
+"prefix": "GHA"
+},
+{
+"n": 8,
+"label": "Caleb Yirenkyi",
+"code": "GHA 8",
+"prefix": "GHA"
+},
+{
+"n": 9,
+"label": "Abdul Issahaku Fatawu",
+"code": "GHA 9",
+"prefix": "GHA"
+},
+{
+"n": 10,
+"label": "Thomas Partey",
+"code": "GHA 10",
+"prefix": "GHA"
+},
+{
+"n": 11,
+"label": "Salis Abdul Samed",
+"code": "GHA 11",
+"prefix": "GHA"
+},
+{
+"n": 12,
+"label": "Kamaldeen Sulemana",
+"code": "GHA 12",
+"prefix": "GHA"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "GHA 13",
+"prefix": "GHA"
+},
+{
+"n": 14,
+"label": "Mohammed Kudus",
+"code": "GHA 14",
+"prefix": "GHA"
+},
+{
+"n": 15,
+"label": "Inaki Williams",
+"code": "GHA 15",
+"prefix": "GHA"
+},
+{
+"n": 16,
+"label": "Jordan Ayew",
+"code": "GHA 16",
+"prefix": "GHA"
+},
+{
+"n": 17,
+"label": "Andrew Ayew",
+"code": "GHA 17",
+"prefix": "GHA"
+},
+{
+"n": 18,
+"label": "Joseph Paintsil",
+"code": "GHA 18",
+"prefix": "GHA"
+},
+{
+"n": 19,
+"label": "Osman Bukari",
+"code": "GHA 19",
+"prefix": "GHA"
+},
+{
+"n": 20,
+"label": "Antoine Semenyo",
+"code": "GHA 20",
+"prefix": "GHA"
+}
+]
+},
+"L|Panamá": {
+"slug": "panama",
+"prefix": "PAN",
+"stickers": [
+{
+"n": 1,
+"label": "Team Logo",
+"code": "PAN 1",
+"prefix": "PAN"
+},
+{
+"n": 2,
+"label": "Orlando Mosquera",
+"code": "PAN 2",
+"prefix": "PAN"
+},
+{
+"n": 3,
+"label": "Luis Mejia",
+"code": "PAN 3",
+"prefix": "PAN"
+},
+{
+"n": 4,
+"label": "Fidel Escobar",
+"code": "PAN 4",
+"prefix": "PAN"
+},
+{
+"n": 5,
+"label": "Andres Andrade",
+"code": "PAN 5",
+"prefix": "PAN"
+},
+{
+"n": 6,
+"label": "Michael Amir Murillo",
+"code": "PAN 6",
+"prefix": "PAN"
+},
+{
+"n": 7,
+"label": "Eric Davis",
+"code": "PAN 7",
+"prefix": "PAN"
+},
+{
+"n": 8,
+"label": "Jose Cordoba",
+"code": "PAN 8",
+"prefix": "PAN"
+},
+{
+"n": 9,
+"label": "Cesar Blackman",
+"code": "PAN 9",
+"prefix": "PAN"
+},
+{
+"n": 10,
+"label": "Cristian Martinez",
+"code": "PAN 10",
+"prefix": "PAN"
+},
+{
+"n": 11,
+"label": "Aníbal Godoy",
+"code": "PAN 11",
+"prefix": "PAN"
+},
+{
+"n": 12,
+"label": "Adalberto Carrasquilla",
+"code": "PAN 12",
+"prefix": "PAN"
+},
+{
+"n": 13,
+"label": "Team Photo",
+"code": "PAN 13",
+"prefix": "PAN"
+},
+{
+"n": 14,
+"label": "Édgar Bárcenas",
+"code": "PAN 14",
+"prefix": "PAN"
+},
+{
+"n": 15,
+"label": "Carlos Harvey",
+"code": "PAN 15",
+"prefix": "PAN"
+},
+{
+"n": 16,
+"label": "Ismael Díaz",
+"code": "PAN 16",
+"prefix": "PAN"
+},
+{
+"n": 17,
+"label": "Jose Fajardo",
+"code": "PAN 17",
+"prefix": "PAN"
+},
+{
+"n": 18,
+"label": "Cecilio Waterman",
+"code": "PAN 18",
+"prefix": "PAN"
+},
+{
+"n": 19,
+"label": "Jose Luiz Rodriguez",
+"code": "PAN 19",
+"prefix": "PAN"
+},
+{
+"n": 20,
+"label": "Alberto Quintero",
+"code": "PAN 20",
+"prefix": "PAN"
+}
+]
+}
+}

@@ -126,8 +126,7 @@ nav.tabs button.on{background:var(--spectrum);color:#0c0f1a;border-color:transpa
 .ghead .chev{color:var(--mut);font-size:12px;transition:.2s}
 .gbar{height:5px;background:rgba(0,0,0,.35)}
 .gbar i{display:block;height:100%;background:var(--spectrum);transition:width .3s}
-.gbody{padding:8px 12px 14px;display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
-@media(max-width:640px){.gbody{grid-template-columns:1fr}}
+.gbody{padding:8px 12px 14px;display:grid;grid-template-columns:1fr;gap:13px}
 
 /* Team card */
 .team{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:15px;padding:13px}
@@ -140,25 +139,37 @@ nav.tabs button.on{background:var(--spectrum);color:#0c0f1a;border-color:transpa
 .bulk button{font-size:11px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);
   background:rgba(0,0,0,.3);color:var(--mut);cursor:pointer;font-weight:700}
 .bulk button:hover{border-color:var(--teal);color:var(--txt)}
-.chips{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
-.chip{position:relative;aspect-ratio:1/1.2;border-radius:10px;border:1px solid var(--line);
-  background:linear-gradient(160deg,#1a2438,#111827);display:flex;flex-direction:column;align-items:center;justify-content:center;
-  cursor:pointer;transition:transform .1s,box-shadow .15s;overflow:hidden}
-.chip .n{font-size:11px;color:var(--mut);font-weight:800}
-.chip .lbl{font-size:7.5px;color:#6f7d96;margin-top:1px;text-align:center;line-height:1;padding:0 2px}
-.chip.have{background:linear-gradient(160deg,#1aa863,#0c6e42);border-color:#2fe08c;box-shadow:0 4px 14px rgba(33,208,122,.3)}
-.chip.have .n{color:#eafff5} .chip.have .lbl{color:#bff3dd}
-.chip .check{position:absolute;top:3px;right:4px;font-size:10px;opacity:0;color:#fff}
-.chip.have .check{opacity:1}
-.chip:active{transform:scale(.92)}
-/* foil look for badge/team/specials */
-.chip.foil{border-width:2px;border-image:var(--spectrum) 1}
-.chip.foil:not(.have){background:linear-gradient(135deg,#1c2944,#2a3650,#15203a)}
-.chip.foil .n{color:var(--gold)}
-.repbadge{position:absolute;bottom:2px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:6px}
-.repbadge button{width:16px;height:16px;border-radius:50%;border:none;font-weight:900;font-size:12px;line-height:1;
-  background:rgba(0,0,0,.45);color:#fff;cursor:pointer;display:grid;place-items:center}
-.repbadge .rn{font-size:10px;font-weight:900;color:var(--gold);min-width:10px;text-align:center}
+/* estampas estilo página de álbum: retrato + leyenda con nombre + código */
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:9px}
+.chip{position:relative;border-radius:11px;border:1px solid var(--line);overflow:hidden;
+  background:#0d1424;display:flex;flex-direction:column;cursor:pointer;transition:transform .1s,box-shadow .15s}
+.chip .pic{position:relative;aspect-ratio:1/1.04;display:grid;place-items:center;
+  background:radial-gradient(120% 100% at 50% 0,#22304b,#0f1626);overflow:hidden}
+.chip .sil{font-size:30px;opacity:.34;filter:grayscale(.8);transition:.15s}
+.chip .code{position:absolute;top:4px;left:4px;font-size:8px;font-weight:900;color:var(--gold);
+  background:rgba(0,0,0,.55);padding:1px 5px;border-radius:6px;letter-spacing:.3px}
+.chip .check{position:absolute;top:4px;right:4px;width:16px;height:16px;border-radius:50%;
+  background:var(--gold);color:#0c0f1a;display:grid;place-items:center;font-size:10px;font-weight:900;opacity:0;transform:scale(.5);transition:.15s}
+.chip .cap{padding:4px 4px 5px;text-align:center;background:rgba(0,0,0,.28);border-top:1px solid var(--line)}
+.chip .cap .name{font-size:9px;font-weight:700;line-height:1.08;color:#c2cce0;
+  overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:20px}
+.chip.have .pic{background:radial-gradient(120% 100% at 50% 0,#22c07e,#0c6e42)}
+.chip.have .sil{opacity:.95;filter:none}
+.chip.have{border-color:#2fe08c;box-shadow:0 3px 12px rgba(33,208,122,.22)}
+.chip.have .check{opacity:1;transform:scale(1)}
+.chip.have .cap{background:rgba(15,110,66,.28)}
+.chip.have .cap .name{color:#eafff5}
+.chip:active{transform:scale(.95)}
+/* foil dorado para escudo / foto de equipo / especiales */
+.chip.foil .pic{background:radial-gradient(120% 100% at 50% 0,#3a3052,#15182a)}
+.chip.foil{border-color:var(--gold-d)}
+.chip.foil .sil{filter:none;opacity:.85}
+.chip.foil.have .pic{background:radial-gradient(120% 100% at 50% 0,#f3d784,#9a730c)}
+.chip.foil.have .sil{opacity:1}
+.repbadge{position:absolute;bottom:3px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:7px}
+.repbadge button{width:17px;height:17px;border-radius:50%;border:none;font-weight:900;font-size:12px;line-height:1;
+  background:rgba(0,0,0,.6);color:#fff;cursor:pointer;display:grid;place-items:center}
+.repbadge .rn{font-size:11px;font-weight:900;color:var(--gold);min-width:10px;text-align:center;text-shadow:0 1px 2px #000}
 .chip:not(.have) .repbadge{display:none}
 
 /* lists */
@@ -305,11 +316,16 @@ const GTAG_GRAD={A:"linear-gradient(135deg,#b8860b,#f3d784)",B:"linear-gradient(
   I:"linear-gradient(135deg,#b8860b,#f3d784)",J:"linear-gradient(135deg,#a9790a,#ecca6e)",
   K:"linear-gradient(135deg,#b8860b,#f3d784)",L:"linear-gradient(135deg,#a9790a,#ecca6e)"};
 const PER_TEAM=20, SPECIALS=20;
-function slotLabel(i){ if(i===0)return"Escudo"; if(i===1)return"Equipo"; return"Jug. "+(i-1); }
-const SPECIAL_NAMES=["Logo Mundial","Mascota","Trofeo","Balón oficial","Sedes","FIFA","Estadio","Portada","Portada","Portada","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","Ilustración","Ilustración","Ilustración","Ilustración","Ilustración"];
-const TEAMS=[]; let _n=SPECIALS;
-GROUPS.forEach(([g,arr])=>arr.forEach(([name,flag])=>{TEAMS.push({key:g+"|"+name,group:g,name,flag,start:_n+1,count:PER_TEAM});_n+=PER_TEAM;}));
+// === Datos reales del álbum Panini WC 2026 (jugadores por selección + especiales). Fuente: scanini.app ===
+const PLAYERS={"A|Chequia":{"prefix":"CZE","names":["Escudo","Matej Kovar","Jindrich Stanek","Ladislav Krejci","Vladimir Coufal","Jaroslav Zeleny","Tomas Holes","David Zima","Michal Sadilek","Lukas Provod","Lukas Cerv","Tomas Soucek","Foto del equipo","Pavel Sulc","Matej Vydra","Vasil Kusej","Tomas Chory","Vaclav Cerny","Adam Hlozek","Patrik Schick"]},"A|México":{"prefix":"MEX","names":["Escudo","Luis Malagón","Johan Vasquez","Jorge Sánchez","Cesar Montes","Jesus Gallardo","Israel Reyes","Diego Lainez","Carlos Rodriguez","Edson Alvarez","Orbelin Pineda","Marcel Ruiz","Foto del equipo","Érick Sánchez","Hirving Lozano","Santiago Giménez","Raúl Jiménez","Alexis Vega","Roberto Alvarado","Cesar Huerta"]},"A|Sudáfrica":{"prefix":"RSA","names":["Escudo","Ronwen Williams","Sipho Chaine","Aubrey Modiba","Samukele Kabini","Mbekezeli Mbokazi","Khulumani Ndamane","Siyabonga Ngezana","Khuliso Mudau","Nkosinathi Sibisi","Teboho Mokoena","Thalente Mbatha","Foto del equipo","Bathasi Aubaas","Yaya Sithole","Sipho Mbule","Lyle Foster","Iqraam Rayners","Mohau Nkota","Oswin Appollis"]},"A|Corea del Sur":{"prefix":"KOR","names":["Escudo","Hyeon-woo Jo","Seung-Gyu Kim","Min-jae Kim","Yu-min Cho","Young-woo Seol","Han-beom Lee","Tae-seok Lee","Myung-jae Lee","Jae-sung Lee","In-beom Hwang","Kang-in Lee","Foto del equipo","Seung-ho Paik","Jens Castrop","Dongg-yeong Lee","Gue-sung Cho","Heung-min Son","Hee-chan Hwang","Hyeon-Gyu Oh"]},"B|Bosnia y Herzegovina":{"prefix":"BIH","names":["Escudo","Nikola Vasilj","Amer Dedic","Sead Kolasinac","Tarik Muharemovic","Nihad Mujakic","Nikola Katic","Amir Hadziahmetovic","Benjamin Tahirovic","Armin Gigovic","Ivan Sunjic","Ivan Basic","Foto del equipo","Dzenis Burnic","Esmir Bajraktarevic","Amar Memic","Ermedin Demirovic","Edin Dzeko","Samed Bazdar","Haris Tabakovic"]},"B|Canadá":{"prefix":"CAN","names":["Escudo","Dayne St.Clair","Alphonso Davies","Alistair Johnston","Samuel Adekugbe","Riche Larvea","Derek Cornelius","Moïse Bombito","Kamal Miller","Stephen Eustáquio","Ismaël Koné","Jonathan Osorio","Foto del equipo","Jacob Shaffelburg","Mathieu Choinière","Niko Sigur","Tajon Buchanan","Liam Millar","Cyle Larin","Jonathan David"]},"B|Catar":{"prefix":"QAT","names":["Escudo","Meshaal Barsham","Sultan Albrake","Lucas Mendes","Homam Ahmed","Boualem Khoukhi","Pedro Miguel","Tarek Salman","Mohamed Al-Mannai","Karim Boudiaf","Assim Madibo","Ahmed Fatehi","Foto del equipo","Mohammed Waad","Abdulaziz Hatem","Hassan Al-Haydos","Edmilson Junior","Akram Hassan Afif","Ahmed Al Ganehi","Almoez Ali"]},"B|Suiza":{"prefix":"SUI","names":["Escudo","Gregor Kobel","Yvon Mvogo","Manuel Akanji","Ricardo Rodriguez","Nico Elvedi","Aurèle Amenda","Silvan Widmer","Granit Xhaka","Denis Zakaria","Remo Freuler","Fabian Rieder","Foto del equipo","Ardon Jashari","Johan Manzambi","Michel Aebischer","Breel Embolo","Ruben Vargas","Dan Ndoye","Zeki Amdouni"]},"C|Brasil":{"prefix":"BRA","names":["Escudo","Alisson","Bento","Marquinhos","Éder Militão","Gabriel Magalhães","Danilo","Wesley","Lucas Paquetá","Casemiro","Bruno Guimarães","Luiz Henrique","Foto del equipo","Vinicius Júnior","Rodrygo","João Pedro","Matheus Cunha","Gabriel Martinelli","Raphinha","Estévão"]},"C|Haití":{"prefix":"HAI","names":["Escudo","Johny Placide","Carlens Arcus","Martin Expérience","Jean-Kevin Duverne","Ricardo Adé","Duke Lacroix","Garven Metusala","Hannes Delcroix","Leverton Pierre","Danley Jean Jacques","Jean-Ricner Bellegarde","Foto del equipo","Christopher Attys","Derrick Etienne Jr","Josue Casimir","Ruben Providence","Duckens Nazon","Louicius Deedson","Frantzdy Pierrot"]},"C|Marruecos":{"prefix":"MAR","names":["Escudo","Yassine Bounou","Munir El Kajoui","Achraf Hakimi","Noussair Mazraoui","Nayef Aguerd","Roman Saiss","Jawad El Yamio","Adam Masina","Sofyan Amrabat","Azzedine Ounahi","Eliesse Ben Seghir","Foto del equipo","Bilal El Khannouss","Ismael Saibari","Youssef En-Nesyri","Abde Ezzalzouli","Soufiane Rahimi","Brahim Diaz","Ayoub El Kaabi"]},"C|Escocia":{"prefix":"SCO","names":["Escudo","Angus Gunn","Jack Hendry","Kieran Tierney","Aaron Hickey","Andrew Robertson","Scott McKenna","John Souttar","Anthony Ralston","Grant Hanley","Scott McTominay","Billy Gilmour","Foto del equipo","Lewis Ferguson","Ryan Christie","Kenny McLean","John McGinn","Lyndon Dykes","Che Adams","Ben Gannon-Doak"]},"D|Australia":{"prefix":"AUS","names":["Escudo","Mathew Ryan","Joe Gauci","Harry Souttar","Alessandro Circati","Jordan Bos","Aziz Behich","Cameron Burgess","Lewis Miller","Milos Degenek","Jackson Irvine","Riley McGree","Foto del equipo","Aiden O'Neill","Connor Metcalfe","Patrick Yazbek","Craig Goodwin","Kusini Vengi","Nestory Irankunda","Mohamed Touré"]},"D|Paraguay":{"prefix":"PAR","names":["Escudo","Roberto Fernandez","Orlando Gill","Gustavo Gomez","Fabián Balbuena","Juan José Cáceres","Omar Alderete","Junior Alonso","Mathías Villasanti","Diego Gomez","Damián Bobadilla","Andres Cubas","Foto del equipo","Matias Galarza Fonda","Julio Enciso","Alejandro Romero Gamarra","Miguel Almirón","Ramon Sosa","Angel Romero","Antonio Sanabria"]},"D|Turquía":{"prefix":"TUR","names":["Escudo","Ugurcan Cakir","Mert Muldur","Zeki Celik","Abdulkerim Bardakci","Caglar Soyuncu","Merih Demiral","Ferdi Kadioglu","Kaan Ayhan","Ismail Yuksek","Hakan Calhanoglu","Orkun Kokcu","Foto del equipo","Arda Guler","Irfan Can Kahveci","Yunus Akgun","Can Uzun","Baris Alper Yilmaz","Kerem Akturkoglu","Kenan Yildiz"]},"D|Estados Unidos":{"prefix":"USA","names":["Escudo","Math Freese","Chris Richards","Tim Ream","Mark McKenzie","Alex Freeman","Antonee Robinson","Tyler Adams","Tanner Tessmann","Weston McKenny","Christian Roldan","Timothy Weah","Foto del equipo","Diego Luna","Malik Tillman","Christian Pulisic","Brenden Aaronson","Ricardo Pepi","Haji Wright","Folarin Balogun"]},"E|Curazao":{"prefix":"CUW","names":["Escudo","Eloy Room","Armando Obispo","Sherel Floranus","Jurien Gaari","Joshua Brenet","Roshon Van Eijma","Shurandy Sambo","Livano Comenencia","Godfried Roemeratoe","Juninho Bacuna","Leandro Bacuna","Foto del equipo","Tahith Chong","Kenji Gorre","Jearl Margaritha","Jurgen Locadia","Jeremy Antonisse","Gervane Kastaneer","Sontje Hansen"]},"E|Ecuador":{"prefix":"ECU","names":["Escudo","Hernán Galíndez","Gonzalo Valle","Piero Hincapié","Pervis Estupiñán","Willian Pacho","Ángelo Preciado","Joel Ordóñez","Moises Caicedo","Alan Franco","Kendry Paez","Pedro Vite","Foto del equipo","John Veboah","Leonardo Campana","Gonzalo Plata","Nilson Angulo","Alan Minda","Kevin Rodriguez","Enner Valencia"]},"E|Alemania":{"prefix":"GER","names":["Escudo","Marc-André ter Stegen","Jonathan Tah","David Raum","Nico Schlotterbeck","Antonio Rüdiger","Waldemar Anton","Ridle Baku","Maximilian Mittelstadt","Joshua Kimmich","Florian Wirtz","Felix Nmecha","Foto del equipo","Leon Goretzka","Jamal Musiala","Serge Gnabry","Kai Havertz","Leroy Sane","Karim Adeyemi","Nick Woltemade"]},"E|Costa de Marfil":{"prefix":"CIV","names":["Escudo","Yahia Fofana","Ghislain Konan","Wilfried Singo","Odilon Kossounou","Evan Ndicka","Willy Boly","Emmanuel Agbadou","Ousmane Diomande","Franck Kessie","Seko Fofana","Ibrahim Sangare","Foto del equipo","Jean-Philippe Gbamin","Amad Diallo","Sébastien Haller","Simon Adingra","Yan Diomande","Evann Guessand","Oumar Diakite"]},"F|Japón":{"prefix":"JPN","names":["Escudo","Zion Suzuki","Henry Heroki Mochizuki","Ayumu Seko","Junnosuke Suzuki","Shogo Taniguchi","Tsuyoshi Watanabe","Kaishu Sano","Yuki Soma","Ao Tanaka","Daichi Kamada","Takefusa Kubo","Foto del equipo","Ritsu Doan","Keito Nakamura","Takumi Minamino","Shuto Machino","Junya Ito","Koki Ogawa","Ayase Ueda"]},"F|Países Bajos":{"prefix":"NED","names":["Escudo","Bart Verbruggen","Virgil van Dijk","Micky van de Ven","Jurrien Timber","Denzel Dumfries","Nathan Aké","Jeremie Frimpong","Jan Paul van Hecke","Tijjani Reijnders","Ryan Gravenberch","Teun Koopmeiners","Foto del equipo","Frenkie de Jong","Xavi Simons","Justin Kluivert","Memphis Depay","Donyell Malen","Wout Weghorst","Cody Gakpo"]},"F|Suecia":{"prefix":"SWE","names":["Escudo","Victor Johansson","Isak Hien","Gabriel Gudmundsson","Emil Holm","Victor Nilsson Lindelöf","Gustaf Lagerbielke","Lucas Bergvall","Hugo Larsson","Jesper Karlström","Yasin Ayari","Mattias Svanberg","Foto del equipo","Daniel Svensson","Ken Sema","Roony Bardghji","Dejan Kulusevski","Anthony Elanga","Alexander Isak","Viktor Gyökeres"]},"F|Túnez":{"prefix":"TUN","names":["Escudo","Bechir Ben Said","Aymen Dahmen","Yan Valery","Montassar Talbi","Yassine Meriah","Ali Abdi","Dylan Bronn","Ellyes Skhiri","Aissa Laidouni","Ferjani Sassi","Mohamed Ali Ben Romdhane","Foto del equipo","Hannibal Mejbri","Elias Achouri","Elias Saad","Hazem Mastouri","Ismael Gharbi","Sayfallah Ltaief","Naim Sliti"]},"G|Bélgica":{"prefix":"BEL","names":["Escudo","Thibaut Courtois","Arthur Theate","Timothy Castagne","Zeno Debast","Brandon Mechele","Maxim De Cuyper","Thomas Meunier","Youri Tielemans","Amadou Onana","Nicolas Raskin","Alexis Saelemaekers","Foto del equipo","Hans Vanaken","Kevin De Bruyne","Jérémy Doku","Charles De Ketelaere","Leandro Trossard","Loïs Openda","Romelu Lukaku"]},"G|Egipto":{"prefix":"EGY","names":["Escudo","Mohamed El Shenawy","Mohamed Hany","Mohamed Hamdy","Yasser Ibrahim","Khaled Sobhi","Ramy Rabia","Hossam Abdelmaguid","Ahmed Fatouh","Marwan Attia","Zizo","Hamdy Fathy","Foto del equipo","Mohamed Lasheen","Emam Ashour","Osama Faisal","Mohamed Salah","Mostafa Mohamed","Trezeguet","Omar Marmoush"]},"G|Irán":{"prefix":"IRN","names":["Escudo","Alireza Beiranvand","Morteza Pouraliganji","Ehsan Hajsafi","Milad Mohammadi","Shojae Khalilzadeh","Ramin Rezaeian","Hossein Kanaani","Sadegh Moharrami","Saleh Hardani","Saeed Ezatolahi","Saman Ghoddos","Foto del equipo","Omid Noorafkan","Roozbeh Cheshmi","Mohammad Mohebi","Sardar Azmoun","Mehdi Taremi","Alireza Jahanbakhsh","Ali Gholizadeh"]},"G|Nueva Zelanda":{"prefix":"NZL","names":["Escudo","Max Crocombe Payne","Alex Paulsen","Michael Boxall","Liberato Cacace","Tim Payne","Tyler Bindon","Francis de Vries","Finn Surman","Joe Bell","Sarpreet Singh","Ryan Thomas","Foto del equipo","Matthew Garbett","Marko Stamenić","Ben Old","Chris Wood","Elijah Just","Callum McCowatt","Kosta Barbarouses"]},"H|Cabo Verde":{"prefix":"CPV","names":["Escudo","Vozinha","Logan Costa","Pico","Diney","Steven Moreira","Wagner Pina","Joao Paulo","Yannick Semedo","Kevin Pina","Patrick Andrade","Jamiro Monteiro","Foto del equipo","Deroy Duarte","Garry Rodrigues","Jovane Cabral","Ryan Mendes","Dailon Livramento","Willy Semedo","Bebe"]},"H|Arabia Saudita":{"prefix":"KSA","names":["Escudo","Nawaf Alaqidi","Abdulrahman Al-Sanbi","Saud Abdulhamid","Nawaf Bouwashl","Jihad Thakri","Moteb Al-Harbi","Hassan Altambakti","Musab Aljuwayr","Ziyad Aljohani","Abdullah Alkhaibari","Nasser Aldawsari","Foto del equipo","Saleh Abu Alshamat","Marwan Alsahafi","Salem Aldawsari","Abdulrahman Al-Aboud","Feras Akbrikan","Saleh Alshehri","Abdullah Al-Hamdan"]},"H|España":{"prefix":"ESP","names":["Escudo","Unai Simon","Robin Le Normand","Aymeric Laporte","Dean Huijsen","Pedro Porro","Dani Carvajal","Marc Cucurella","Martín Zubimendi","Rodri","Pedri","Fabian Ruiz","Foto del equipo","Mikel Merino","Lamine Yamal","Dani Olmo","Nico Williams","Ferran Torres","Álvaro Morata","Mikel Oyarzabal"]},"H|Uruguay":{"prefix":"URU","names":["Escudo","Sergio Rochet","Santiago Mele","Ronald Araujo","José María Giménez","Sebastian Caceres","Mathias Olivera","Guillermo Varela","Nahitan Nandez","Federico Valverde","Giorgian De Arrascaeta","Rodrigo Bentancur","Foto del equipo","Manuel Ugarte","Nicolás de la Cruz","Maxi Araujo","Darwin Núñez","Federico Viñas","Rodrigo Aguirre","Facundo Pellistri"]},"I|Francia":{"prefix":"FRA","names":["Escudo","Mike Maignan","Theo Hernandez","William Saliba","Jules Kounde","Ibrahima Konate","Dayot Upamecano","Lucas Digne","Aurélien Tchouaméni","Eduardo Camavinga","Manu Kone","Adrien Rabiot","Foto del equipo","Michael Olise","Ousmane Dembele","Bradley Barcola","Désiré Doué","Kingsley Coman","Hugo Ekitike","Kylian Mbappe"]},"I|Irak":{"prefix":"IRQ","names":["Escudo","Jalal Hassan","Rebin Sulaka","Hussein Ali","Akam Hashem","Merchas Doski","Zaid Tahseen","Manaf Younis","Zidane Iqbal","Amir Al-Ammari","Ibrahim Bavesh","Ali Jasim","Foto del equipo","Youssef Amyn","Aimar Sher","Marko Farji","Osama Rashid","Ali Al-Hamadi","Aymen Hussein","Mohanad Ali"]},"I|Noruega":{"prefix":"NOR","names":["Escudo","Orjan Nyland","Julian Ryerson","Leo Ostigård","Kristoffer Vassbakk Ajer","Marcus Holmgren Pedersen","David Møller Wolfe","Torbjørn Heggem","Morten Thorsby","Martin Ødegaard","Sander Berge","Andreas Schjelderup","Foto del equipo","Patrick Berg","Erling Haaland","Alexander Sørloth","Aron Dønnum","Jorgen Strand Larsen","Antonio Nusa","Oscar Bobb"]},"I|Senegal":{"prefix":"SEN","names":["Escudo","Edouard Mendy","Yehvann Diouf","Moussa Niakhaté","Abdoulaye Seck","Ismail Jakobs","El Hadji Malick Diouf","Kalidou Koulibaly","Idrissa Gana Gueye","Pape Matar Sarr","Pape Gueye","Habib Diarra","Foto del equipo","Lamine Camara","Sadio Mane","Ismaïla Sarr","Boulaye Dia","Iliman Ndiaye","Nicolas Jackson","Krepin Diatta"]},"J|Argelia":{"prefix":"ALG","names":["Escudo","Alexis Guendouz","Ramy Bensebaini","Youcef Atal","Rayan Aït-Nouri","Mohamed Amine Tougai","Aïssa Mandi","Ismael Bennacer","Houssem Aquar","Hicham Boudaoui","Ramiz Zerrouki","Nabil Bentalab","Foto del equipo","Farés Chaibi","Riyad Mahrez","Said Benrahma","Anis Hadj Moussa","Amine Gouiri","Baghdad Bounedjah","Mohammed Amoura"]},"J|Argentina":{"prefix":"ARG","names":["Escudo","Emiliano Martinez","Nahuel Molina","Cristian Romero","Nicolas Otamendi","Nicolas Tagliafico","Leonardo Balerdi","Enzo Fernandez","Alexis Mac Allister","Rodrigo De Paul","Exequiel Palacios","Leandro Paredes","Foto del equipo","Nico Paz","Franco Mastantuono","Nico Gonzalez","Lionel Messi","Lautaro Martinez","Julian Alvarez","Giuliano Simeone"]},"J|Austria":{"prefix":"AUT","names":["Escudo","Alexander Schlager","Patrick Pentz","David Alaba","Kevin Danso","Philipp Lienhart","Stefan Posch","Phillipp Mwene","Alexander Prass","Xaver Schlager","Marcel Sabitzer","Konrad Laimer","Foto del equipo","Florian Grillitsch","Nicolas Seiwald","Romano Schmid","Patrick Wimmer","Christoph Baumgartner","Michael Gregoritsch","Marko Arnautović"]},"J|Jordania":{"prefix":"JOR","names":["Escudo","Yazeed Abulaila","Ihsan Haddad","Mohammad Abu Hashish","Yazan Al-Arab","Abdallah Nasib","Saleem Obaid","Mohammad Abualnadi","Ibrahim Saadeh","Nizar Al-Rashdan","Noor Al-Rawabdeh","Mohannad Abu Taha","Foto del equipo","Amer Jamous","Musa Al-Taamari","Yazan Al-Naimat","Mahmoud Al-Mardi","Ali Olwan","Mohammad Abu Zrayq","Ibrahim Sabra"]},"K|Colombia":{"prefix":"COL","names":["Escudo","Camilo Vargas","David Ospina","Dávinson Sánchez","Yerry Mina","Daniel Munoz","Johan Mojica","Jhon Lucumí","Santiago Arias","Jefferson Lerma","Kevin Castaño","Richard Rios","Foto del equipo","James Rodriguez","Juan Fernando Quintero","Jorge Carrascal","Jon Arias","Jhon Cordova","Luis Suarez","Luis Diaz"]},"K|RD del Congo":{"prefix":"COD","names":["Escudo","Lionel Mpasi","Aaron Wan-Bissaka","Axel Tuanzebe","Arthur Masuaku","Chancel Mbemba","Joris Kayembe","Charles Pickel","Ngal'ayel Mukau","Edo Kayembe","Samuel Moutoussamy","Noah Sadiki","Foto del equipo","Théo Bongonda","Meschak Elia","Yoane Wissa","Brian Cipenga","Fiston Mayele","Cédric Bakambu","Nathanaël Mbuku"]},"K|Portugal":{"prefix":"POR","names":["Escudo","Diogo Costa","Jose Sa","Ruben Dias","João Cancelo","Diogo Dalot","Nuno Mendes","Gonçalo Inácio","Bernardo Silva","Bruno Fernandes","Ruben Neves","Vitinha","Foto del equipo","João Neves","Cristiano Ronaldo","Francisco Trincao","João Felix","Gonçalo Ramos","Pedro Neto","Rafael Leão"]},"K|Uzbekistán":{"prefix":"UZB","names":["Escudo","Utkir Yusupov","Farrukh Savfiev","Sherzod Nasrullaev","Umar Eshmurodov","Husniddin Aliqulov","Rustamjon Ashurmatov","Khojiakbar Alijonov","Abdukodir Khusanov","Odiljon Hamrobekov","Otabek Shukurov","Jamshid Iskanderov","Foto del equipo","Azizbek Turgunboev","Khojimat Erkinov","Eldor Shomurodov","Oston Urunov","Jaloliddin Masharipov","Igor Sergeev","Abbosbek Fayzullaev"]},"L|Croacia":{"prefix":"CRO","names":["Escudo","Dominik Livaković","Duje Caleta-Car","Josko Gvardiol","Josip Stanišić","Luka Vušković","Josip Sutalo","Kristijan Jakic","Luka Modrić","Mateo Kovacic","Martin Baturina","Lovro Majer","Foto del equipo","Mario Pasalic","Petar Sucic","Ivan Perišić","Marco Pasalic","Ante Budimir","Andrej Kramarić","Franjo Ivanovic"]},"L|Inglaterra":{"prefix":"ENG","names":["Escudo","Jordan Pickford","John Stones","Marc Guéhi","Ezri Konsa","Trent Alexander-Arnold","Reece James","Dan Burn","Jordan Henderson","Declan Rice","Jude Bellingham","Cole Palmer","Foto del equipo","Morgan Rogers","Anthony Gordon","Phil Foden","Bukayo Saka","Harry Kane","Marcus Rashford","Ollie Watkins"]},"L|Ghana":{"prefix":"GHA","names":["Escudo","Lawrence Ati Zigi","Tariq Lamptey","Mohammed Salisu","Alidu Seidu","Alexander Djiku","Gideon Mensah","Caleb Yirenkyi","Abdul Issahaku Fatawu","Thomas Partey","Salis Abdul Samed","Kamaldeen Sulemana","Foto del equipo","Mohammed Kudus","Inaki Williams","Jordan Ayew","Andrew Ayew","Joseph Paintsil","Osman Bukari","Antoine Semenyo"]},"L|Panamá":{"prefix":"PAN","names":["Escudo","Orlando Mosquera","Luis Mejia","Fidel Escobar","Andres Andrade","Michael Amir Murillo","Eric Davis","Jose Cordoba","Cesar Blackman","Cristian Martinez","Aníbal Godoy","Adalberto Carrasquilla","Foto del equipo","Édgar Bárcenas","Carlos Harvey","Ismael Díaz","Jose Fajardo","Cecilio Waterman","Jose Luiz Rodriguez","Alberto Quintero"]}};
+const SPECIAL_LABELS=["Emblema oficial","Emblema oficial","Mascotas oficiales","Slogan oficial","Balón oficial (Trionda)","Anfitrión: Canadá","Anfitrión: México","Anfitrión: USA","Italy 1934","Uruguay 1950","West Germany 1954","Brazil 1962","West Germany 1974","Argentina 1986","Brazil 1994","Brazil 2002","Italy 2006","Germany 2014","Argentina 2022","Especial"];const TEAMS=[]; let _n=SPECIALS;
+GROUPS.forEach(([g,arr])=>arr.forEach(([name,flag])=>{const key=g+"|"+name; const pd=PLAYERS[key]; TEAMS.push({key,group:g,name,flag,start:_n+1,count:PER_TEAM,prefix:(pd&&pd.prefix)||name.slice(0,3).toUpperCase()});_n+=PER_TEAM;}));
 const TOTAL=SPECIALS+TEAMS.length*PER_TEAM; // 980
+// etiqueta real del slot local (0-19): escudo, foto del equipo o nombre del jugador
+function slotLabel(t,i){ const p=PLAYERS[t.key]; return (p&&p.names[i])||("Jugador "+(i+1)); }
+function slotKind(i){ return i===0?"escudo":i===12?"foto":"player"; }
+function teamByStart(id){ return TEAMS.find(t=>id>=t.start&&id<t.start+t.count); }
+function stickerCode(id){ if(id<=SPECIALS) return "FWC "+id; const t=teamByStart(id); return t?(t.prefix+" "+(id-t.start+1)):("#"+id); }
 
 // =================== CLOUD (Supabase) ===================
 const SB_URL="https://ffkruigqwgzvqhdxvgjv.supabase.co";
@@ -487,7 +503,8 @@ function renderAlbum(){
     <div class="legend"><span><i class="dot h"></i>La tengo</span><span><i class="dot f"></i>Me falta</span><span><i class="dot r"></i>Repes: toca + / −</span></div>`;
   html+=specialBlock();
   GROUPS.forEach(([g])=>{
-    const ts=groupTeams(g).filter(t=>!searchTerm||t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    const q=searchTerm.toLowerCase();
+    const ts=groupTeams(g).filter(t=>!q||t.name.toLowerCase().includes(q)||((PLAYERS[t.key]&&PLAYERS[t.key].names)||[]).some(n=>n&&n.toLowerCase().includes(q)));
     if(searchTerm&&ts.length===0)return;
     const total=groupTeams(g).length*PER_TEAM, got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
     const open=searchTerm?true:!!openGroups[g];
@@ -503,7 +520,7 @@ function specialBlock(){
   if(searchTerm&&!"especiales especial fifa logo trofeo mascota".includes(searchTerm.toLowerCase()))return"";
   let got=0;for(let i=1;i<=SPECIALS;i++)if(has(i))got++;
   const open=searchTerm?true:(openGroups.SP!==false);
-  let chips="";for(let i=1;i<=SPECIALS;i++)chips+=chipHTML(i,"#"+i,SPECIAL_NAMES[i-1]||"Especial",true);
+  let chips="";for(let i=1;i<=SPECIALS;i++)chips+=chipHTML(i,"FWC "+i,SPECIAL_LABELS[i-1]||"Especial","special");
   return `<div class="group"><div class="ghead" data-g="SP">
     <div class="gtag" style="background:linear-gradient(135deg,var(--gold),#ff9a3d)">★</div><h3>Especiales del torneo</h3>
     <span class="gp">${got}/${SPECIALS}</span><span class="chev">${open?"▲":"▼"}</span></div>
@@ -516,18 +533,21 @@ function specialBlock(){
 }
 function teamCard(t){
   const got=teamHave(t),done=got===t.count;
-  let chips="";for(let i=0;i<t.count;i++)chips+=chipHTML(t.start+i,"#"+(t.start+i),slotLabel(i),i<2);
+  let chips="";for(let i=0;i<t.count;i++)chips+=chipHTML(t.start+i,t.prefix+" "+(i+1),slotLabel(t,i),slotKind(i));
   return `<div class="team" data-team="${t.key}"><div class="thead">
     <span class="flag">${t.flag}</span><span class="tname">${t.name}</span>
+    <span style="font-size:10px;font-weight:800;color:var(--gold);background:rgba(233,194,90,.13);padding:2px 7px;border-radius:6px;letter-spacing:.5px">${t.prefix}</span>
     <span class="tprog ${done?"done":""}">${done?"✓ Completo":got+"/"+t.count}</span></div>
     <div class="bulk"><button data-all="${t.key}">Marcar todas</button><button data-none="${t.key}">Quitar</button></div>
     <div class="chips">${chips}</div></div>`;
 }
-function chipHTML(id,numTxt,lbl,foil){
-  const h=has(id),r=repCount(id);
-  return `<div class="chip ${h?"have":""} ${foil?"foil":""}" data-id="${id}"><span class="check">✓</span>
-    <span class="n">${numTxt}</span><span class="lbl">${lbl}</span>
-    <div class="repbadge"><button data-rep="-" data-id="${id}">−</button><span class="rn">${r}</span><button data-rep="+" data-id="${id}">+</button></div></div>`;
+function picIcon(kind){ return kind==="escudo"?"🛡️":kind==="foto"?"👥":kind==="special"?"★":"👤"; }
+function chipHTML(id,code,name,kind){
+  const h=has(id),r=repCount(id),foil=kind!=="player";
+  return `<div class="chip ${h?"have":""} ${foil?"foil":""}" data-id="${id}">
+    <div class="pic"><span class="code">${code}</span><span class="check">✓</span><span class="sil">${picIcon(kind)}</span>
+      <div class="repbadge"><button data-rep="-" data-id="${id}">−</button><span class="rn">${r}</span><button data-rep="+" data-id="${id}">+</button></div></div>
+    <div class="cap"><span class="name">${name}</span></div></div>`;
 }
 function bindAlbum(){
   $$(".ghead").forEach(el=>el.onclick=()=>{const g=el.dataset.g; if(g==="SP")openGroups.SP=openGroups.SP===false?true:false; else openGroups[g]=!openGroups[g]; renderAlbum();});
@@ -550,9 +570,9 @@ function bulk(key,val){ if(key==="SP"){for(let i=1;i<=SPECIALS;i++)setHave(i,val
 
 // =================== ME FALTAN ===================
 function stickerName(id){
-  if(id<=SPECIALS) return "Especial "+id+" ("+(SPECIAL_NAMES[id-1]||"")+")";
-  const t=TEAMS.find(t=>id>=t.start&&id<t.start+t.count);
-  return t? t.name+" "+slotLabel(id-t.start) : "#"+id;
+  if(id<=SPECIALS) return "FWC "+id+" · "+(SPECIAL_LABELS[id-1]||"Especial");
+  const t=teamByStart(id);
+  return t? stickerCode(id)+" · "+slotLabel(t,id-t.start) : "#"+id;
 }
 function renderFaltan(){
   let blocks=[],total=0;
@@ -561,9 +581,9 @@ function renderFaltan(){
   TEAMS.forEach(t=>{const m=[];for(let i=0;i<t.count;i++)if(!has(t.start+i))m.push(t.start+i);if(m.length){total+=m.length;blocks.push({flag:t.flag,name:t.name,group:t.group,nums:m});}});
   if(total===0){view().innerHTML=`<div class="empty"><div class="big">🏆</div><h3>¡Álbum completo!</h3><p>Las ${TOTAL} estampas. A presumir.</p></div>`;updateHeader();return;}
   let html=`<div class="listcard"><h3>Me faltan ${total} estampas</h3><p class="sub">Llévalo al puesto o mándalo por WhatsApp.</p><button class="copybtn" id="copyAll">📋 Copiar toda mi lista</button></div>`;
-  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">faltan ${b.nums.length}</span></div><div class="nums">${b.nums.map(x=>`<span class="num">${x}</span>`).join("")}</div></div>`;});
+  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">faltan ${b.nums.length}</span></div><div class="nums">${b.nums.map(x=>`<span class="num" title="${stickerName(x)}">${stickerCode(x)}</span>`).join("")}</div></div>`;});
   view().innerHTML=html; updateHeader();
-  $("#copyAll").onclick=()=>copy("FALTANTES (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.nums.join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
+  $("#copyAll").onclick=()=>copy("FALTANTES (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.nums.map(stickerCode).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
 }
 
 // =================== MIS REPES ===================
@@ -574,9 +594,9 @@ function renderRepes(){
   TEAMS.forEach(t=>{const reps=[];for(let i=0;i<t.count;i++){const id=t.start+i,r=repCount(id);if(r>0)reps.push([id,r]);}if(reps.length){total+=reps.reduce((a,x)=>a+x[1],0);blocks.push({flag:t.flag,name:t.name,group:t.group,reps});}});
   if(total===0){view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repes todavía</h3><p>Cuando te salga una repetida, en el Álbum toca <b>+</b> sobre la estampa.</p></div>`;updateHeader();return;}
   let html=`<div class="listcard"><h3>Tengo ${total} repes</h3><p class="sub">Las que te sobran para cambiar. Ve a <b>Cambios 🔁</b> para ver con quién hacen match.</p><button class="copybtn" id="copyR">📋 Copiar mis repes</button></div>`;
-  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repes</span></div><div class="nums">${b.reps.map(([id,r])=>`<span class="num rep">${id}${r>1?` ×${r}`:""}</span>`).join("")}</div></div>`;});
+  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repes</span></div><div class="nums">${b.reps.map(([id,r])=>`<span class="num rep" title="${stickerName(id)}">${stickerCode(id)}${r>1?` ×${r}`:""}</span>`).join("")}</div></div>`;});
   view().innerHTML=html; updateHeader();
-  $("#copyR").onclick=()=>copy("REPES PARA CAMBIO (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>id+(r>1?` (×${r})`:"")).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
+  $("#copyR").onclick=()=>copy("REPES PARA CAMBIO (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>stickerCode(id)+(r>1?` (×${r})`:"")).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
 }
 
 // =================== CAMBIOS (amigos) ===================
@@ -614,13 +634,13 @@ function renderMatch(fid){
     <p class="sub">${give.length+get.length===0?"Por ahora no hay match. Cuando alguno tenga repes que el otro necesite, aparecen aquí.":`${give.length} para darle · ${get.length} que te puede dar`}</p></div>
     <div class="match-cols">
       <div class="match-col"><h4>Le das<span class="tag give">${give.length}</span></h4><p class="cnt">Tus repes que ${fr.name} necesita</p>
-        ${give.length?`<div class="nums">${give.map(id=>`<span class="num match" title="${stickerName(id)}">${id}</span>`).join("")}</div><button class="copybtn" id="cgive">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
+        ${give.length?`<div class="nums">${give.map(id=>`<span class="num match" title="${stickerName(id)}">${stickerCode(id)}</span>`).join("")}</div><button class="copybtn" id="cgive">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
       <div class="match-col"><h4>Te da<span class="tag get">${get.length}</span></h4><p class="cnt">Sus repes que tú necesitas</p>
-        ${get.length?`<div class="nums">${get.map(id=>`<span class="num rep" title="${stickerName(id)}">${id}</span>`).join("")}</div><button class="copybtn" id="cget">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
+        ${get.length?`<div class="nums">${get.map(id=>`<span class="num rep" title="${stickerName(id)}">${stickerCode(id)}</span>`).join("")}</div><button class="copybtn" id="cget">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
     </div>`;
   view().innerHTML=html;
-  if(give.length)$("#cgive").onclick=()=>copy(`Le doy a ${fr.name} (Mundial 26):\n`+give.map(id=>`${id} · ${stickerName(id)}`).join("\n"));
-  if(get.length)$("#cget").onclick=()=>copy(`${fr.name} me da (Mundial 26):\n`+get.map(id=>`${id} · ${stickerName(id)}`).join("\n"));
+  if(give.length)$("#cgive").onclick=()=>copy(`Le doy a ${fr.name} (Mundial 26):\n`+give.map(id=>stickerName(id)).join("\n"));
+  if(get.length)$("#cget").onclick=()=>copy(`${fr.name} me da (Mundial 26):\n`+get.map(id=>stickerName(id)).join("\n"));
 }
 
 // =================== AJUSTES ===================
