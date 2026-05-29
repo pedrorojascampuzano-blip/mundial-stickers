@@ -382,27 +382,14 @@ const $$=s=>document.querySelectorAll(s);
 
 function lerr(msg){ const e=$("#lerr"); if(!msg){e.classList.remove("show");return;} e.textContent=msg; e.classList.add("show"); }
 
+function codeOf(id){ return id? "#"+String(id).slice(0,4) : ""; }
 async function listPlayers(){
   if(!sb) return [];
-  try{ const {data,error}=await sb.from(TABLE).select("id,name,pin,have,rep,color"); if(error)throw error; cloudOK=true; return data||[]; }
+  try{ const {data,error}=await sb.from(TABLE).select("*"); if(error)throw error; cloudOK=true; return data||[]; }
   catch(e){ cloudOK=false; return null; } // null = backend not ready
 }
-
-async function renderQuickUsers(){
-  const box=$("#usersQuick"); box.innerHTML="";
-  const players=await listPlayers();
-  if(players===null){ // backend missing
-    box.innerHTML='';
-    return;
-  }
-  players.slice(0,8).forEach(p=>{
-    const c=p.color||colorFor(p.name);
-    const el=document.createElement("div"); el.className="uq";
-    el.innerHTML=`<span class="av" style="background:${c}">${initials(p.name)}</span>${p.name}`;
-    el.onclick=()=>{ $("#lname").value=p.name; mode="login"; setMode(); $("#lpin").focus(); };
-    box.appendChild(el);
-  });
-}
+// el login NO lista cuentas (privacidad): cada quien escribe su nombre + PIN
+async function renderQuickUsers(){ const box=$("#usersQuick"); if(box) box.innerHTML=""; }
 
 function setMode(){
   if(mode==="signup"){ $("#lgo").textContent="Crear mi cuenta"; $("#lswitch").innerHTML='¿Ya tienes cuenta? <a id="toSignup">Entra aquí</a>'; }
@@ -418,28 +405,46 @@ async function doAuth(){
   if(!/^\d{4}$/.test(pin)) return lerr("El PIN debe ser de 4 dígitos.");
   if(!sb) return lerr("No se pudo conectar a la nube. Usa 'jugar local' por ahora.");
   $("#lgo").disabled=true; const old=$("#lgo").textContent; $("#lgo").innerHTML='<span class="spin"></span>';
+  const reset=()=>{ $("#lgo").disabled=false; $("#lgo").textContent=old; setMode(); };
   try{
-    const {data:existing,error:e1}=await sb.from(TABLE).select("id,name,pin,color").ilike("name",name).limit(1);
+    // todas las cuentas con ese nombre (puede haber tocayos)
+    const {data:matches,error:e1}=await sb.from(TABLE).select("*").ilike("name",name);
     if(e1) throw {backend:true,e:e1};
     if(mode==="signup"){
-      if(existing&&existing.length){ throw {msg:"Ya existe alguien con ese nombre. Entra con tu PIN o usa otro nombre."}; }
       const color=colorFor(name);
-      const {data:ins,error:e2}=await sb.from(TABLE).insert({name,pin,have:{},rep:{},color}).select("id,name,pin,color").single();
-      if(e2) throw {backend:true,e:e2};
-      enter({id:ins.id,name:ins.name,pin:ins.pin,color:ins.color});
+      const {data:ins,error:e2}=await sb.from(TABLE).insert({name,pin,have:{},rep:{},color}).select("*").single();
+      if(e2){
+        if(e2.code==="23505"||/duplicate|unique/i.test(e2.message||"")) throw {msg:"Ese nombre todavía está bloqueado para repetidos. Pídele a Pedro correr la actualización de la base."};
+        throw {backend:true,e:e2};
+      }
+      const dupes=(matches||[]).length;
+      enter(rowToUser(ins), {have:{},rep:{}});
+      if(dupes>0) toast("Ya había otro "+name+". Tu código es "+codeOf(ins.id));
     } else {
-      if(!existing||!existing.length){ throw {msg:"No encontré esa cuenta. ¿Quieres crearla? Toca 'Crea tu cuenta'."}; }
-      const p=existing[0];
-      if(String(p.pin)!==pin){ throw {msg:"PIN incorrecto."}; }
-      // load full row
-      const {data:full}=await sb.from(TABLE).select("have,rep").eq("id",p.id).single();
-      enter({id:p.id,name:p.name,pin:p.pin,color:p.color||colorFor(p.name)}, full);
+      if(!matches||!matches.length) throw {msg:"No encontré esa cuenta. ¿Es tu primera vez? Toca 'Crea tu cuenta'."};
+      const cands=matches.filter(p=>String(p.pin)===pin);
+      if(!cands.length) throw {msg:"PIN incorrecto."};
+      if(cands.length===1){ const p=cands[0]; enter(rowToUser(p),{have:p.have||{},rep:p.rep||{}}); }
+      else { showAccountPicker(cands); reset(); } // varios con mismo nombre+PIN
     }
   }catch(err){
-    if(err.backend){ lerr("La base de datos aún no está lista (falta crear la tabla). Mientras tanto puedes 'jugar local'."); }
+    if(err.backend){ lerr("La base de datos aún no está lista. Mientras tanto puedes 'jugar local'."); }
     else lerr(err.msg||"Algo salió mal. Intenta de nuevo.");
-    $("#lgo").disabled=false; $("#lgo").textContent=old; setMode();
+    reset();
   }
+}
+function rowToUser(r){ return {id:r.id,name:r.name,pin:r.pin,color:r.color||colorFor(r.name),share:!!r.share}; }
+function showAccountPicker(cands){
+  lerr("");
+  const box=$("#usersQuick");
+  box.innerHTML=`<div style="width:100%;text-align:center;color:var(--mut);font-size:13px;margin-bottom:4px">Hay varias cuentas "${cands[0].name}". ¿Cuál es la tuya?</div>`;
+  cands.forEach(p=>{
+    const c=p.color||colorFor(p.name); const created=(p.created_at||"").slice(0,10);
+    const el=document.createElement("div"); el.className="uq";
+    el.innerHTML=`<span class="av" style="background:${c}">${initials(p.name)}</span>${codeOf(p.id)}${created?" · "+created:""}`;
+    el.onclick=()=>{ box.innerHTML=""; enter(rowToUser(p),{have:p.have||{},rep:p.rep||{}}); };
+    box.appendChild(el);
+  });
 }
 
 function enter(user, cloudData){
@@ -604,21 +609,43 @@ let friendsCache=null;
 async function renderAmigos(){
   if(USER?.guest){ view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Entra con tu cuenta</h3><p>Los cambios con amigos necesitan que entres con tu nombre y PIN (no en modo invitado), para sincronizar en la nube.</p><button class="btn primary" onclick="logout()">Crear / entrar a mi cuenta</button></div>`; return; }
   view().innerHTML=`<div class="empty"><div class="big"><span class="spin"></span></div><p>Cargando coleccionistas...</p></div>`;
-  const players=await listPlayers();
-  if(players===null){ view().innerHTML=`<div class="empty"><div class="big">☁️</div><h3>Nube no disponible</h3><p>La base de datos aún no está lista. Avísale a Pedro para activarla.</p></div>`; return; }
-  friendsCache=players;
-  const me=players.find(p=>p.id===USER.id);
-  let html=`<div class="listcard"><h3>Coleccionistas (${players.length})</h3><p class="sub">Toca a alguien para ver qué estampas pueden intercambiar.</p></div>`;
-  players.sort((a,b)=>totalHave(b)-totalHave(a));
+  const all=await listPlayers();
+  if(all===null){ view().innerHTML=`<div class="empty"><div class="big">☁️</div><h3>Nube no disponible</h3><p>La base de datos aún no está lista. Avísale a Pedro para activarla.</p></div>`; return; }
+  friendsCache=all;
+  // solo visibles (share) + tú mismo
+  const players=all.filter(p=>p.share||p.id===USER.id);
+  const meVisible = all.some(p=>p.id===USER.id && p.share);
+  let html="";
+  if(!meVisible){
+    html+=`<div class="listcard" style="border-color:var(--gold)"><h3>No apareces en Cambios</h3>
+      <p class="sub">Estás oculto: nadie te ve aquí. Préndelo para que otros encuentren tus repetidas y te propongan cambios.</p>
+      <button class="btn primary" onclick="setShare(true)">Aparecer en Cambios</button></div>`;
+  }
+  const others=players.filter(p=>p.id!==USER.id);
+  html+=`<div class="listcard"><h3>Coleccionistas (${others.length})</h3><p class="sub">${others.length?"Toca a alguien para ver qué estampas pueden intercambiar.":"Todavía no hay nadie más visible. Cuando tus cuates prendan 'Aparecer en Cambios', salen aquí."}</p></div>`;
+  players.sort((a,b)=>Object.keys(b.have||{}).length-Object.keys(a.have||{}).length);
+  // ¿hay nombres repetidos visibles? mostrar código para distinguir
+  const counts={}; players.forEach(p=>counts[p.name.toLowerCase()]=(counts[p.name.toLowerCase()]||0)+1);
   players.forEach(p=>{
     const c=p.color||colorFor(p.name), h=Object.keys(p.have||{}).length, pct=Math.round(h/TOTAL*100), mine=p.id===USER.id;
+    const dup=counts[p.name.toLowerCase()]>1;
     html+=`<div class="friend ${mine?"me":""}" ${mine?"":`data-fid="${p.id}"`}>
       <span class="av" style="background:${c}">${initials(p.name)}</span>
-      <div class="fi"><div class="fn">${p.name}${mine?" (tú)":""}</div><div class="fbar"><i style="width:${pct}%"></i></div></div>
+      <div class="fi"><div class="fn">${p.name}${mine?" (tú)":""}${dup?` <span style="color:var(--mut);font-weight:700;font-size:12px">${codeOf(p.id)}</span>`:""}</div><div class="fbar"><i style="width:${pct}%"></i></div></div>
       <span class="fpct">${pct}%</span>${mine?"":'<span class="arrow">›</span>'}</div>`;
   });
   view().innerHTML=html;
   $$("[data-fid]").forEach(el=>el.onclick=()=>renderMatch(el.dataset.fid));
+}
+async function setShare(v){
+  if(!USER||USER.guest||!sb) return;
+  try{
+    const {error}=await sb.from(TABLE).update({share:v}).eq("id",USER.id);
+    if(error) throw error;
+    USER.share=v; try{localStorage.setItem(SESSION_KEY,JSON.stringify(USER));}catch(e){}
+    toast(v?"Ahora apareces en Cambios":"Te ocultaste de Cambios");
+    if(tab==="amigos")renderAmigos(); if(tab==="ajustes")renderAjustes();
+  }catch(e){ toast("No se pudo (¿falta correr la actualización de la base?)"); }
 }
 function renderMatch(fid){
   const me=friendsCache.find(p=>p.id===USER.id)||{have:DB.have,rep:DB.rep,name:USER.name,color:USER.color};
@@ -630,7 +657,7 @@ function renderMatch(fid){
   const get=[];for(const id in frRep){if(frRep[id]>0 && !myHave[id])get.push(+id);} get.sort((a,b)=>a-b);
   const c=fr.color||colorFor(fr.name);
   let html=`<button class="backbtn" onclick="route()">‹ Volver a coleccionistas</button>
-    <div class="listcard"><h3 style="display:flex;align-items:center;gap:10px"><span class="av" style="background:${c};width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#0c0f1a">${initials(fr.name)}</span>Cambio con ${fr.name}</h3>
+    <div class="listcard"><h3 style="display:flex;align-items:center;gap:10px"><span class="av" style="background:${c};width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#0c0f1a">${initials(fr.name)}</span>Cambio con ${fr.name} <span style="color:var(--mut);font-weight:700;font-size:13px">${codeOf(fr.id)}</span></h3>
     <p class="sub">${give.length+get.length===0?"Por ahora no hay match. Cuando alguno tenga repetidas que el otro necesite, aparecen aquí.":`${give.length} para darle · ${get.length} que te puede dar`}</p></div>
     <div class="match-cols">
       <div class="match-col"><h4>Le das<span class="tag give">${give.length}</span></h4><p class="cnt">Tus repetidas que ${fr.name} necesita</p>
@@ -648,9 +675,12 @@ function renderAjustes(){
   const guest=USER?.guest;
   view().innerHTML=`
   <div class="listcard"><h3>Tu cuenta</h3>
-    <p class="note">${guest?"Estás en <b>modo invitado</b> (solo este dispositivo, sin nube). Crea una cuenta para sincronizar y hacer cambios con amigos.":`Conectado como <b>${USER.name}</b>. Tu progreso se sincroniza en la nube — entra con tu nombre y PIN desde cualquier celular.`}</p>
+    <p class="note">${guest?"Estás en <b>modo invitado</b> (solo este dispositivo, sin nube). Crea una cuenta para sincronizar y hacer cambios con amigos.":`Conectado como <b>${USER.name}</b> <span style="color:var(--gold)">${codeOf(USER.id)}</span>. Tu progreso se sincroniza en la nube — entra con tu nombre y PIN desde cualquier celular.`}</p>
     <div class="row"><button class="btn ${guest?"primary":""}" onclick="logout()">${guest?"Crear cuenta / entrar":"Cambiar de cuenta / salir"}</button></div>
   </div>
+  ${guest?"":`<div class="listcard"><h3>Privacidad · Cambios 🔁</h3>
+    <p class="note">Si apareces en Cambios, otros coleccionistas ven tu avance y tus repetidas para proponerte intercambios. Si no, quedas oculto y nadie te ve (tú sí puedes ver a los demás).</p>
+    <div class="row"><button class="btn ${USER.share?"":"primary"}" id="shareToggle">${USER.share?"✓ Apareces en Cambios — ocultarme":"Aparecer en Cambios"}</button></div></div>`}
   <div class="listcard"><h3>Captura rápida por números 🔢</h3>
     <p class="note">Escribe los números de estampa separados por coma, espacio o salto de línea (ej. <b>45, 320, 700</b>). Sirve para cargar rápido tu álbum sin ir una por una.</p>
     <textarea id="qnums" placeholder="45, 320, 700, 812 ..."></textarea>
@@ -689,6 +719,7 @@ function renderAjustes(){
   $("#exp").onclick=()=>{$("#io").value=btoa(unescape(encodeURIComponent(JSON.stringify(DB))));copy($("#io").value);};
   $("#imp").onclick=()=>{try{const raw=$("#io").value.trim();if(!raw)return toast("Pega un código");const d=JSON.parse(decodeURIComponent(escape(atob(raw))));if(!d.have)throw 0;DB={have:d.have||{},rep:d.rep||{}};save();toast("¡Importado!");updateHeader();}catch(e){toast("Código inválido");}};
   $("#reset").onclick=()=>{if(confirm("¿Seguro? Borra TODAS tus estampas marcadas.")){DB={have:{},rep:{}};save();toast("Reiniciado");updateHeader();}};
+  const stog=$("#shareToggle"); if(stog) stog.onclick=()=>setShare(!USER.share);
 }
 
 // =================== ROUTER ===================
@@ -714,8 +745,8 @@ renderQuickUsers();
   let s=null; try{s=JSON.parse(localStorage.getItem(SESSION_KEY));}catch(e){}
   if(s&&s.id&&sb){
     // try to refresh from cloud
-    sb.from(TABLE).select("have,rep,color").eq("id",s.id).single().then(({data,error})=>{
-      if(!error&&data){ enter({id:s.id,name:s.name,pin:s.pin,color:data.color||s.color},data); }
+    sb.from(TABLE).select("*").eq("id",s.id).single().then(({data,error})=>{
+      if(!error&&data){ enter(rowToUser(data),{have:data.have||{},rep:data.rep||{}}); }
       else { /* offline or row gone: use local cache */ USER=s; DB=loadLocal(); cloudOK=false; showApp(); }
     });
   }
