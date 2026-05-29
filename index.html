@@ -114,6 +114,10 @@ nav.tabs button.on{background:var(--spectrum);color:#0c0f1a;border-color:transpa
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:12px;height:12px;border-radius:4px;display:inline-block}
 .dot.h{background:var(--green)} .dot.f{background:rgba(0,0,0,.3);border:1px solid var(--line)} .dot.r{background:var(--gold)}
+.sortbar{display:flex;align-items:center;gap:7px;color:var(--mut);font-size:12px;font-weight:700;margin:0 0 12px}
+.sortbar button{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--mut);
+  padding:5px 12px;border-radius:999px;font-weight:800;font-size:12px;cursor:pointer}
+.sortbar button.on{background:var(--spectrum);color:#0c0f1a;border-color:transparent}
 
 /* ===== Group ===== */
 .group{margin:14px 0;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;
@@ -496,7 +500,18 @@ function copy(txt){
 }
 
 // =================== ALBUM ===================
-let openGroups={}, searchTerm="";
+let openGroups={}, searchTerm="", sortMode="album"; // album | alpha
+function orderBlocks(blocks){ // especiales siempre primero; equipos según sortMode
+  const sp=blocks.filter(b=>!b.group), teams=blocks.filter(b=>b.group);
+  if(sortMode==="alpha") teams.sort((a,b)=>a.name.localeCompare(b.name,"es"));
+  return [...sp,...teams];
+}
+function sortPills(){
+  return `<div class="sortbar">Orden:
+    <button class="${sortMode==="album"?"on":""}" data-sort="album">Del álbum</button>
+    <button class="${sortMode==="alpha"?"on":""}" data-sort="alpha">A–Z</button></div>`;
+}
+function bindSort(rerender){ $$("[data-sort]").forEach(b=>b.onclick=()=>{ sortMode=b.dataset.sort; rerender(); }); }
 function renderAlbum(){
   const h=totalHave(),faltan=TOTAL-h,rep=totalRep();
   let html=`<div class="stats">
@@ -585,10 +600,15 @@ function renderFaltan(){
   if(sp.length){total+=sp.length;blocks.push({flag:"★",name:"Especiales",nums:sp});}
   TEAMS.forEach(t=>{const m=[];for(let i=0;i<t.count;i++)if(!has(t.start+i))m.push(t.start+i);if(m.length){total+=m.length;blocks.push({flag:t.flag,name:t.name,group:t.group,nums:m});}});
   if(total===0){view().innerHTML=`<div class="empty"><div class="big">🏆</div><h3>¡Álbum completo!</h3><p>Las ${TOTAL} estampas. A presumir.</p></div>`;updateHeader();return;}
-  let html=`<div class="listcard"><h3>Me faltan ${total} estampas</h3><p class="sub">Llévalo al puesto o mándalo por WhatsApp.</p><button class="copybtn" id="copyAll">📋 Copiar toda mi lista</button></div>`;
+  blocks=orderBlocks(blocks);
+  let html=`<div class="listcard"><h3>Me faltan ${total} estampas</h3><p class="sub">Llévalo al puesto o mándalo por WhatsApp.</p>${sortPills()}<button class="copybtn" id="copyAll">📋 Copiar toda mi lista</button></div>`;
   blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">faltan ${b.nums.length}</span></div><div class="nums">${b.nums.map(x=>`<span class="num" title="${stickerName(x)}">${stickerCode(x)}</span>`).join("")}</div></div>`;});
-  view().innerHTML=html; updateHeader();
-  $("#copyAll").onclick=()=>copy("FALTANTES (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.nums.map(stickerCode).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
+  view().innerHTML=html; updateHeader(); bindSort(renderFaltan);
+  $("#copyAll").onclick=()=>copy(exportHeader("FALTANTES",total,"faltan")+blocks.map(b=>`${b.flag} ${b.name}: ${b.nums.map(stickerCode).join(", ")}`).join("\n"));
+}
+function exportHeader(titulo,total,verbo){
+  const h=totalHave(), who=(USER&&!USER.guest)?`${USER.name} · `:"";
+  return `🏆 Álbum Mundial 26 — ${titulo}\n${who}${h}/${TOTAL} pegadas · ${verbo} ${total}\n\n`;
 }
 
 // =================== MIS REPETIDAS ===================
@@ -598,10 +618,11 @@ function renderRepes(){
   if(sp.length){total+=sp.reduce((a,x)=>a+x[1],0);blocks.push({flag:"★",name:"Especiales",reps:sp});}
   TEAMS.forEach(t=>{const reps=[];for(let i=0;i<t.count;i++){const id=t.start+i,r=repCount(id);if(r>0)reps.push([id,r]);}if(reps.length){total+=reps.reduce((a,x)=>a+x[1],0);blocks.push({flag:t.flag,name:t.name,group:t.group,reps});}});
   if(total===0){view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repetidas todavía</h3><p>Cuando te salga una repetida, en el Álbum toca <b>+</b> sobre la estampa.</p></div>`;updateHeader();return;}
-  let html=`<div class="listcard"><h3>Tengo ${total} repetidas</h3><p class="sub">Las que te sobran para cambiar. Ve a <b>Cambios 🔁</b> para ver con quién hacen match.</p><button class="copybtn" id="copyR">📋 Copiar mis repetidas</button></div>`;
+  blocks=orderBlocks(blocks);
+  let html=`<div class="listcard"><h3>Tengo ${total} repetidas</h3><p class="sub">Las que te sobran para cambiar. Ve a <b>Cambios 🔁</b> para ver con quién hacen match.</p>${sortPills()}<button class="copybtn" id="copyR">📋 Copiar mis repetidas</button></div>`;
   blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repetidas</span></div><div class="nums">${b.reps.map(([id,r])=>`<span class="num rep" title="${stickerName(id)}">${stickerCode(id)}${r>1?` ×${r}`:""}</span>`).join("")}</div></div>`;});
-  view().innerHTML=html; updateHeader();
-  $("#copyR").onclick=()=>copy("REPETIDAS PARA CAMBIO (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>stickerCode(id)+(r>1?` (×${r})`:"")).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
+  view().innerHTML=html; updateHeader(); bindSort(renderRepes);
+  $("#copyR").onclick=()=>copy(exportHeader("REPETIDAS PARA CAMBIO",total,"tengo")+blocks.map(b=>`${b.flag} ${b.name}: ${b.reps.map(([id,r])=>stickerCode(id)+(r>1?` (×${r})`:"")).join(", ")}`).join("\n"));
 }
 
 // =================== CAMBIOS (amigos) ===================
