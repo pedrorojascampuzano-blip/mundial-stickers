@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b1f3a">
+<title>Mi Álbum Mundial 2026</title>
+<style>
+:root{
+  --bg:#071427; --bg2:#0b1f3a; --card:#11294a; --card2:#16335c;
+  --line:#1f3f6b; --txt:#eaf2ff; --mut:#8fa9cf;
+  --grn:#22c98a; --grn2:#15a06b; --red:#ff5d6c; --gold:#ffcb45;
+  --acc:#00c2cb; --acc2:#ff3d77; --rad:16px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#143a63 0%,var(--bg2) 45%,var(--bg) 100%);
+  color:var(--txt); min-height:100vh; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--acc)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 14px 120px}
+
+/* Header */
+header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(7,20,39,.95),rgba(7,20,39,.78));
+  border-bottom:1px solid var(--line)}
+.hbar{max-width:1080px;margin:0 auto;padding:12px 14px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.logo .ball{font-size:24px}
+.logo b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{display:block;font-weight:600;color:var(--mut);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.ring{margin-left:auto;display:flex;align-items:center;gap:12px}
+.ring svg{transform:rotate(-90deg)}
+.ringtxt{text-align:right;line-height:1.1}
+.ringtxt b{font-size:18px}
+.ringtxt span{display:block;color:var(--mut);font-size:11px}
+
+/* Tabs */
+nav.tabs{display:flex;gap:6px;max-width:1080px;margin:0 auto;padding:0 10px 10px;overflow-x:auto}
+nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--mut);
+  padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;transition:.15s}
+nav.tabs button.on{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#06121f;border-color:transparent}
+
+/* Stat strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:12px 14px}
+.stat b{font-size:22px;display:block;font-variant-numeric:tabular-nums}
+.stat span{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.stat.good b{color:var(--grn)} .stat.warn b{color:var(--gold)} .stat.rep b{color:var(--acc)}
+
+/* Group */
+.group{margin:14px 0;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;background:var(--card)}
+.ghead{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none}
+.gtag{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:900;
+  background:linear-gradient(135deg,var(--acc),var(--acc2));color:#06121f;font-size:16px}
+.ghead h3{margin:0;font-size:15px}
+.ghead .gp{margin-left:auto;color:var(--mut);font-size:13px;font-variant-numeric:tabular-nums}
+.gbar{height:4px;background:#0a1c34}
+.gbar i{display:block;height:100%;background:linear-gradient(90deg,var(--grn2),var(--grn))}
+.gbody{padding:6px 12px 14px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:640px){.gbody{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Team card */
+.team{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px}
+.thead{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.flag{font-size:22px;line-height:1}
+.tname{font-weight:800;font-size:14px}
+.tprog{margin-left:auto;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
+.tprog.done{color:var(--grn);font-weight:800}
+.chips{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.chip{position:relative;aspect-ratio:1/1.18;border-radius:9px;border:1px solid var(--line);
+  background:#0c2342;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  cursor:pointer;transition:.12s;overflow:hidden}
+.chip .n{font-size:11px;color:var(--mut);font-weight:700}
+.chip .lbl{font-size:7.5px;color:#5f7aa3;margin-top:1px;text-align:center;line-height:1;padding:0 1px}
+.chip.have{background:linear-gradient(160deg,var(--grn2),#0f7a52);border-color:var(--grn)}
+.chip.have .n{color:#eafff5}
+.chip.have .lbl{color:#bff3dd}
+.chip .check{position:absolute;top:3px;right:4px;font-size:9px;opacity:0;color:#eafff5}
+.chip.have .check{opacity:1}
+.chip:active{transform:scale(.93)}
+.chip.special{border-style:dashed}
+.repbadge{position:absolute;bottom:2px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:6px}
+.repbadge button{width:15px;height:15px;border-radius:50%;border:none;font-weight:900;font-size:11px;line-height:1;
+  background:rgba(0,0,0,.35);color:#fff;cursor:pointer;display:grid;place-items:center}
+.repbadge .rn{font-size:10px;font-weight:800;color:var(--gold);min-width:10px;text-align:center}
+.chip:not(.have) .repbadge{display:none}
+
+/* faltan / repes list */
+.listcard{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin:14px 0}
+.listcard h3{margin:0 0 4px}
+.listcard p.sub{margin:0 0 14px;color:var(--mut);font-size:13px}
+.miss-team{margin-bottom:14px}
+.miss-team .mt{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;margin-bottom:6px}
+.miss-team .mt .c{margin-left:auto;color:var(--mut);font-weight:600;font-size:12px}
+.nums{display:flex;flex-wrap:wrap;gap:5px}
+.num{font-size:11px;font-weight:800;padding:3px 7px;border-radius:7px;background:#0c2342;border:1px solid var(--line);color:var(--mut);font-variant-numeric:tabular-nums}
+.num.rep{background:rgba(0,194,203,.13);border-color:var(--acc);color:var(--acc)}
+.copybtn{margin-top:8px;background:var(--card2);border:1px solid var(--line);color:var(--txt);
+  padding:7px 12px;border-radius:9px;font-weight:700;font-size:12px;cursor:pointer}
+.empty{text-align:center;color:var(--mut);padding:40px 10px}
+.empty .big{font-size:40px;margin-bottom:8px}
+
+/* settings */
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}
+.btn{background:var(--card2);border:1px solid var(--line);color:var(--txt);padding:10px 16px;border-radius:10px;
+  font-weight:700;font-size:14px;cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--acc)}
+.btn.danger{border-color:var(--red);color:var(--red)}
+.btn.primary{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#06121f;border:none}
+textarea{width:100%;min-height:120px;background:#0a1c34;border:1px solid var(--line);border-radius:10px;
+  color:var(--txt);padding:10px;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.note{color:var(--mut);font-size:13px;line-height:1.5}
+.searchbar{position:relative;margin:14px 0}
+.searchbar input{width:100%;padding:12px 14px 12px 40px;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--txt);font-size:15px}
+.searchbar .ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--mut)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--mut);font-size:12px;margin:8px 2px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+.dot.h{background:var(--grn)} .dot.f{background:#0c2342;border:1px solid var(--line)} .dot.r{background:var(--gold)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;
+  background:#06121f;border:1px solid var(--acc);color:var(--txt);padding:10px 18px;border-radius:12px;
+  font-weight:700;font-size:14px;z-index:100;transition:.25s;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:24px 0}
+.bulk{display:flex;gap:6px;margin-bottom:8px}
+.bulk button{font-size:11px;padding:5px 9px;border-radius:8px;border:1px solid var(--line);background:#0c2342;color:var(--mut);cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <div class="hbar">
+    <div class="logo">
+      <span class="ball">⚽</span>
+      <div><b>Mi Álbum Mundial</b><small>Estampas 2026</small></div>
+    </div>
+    <div class="ring">
+      <svg width="46" height="46" viewBox="0 0 46 46">
+        <circle cx="23" cy="23" r="19" fill="none" stroke="#0a1c34" stroke-width="6"/>
+        <circle id="ringArc" cx="23" cy="23" r="19" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-dasharray="119.4" stroke-dashoffset="119.4"/>
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00c2cb"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs>
+      </svg>
+      <div class="ringtxt"><b id="pct">0%</b><span id="ratio">0 / 980</span></div>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-tab="album" class="on">Álbum</button>
+    <button data-tab="faltan">Me faltan</button>
+    <button data-tab="repes">Repes / Cambios</button>
+    <button data-tab="ajustes">Ajustes</button>
+  </nav>
+</header>
+
+<div class="wrap">
+  <div id="view"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ====== DATA: Panini FIFA World Cup 2026 (980 estampas) ======
+// 12 grupos A-L · 48 selecciones · 20 estampas c/u (Escudo + Foto + 18 jugadores) + 20 Especiales.
+// Sorteo real del Mundial 2026. Fuente estructura: Panini / EstampaCheck.
+const GROUPS = [
+  ["A",[["Chequia","🇨🇿"],["México","🇲🇽"],["Sudáfrica","🇿🇦"],["Corea del Sur","🇰🇷"]]],
+  ["B",[["Bosnia y Herzegovina","🇧🇦"],["Canadá","🇨🇦"],["Catar","🇶🇦"],["Suiza","🇨🇭"]]],
+  ["C",[["Brasil","🇧🇷"],["Haití","🇭🇹"],["Marruecos","🇲🇦"],["Escocia","🏴󠁧󠁢󠁳󠁣󠁴󠁿"]]],
+  ["D",[["Australia","🇦🇺"],["Paraguay","🇵🇾"],["Turquía","🇹🇷"],["Estados Unidos","🇺🇸"]]],
+  ["E",[["Curazao","🇨🇼"],["Ecuador","🇪🇨"],["Alemania","🇩🇪"],["Costa de Marfil","🇨🇮"]]],
+  ["F",[["Japón","🇯🇵"],["Países Bajos","🇳🇱"],["Suecia","🇸🇪"],["Túnez","🇹🇳"]]],
+  ["G",[["Bélgica","🇧🇪"],["Egipto","🇪🇬"],["Irán","🇮🇷"],["Nueva Zelanda","🇳🇿"]]],
+  ["H",[["Cabo Verde","🇨🇻"],["Arabia Saudita","🇸🇦"],["España","🇪🇸"],["Uruguay","🇺🇾"]]],
+  ["I",[["Francia","🇫🇷"],["Irak","🇮🇶"],["Noruega","🇳🇴"],["Senegal","🇸🇳"]]],
+  ["J",[["Argelia","🇩🇿"],["Argentina","🇦🇷"],["Austria","🇦🇹"],["Jordania","🇯🇴"]]],
+  ["K",[["Colombia","🇨🇴"],["RD del Congo","🇨🇩"],["Portugal","🇵🇹"],["Uzbekistán","🇺🇿"]]],
+  ["L",[["Croacia","🇭🇷"],["Inglaterra","🏴󠁧󠁢󠁥󠁮󠁧󠁿"],["Ghana","🇬🇭"],["Panamá","🇵🇦"]]],
+];
+const PER_TEAM = 20; // Escudo + Foto del equipo + 18 jugadores
+const SPECIALS = 20; // Logo, portadas, FIFA, ilustraciones
+// labels para los 20 slots de cada equipo
+function slotLabel(i){ // i: 0..19
+  if(i===0) return "Escudo";
+  if(i===1) return "Equipo";
+  return "Jug. "+(i-1);
+}
+// Build flat list of teams in order, assign global sticker numbers.
+const TEAMS = [];
+let n = SPECIALS; // specials ocupan 1..20, equipos arrancan en 21
+GROUPS.forEach(([g,arr])=>{
+  arr.forEach(([name,flag])=>{
+    const start = n+1;
+    TEAMS.push({key:g+"|"+name, group:g, name, flag, start, count:PER_TEAM});
+    n += PER_TEAM;
+  });
+});
+const TOTAL = SPECIALS + TEAMS.length*PER_TEAM; // 20 + 48*20 = 980
+
+// ====== STATE ======
+const LS_KEY = "mundial2026_album_v1";
+let DB = load();
+function load(){
+  try{const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.have) return r;}catch(e){}
+  return {have:{}, rep:{}}; // have[id]=true ; rep[id]=n
+}
+function save(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(DB)); }catch(e){ /* modo privado / file:// sin storage: el progreso vive en memoria esta sesión */ } }
+function has(id){ return !!DB.have[id]; }
+function repCount(id){ return DB.rep[id]||0; }
+function setHave(id,v){ if(v){DB.have[id]=true;} else {delete DB.have[id]; delete DB.rep[id];} save(); }
+function setRep(id,v){ v=Math.max(0,v); if(v) DB.rep[id]=v; else delete DB.rep[id]; save(); }
+
+// ====== HELPERS ======
+const $=s=>document.querySelector(s);
+const view=$("#view");
+function teamHave(t){let c=0;for(let i=0;i<t.count;i++) if(has(t.start+i)) c++; return c;}
+function totalHave(){return Object.keys(DB.have).length;}
+function totalRep(){return Object.values(DB.rep).reduce((a,b)=>a+b,0);}
+function groupTeams(g){return TEAMS.filter(t=>t.group===g);}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1800);}
+
+function updateHeader(){
+  const h=totalHave();
+  const p=Math.round(h/TOTAL*100);
+  $("#pct").textContent=p+"%";
+  $("#ratio").textContent=h+" / "+TOTAL;
+  const circ=2*Math.PI*19;
+  $("#ringArc").setAttribute("stroke-dasharray",circ);
+  $("#ringArc").setAttribute("stroke-dashoffset", circ*(1-h/TOTAL));
+}
+
+// ====== RENDER: ALBUM ======
+let openGroups = {};
+let searchTerm = "";
+function renderAlbum(){
+  const h=totalHave(), faltan=TOTAL-h, rep=totalRep();
+  let html = `
+  <div class="stats">
+    <div class="stat good"><b>${h}</b><span>Pegadas</span></div>
+    <div class="stat warn"><b>${faltan}</b><span>Me faltan</span></div>
+    <div class="stat rep"><b>${rep}</b><span>Repes</span></div>
+    <div class="stat"><b>${TOTAL}</b><span>Total álbum</span></div>
+  </div>
+  <div class="searchbar"><span class="ic">🔎</span>
+    <input id="search" placeholder="Buscar selección (México, Brasil...)" value="${searchTerm}">
+  </div>
+  <div class="legend">
+    <span><i class="dot h"></i>La tengo</span>
+    <span><i class="dot f"></i>Me falta</span>
+    <span><i class="dot r"></i>Repes (toca + / − en la estampa)</span>
+  </div>`;
+
+  // Specials group
+  html += specialBlock();
+
+  GROUPS.forEach(([g])=>{
+    const ts = groupTeams(g).filter(t=>!searchTerm || t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    if(searchTerm && ts.length===0) return;
+    const total=groupTeams(g).length*PER_TEAM;
+    const got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
+    const open = searchTerm ? true : !!openGroups[g];
+    html+=`<div class="group">
+      <div class="ghead" data-g="${g}">
+        <div class="gtag">${g}</div>
+        <h3>Grupo ${g}</h3>
+        <span class="gp">${got}/${total}</span>
+      </div>
+      <div class="gbar"><i style="width:${got/total*100}%"></i></div>
+      <div class="gbody" style="${open?'':'display:none'}">
+        ${ts.map(teamCard).join("")}
+      </div>
+    </div>`;
+  });
+  view.innerHTML=html;
+  bindAlbum();
+  updateHeader();
+}
+
+function specialBlock(){
+  if(searchTerm && !"especiales especial fifa logo".includes(searchTerm.toLowerCase())) return "";
+  const got = (()=>{let c=0;for(let i=1;i<=SPECIALS;i++) if(has(i)) c++; return c;})();
+  const open = searchTerm ? true : (openGroups["SP"]!==false);
+  let chips="";
+  const specialNames=["Logo Mundial","Mascota","Trofeo","Estadios","Balón oficial","FIFA","Sedes","Portada","Portada","Portada","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","Ilustración","Ilustración","Ilustración","Ilustración","Ilustración"];
+  for(let i=1;i<=SPECIALS;i++){
+    chips+=chipHTML(i, "#"+i, specialNames[i-1]||"Especial", true);
+  }
+  return `<div class="group">
+    <div class="ghead" data-g="SP">
+      <div class="gtag" style="background:linear-gradient(135deg,var(--gold),#ff9a3d)">★</div>
+      <h3>Especiales del torneo</h3>
+      <span class="gp">${got}/${SPECIALS}</span>
+    </div>
+    <div class="gbar"><i style="width:${got/SPECIALS*100}%;background:linear-gradient(90deg,#ff9a3d,var(--gold))"></i></div>
+    <div class="gbody" style="grid-template-columns:1fr;${open?'':'display:none'}">
+      <div class="team">
+        <div class="thead"><span class="flag">★</span><span class="tname">Especiales</span>
+          <span class="tprog ${got===SPECIALS?'done':''}">${got}/${SPECIALS}</span></div>
+        <div class="bulk"><button data-all="SP">Marcar todas</button><button data-none="SP">Quitar todas</button></div>
+        <div class="chips" style="grid-template-columns:repeat(5,1fr)">${chips}</div>
+      </div>
+    </div></div>`;
+}
+
+function teamCard(t){
+  const got=teamHave(t), done=got===t.count;
+  let chips="";
+  for(let i=0;i<t.count;i++){
+    const id=t.start+i;
+    chips+=chipHTML(id, "#"+id, slotLabel(i), false);
+  }
+  return `<div class="team" data-team="${t.key}">
+    <div class="thead">
+      <span class="flag">${t.flag}</span>
+      <span class="tname">${t.name}</span>
+      <span class="tprog ${done?'done':''}">${done?'✓ Completo':got+'/'+t.count}</span>
+    </div>
+    <div class="bulk"><button data-all="${t.key}">Marcar todas</button><button data-none="${t.key}">Quitar todas</button></div>
+    <div class="chips">${chips}</div>
+  </div>`;
+}
+
+function chipHTML(id,numTxt,lbl,special){
+  const h=has(id), r=repCount(id);
+  return `<div class="chip ${h?'have':''} ${special?'special':''}" data-id="${id}">
+    <span class="check">✓</span>
+    <span class="n">${numTxt}</span>
+    <span class="lbl">${lbl}</span>
+    <div class="repbadge">
+      <button data-rep="-" data-id="${id}">−</button>
+      <span class="rn">${r}</span>
+      <button data-rep="+" data-id="${id}">+</button>
+    </div>
+  </div>`;
+}
+
+function bindAlbum(){
+  // toggle group
+  view.querySelectorAll(".ghead").forEach(el=>el.addEventListener("click",()=>{
+    const g=el.dataset.g;
+    if(g==="SP") openGroups["SP"]= openGroups["SP"]===false ? true : false;
+    else openGroups[g]=!openGroups[g];
+    renderAlbum();
+  }));
+  // chip toggle
+  view.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",e=>{
+    if(e.target.closest(".repbadge")) return;
+    const id=+c.dataset.id;
+    setHave(id,!has(id));
+    refreshChip(c,id);
+    refreshProgress();
+  }));
+  // rep +/-
+  view.querySelectorAll("[data-rep]").forEach(b=>b.addEventListener("click",e=>{
+    e.stopPropagation();
+    const id=+b.dataset.id;
+    if(!has(id)){ setHave(id,true); }
+    const d=b.dataset.rep==="+"?1:-1;
+    setRep(id, repCount(id)+d);
+    const chip=b.closest(".chip");
+    refreshChip(chip,id);
+    refreshProgress();
+  }));
+  // bulk
+  view.querySelectorAll("[data-all]").forEach(b=>b.addEventListener("click",e=>{
+    e.stopPropagation(); bulk(b.dataset.all,true);
+  }));
+  view.querySelectorAll("[data-none]").forEach(b=>b.addEventListener("click",e=>{
+    e.stopPropagation(); bulk(b.dataset.none,false);
+  }));
+  // search
+  const s=$("#search");
+  if(s) s.addEventListener("input",e=>{searchTerm=e.target.value; const pos=e.target.selectionStart; renderAlbum(); const ns=$("#search"); if(ns){ns.focus(); ns.setSelectionRange(pos,pos);} });
+}
+function refreshChip(chip,id){
+  const h=has(id), r=repCount(id);
+  chip.classList.toggle("have",h);
+  chip.querySelector(".rn").textContent=r;
+}
+function refreshProgress(){
+  // update group/team counters without full rerender
+  updateHeader();
+  view.querySelectorAll(".group").forEach(gr=>{}); // counters refreshed on next render; do light update:
+  // team progress
+  view.querySelectorAll(".team").forEach(td=>{
+    const key=td.dataset.team;
+    const t=TEAMS.find(x=>x.key===key);
+    if(!t)return;
+    const got=teamHave(t),done=got===t.count;
+    const p=td.querySelector(".tprog");
+    p.textContent=done?'✓ Completo':got+'/'+t.count;
+    p.classList.toggle("done",done);
+  });
+  // group bars + headers
+  GROUPS.forEach(([g],idx)=>{
+    const total=groupTeams(g).length*PER_TEAM;
+    const got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
+    const gp=view.querySelectorAll(".group");
+  });
+  // simplest: update all gp spans by recomputing
+  let i=0;
+  view.querySelectorAll(".group").forEach(gr=>{
+    const head=gr.querySelector(".ghead"); const g=head.dataset.g;
+    const bar=gr.querySelector(".gbar i"); const gp=gr.querySelector(".gp");
+    if(g==="SP"){let c=0;for(let k=1;k<=SPECIALS;k++)if(has(k))c++; gp.textContent=c+"/"+SPECIALS; bar.style.width=(c/SPECIALS*100)+"%";}
+    else{const total=groupTeams(g).length*PER_TEAM; const got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0); gp.textContent=got+"/"+total; bar.style.width=(got/total*100)+"%";}
+  });
+  // stat strip
+  const st=view.querySelectorAll(".stat b");
+  if(st.length>=3){st[0].textContent=totalHave(); st[1].textContent=TOTAL-totalHave(); st[2].textContent=totalRep();}
+}
+function bulk(key,val){
+  if(key==="SP"){ for(let i=1;i<=SPECIALS;i++) setHave(i,val); }
+  else { const t=TEAMS.find(x=>x.key===key); if(t) for(let i=0;i<t.count;i++) setHave(t.start+i,val); }
+  renderAlbum();
+  toast(val?"Marcadas ✓":"Quitadas");
+}
+
+// ====== RENDER: ME FALTAN ======
+function renderFaltan(){
+  let blocks=[]; let totalMiss=0;
+  // specials
+  const spMiss=[];for(let i=1;i<=SPECIALS;i++) if(!has(i)) spMiss.push(i);
+  if(spMiss.length){totalMiss+=spMiss.length; blocks.push({flag:"★",name:"Especiales",nums:spMiss});}
+  TEAMS.forEach(t=>{
+    const miss=[];for(let i=0;i<t.count;i++) if(!has(t.start+i)) miss.push(t.start+i);
+    if(miss.length){totalMiss+=miss.length; blocks.push({flag:t.flag,name:t.name,group:t.group,nums:miss});}
+  });
+  if(totalMiss===0){
+    view.innerHTML=`<div class="empty"><div class="big">🏆</div><h3>¡Álbum completo!</h3><p>Llenaste las ${TOTAL} estampas. A presumirlo.</p></div>`;
+    updateHeader();return;
+  }
+  let html=`<div class="listcard"><h3>Me faltan ${totalMiss} estampas</h3>
+    <p class="sub">Llévalo al puesto. Toca "Copiar números" para mandar tu lista por WhatsApp.</p>
+    <button class="copybtn" id="copyAll">📋 Copiar TODA mi lista de faltantes</button></div>`;
+  blocks.forEach(b=>{
+    html+=`<div class="listcard miss-team">
+      <div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` <span style="color:var(--mut);font-weight:600">· Grupo ${b.group}</span>`:''}<span class="c">faltan ${b.nums.length}</span></div>
+      <div class="nums">${b.nums.map(x=>`<span class="num">${x}</span>`).join("")}</div>
+    </div>`;
+  });
+  view.innerHTML=html;
+  $("#copyAll").addEventListener("click",()=>{
+    const lines=blocks.map(b=>`${b.name}: ${b.nums.join(", ")}`).join("\n");
+    copy("FALTANTES (Álbum Mundial 2026):\n"+lines+`\n\nTotal: ${totalMiss}`);
+  });
+  updateHeader();
+}
+
+// ====== RENDER: REPES ======
+function renderRepes(){
+  let blocks=[]; let totalR=0;
+  const spRep=[];for(let i=1;i<=SPECIALS;i++){const r=repCount(i); if(r>0) spRep.push([i,r]);}
+  if(spRep.length){totalR+=spRep.reduce((a,x)=>a+x[1],0); blocks.push({flag:"★",name:"Especiales",reps:spRep});}
+  TEAMS.forEach(t=>{
+    const reps=[];for(let i=0;i<t.count;i++){const id=t.start+i;const r=repCount(id); if(r>0) reps.push([id,r]);}
+    if(reps.length){totalR+=reps.reduce((a,x)=>a+x[1],0); blocks.push({flag:t.flag,name:t.name,group:t.group,reps});}
+  });
+  if(totalR===0){
+    view.innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repetidas todavía</h3><p>Cuando te salga una repe, en el Álbum toca <b>+</b> sobre la estampa para sumarla aquí y cambiarla.</p></div>`;
+    updateHeader();return;
+  }
+  let html=`<div class="listcard"><h3>Tengo ${totalR} repes para cambio</h3>
+    <p class="sub">Estas son las que te sobran. Cópialas y mándalas para hacer trueque.</p>
+    <button class="copybtn" id="copyR">📋 Copiar TODAS mis repes</button></div>`;
+  blocks.forEach(b=>{
+    html+=`<div class="listcard miss-team">
+      <div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` <span style="color:var(--mut);font-weight:600">· Grupo ${b.group}</span>`:''}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repes</span></div>
+      <div class="nums">${b.reps.map(([id,r])=>`<span class="num rep">${id}${r>1?` ×${r}`:''}</span>`).join("")}</div>
+    </div>`;
+  });
+  view.innerHTML=html;
+  $("#copyR").addEventListener("click",()=>{
+    const lines=blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>id+(r>1?` (×${r})`:"")).join(", ")}`).join("\n");
+    copy("REPES PARA CAMBIO (Álbum Mundial 2026):\n"+lines+`\n\nTotal: ${totalR}`);
+  });
+  updateHeader();
+}
+
+// ====== RENDER: AJUSTES ======
+function renderAjustes(){
+  view.innerHTML=`
+  <div class="listcard">
+    <h3>Respaldo y traspaso</h3>
+    <p class="note">Tu progreso se guarda solo en este navegador/dispositivo. Para pasarlo a tu celular o respaldarlo, exporta el código y pégalo en el otro dispositivo.</p>
+    <div class="row">
+      <button class="btn primary" id="exp">⬇️ Exportar mi progreso</button>
+      <button class="btn" id="impBtn">⬆️ Importar progreso</button>
+    </div>
+    <textarea id="io" placeholder="Aquí aparece tu código al exportar. Para importar, pega un código y dale Importar."></textarea>
+  </div>
+  <div class="listcard">
+    <h3>Sobre el álbum</h3>
+    <p class="note"><b>${TOTAL}</b> estampas en total · <b>48</b> selecciones en 12 grupos (A–L) · 20 estampas por equipo (escudo + foto + 18 jugadores) + 20 especiales del torneo.<br>
+    Estructura basada en la colección oficial Panini FIFA World Cup 2026™.</p>
+  </div>
+  <div class="listcard">
+    <h3>Zona de peligro</h3>
+    <p class="note">Borra todo tu progreso y empieza de cero.</p>
+    <button class="btn danger" id="reset">🗑️ Reiniciar álbum</button>
+  </div>`;
+  $("#exp").addEventListener("click",()=>{$("#io").value=btoa(unescape(encodeURIComponent(JSON.stringify(DB)))); copy($("#io").value); toast("Copiado al portapapeles");});
+  $("#impBtn").addEventListener("click",()=>{
+    try{const raw=$("#io").value.trim(); if(!raw)return toast("Pega un código primero");
+      const d=JSON.parse(decodeURIComponent(escape(atob(raw))));
+      if(!d.have)throw 0; DB=d; if(!DB.rep)DB.rep={}; save(); toast("¡Progreso importado!"); updateHeader();
+    }catch(e){toast("Código inválido");}
+  });
+  $("#reset").addEventListener("click",()=>{
+    if(confirm("¿Seguro? Esto borra TODAS las estampas marcadas y no se puede deshacer.")){
+      DB={have:{},rep:{}}; save(); toast("Álbum reiniciado"); updateHeader();
+    }
+  });
+  updateHeader();
+}
+
+// ====== utils ======
+function copy(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(()=>toast("📋 Copiado")).catch(()=>fallbackCopy(txt));}
+  else fallbackCopy(txt);
+}
+function fallbackCopy(txt){const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("📋 Copiado");}catch(e){toast("No se pudo copiar");}document.body.removeChild(ta);}
+
+// ====== router ======
+let tab="album";
+function route(){
+  if(tab==="album")renderAlbum();
+  else if(tab==="faltan")renderFaltan();
+  else if(tab==="repes")renderRepes();
+  else renderAjustes();
+}
+$("#tabs").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+  tab=b.dataset.tab;
+  $("#tabs").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));
+  window.scrollTo(0,0);
+  route();
+}));
+
+route();
+</script>
+<footer>Mi Álbum Mundial 2026 · funciona offline · tu progreso vive en este dispositivo</footer>
+</body>
+</html>
