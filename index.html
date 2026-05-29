@@ -239,7 +239,7 @@ footer{text-align:center;color:var(--mut);font-size:11px;padding:26px 0;line-hei
   <div class="lcard">
     <div class="big">🏆</div>
     <h1>Mi Álbum <b>Mundial 26</b></h1>
-    <p class="sub">Junta las 980 estampas. Cambia repes con tus cuates.</p>
+    <p class="sub">Junta las 980 estampas. Cambia repetidas con tus cuates.</p>
     <div class="lerr" id="lerr"></div>
     <div class="users-quick" id="usersQuick"></div>
     <div class="field"><label>Tu nombre</label>
@@ -280,7 +280,7 @@ footer{text-align:center;color:var(--mut);font-size:11px;padding:26px 0;line-hei
   <nav class="tabs" id="tabs">
     <button data-tab="album" class="on">Álbum</button>
     <button data-tab="faltan">Me faltan</button>
-    <button data-tab="repes">Mis repes</button>
+    <button data-tab="repes">Mis repetidas</button>
     <button data-tab="amigos">Cambios 🔁</button>
     <button data-tab="ajustes">Ajustes</button>
   </nav>
@@ -497,10 +497,10 @@ function renderAlbum(){
   let html=`<div class="stats">
     <div class="stat good"><b>${h}</b><span>Pegadas</span></div>
     <div class="stat warn"><b>${faltan}</b><span>Me faltan</span></div>
-    <div class="stat rep"><b>${rep}</b><span>Repes</span></div>
+    <div class="stat rep"><b>${rep}</b><span>Repetidas</span></div>
     <div class="stat"><b>${TOTAL}</b><span>Total</span></div></div>
     <div class="searchbar"><span class="ic">🔎</span><input id="search" placeholder="Buscar selección (México, Brasil...)" value="${searchTerm}"></div>
-    <div class="legend"><span><i class="dot h"></i>La tengo</span><span><i class="dot f"></i>Me falta</span><span><i class="dot r"></i>Repes: toca + / −</span></div>`;
+    <div class="legend"><span><i class="dot h"></i>La tengo</span><span><i class="dot f"></i>Me falta</span><span><i class="dot r"></i>Repetidas: toca + / −</span></div>`;
   html+=specialBlock();
   GROUPS.forEach(([g])=>{
     const q=searchTerm.toLowerCase();
@@ -586,17 +586,17 @@ function renderFaltan(){
   $("#copyAll").onclick=()=>copy("FALTANTES (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.nums.map(stickerCode).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
 }
 
-// =================== MIS REPES ===================
+// =================== MIS REPETIDAS ===================
 function renderRepes(){
   let blocks=[],total=0;
   const sp=[];for(let i=1;i<=SPECIALS;i++){const r=repCount(i);if(r>0)sp.push([i,r]);}
   if(sp.length){total+=sp.reduce((a,x)=>a+x[1],0);blocks.push({flag:"★",name:"Especiales",reps:sp});}
   TEAMS.forEach(t=>{const reps=[];for(let i=0;i<t.count;i++){const id=t.start+i,r=repCount(id);if(r>0)reps.push([id,r]);}if(reps.length){total+=reps.reduce((a,x)=>a+x[1],0);blocks.push({flag:t.flag,name:t.name,group:t.group,reps});}});
-  if(total===0){view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repes todavía</h3><p>Cuando te salga una repetida, en el Álbum toca <b>+</b> sobre la estampa.</p></div>`;updateHeader();return;}
-  let html=`<div class="listcard"><h3>Tengo ${total} repes</h3><p class="sub">Las que te sobran para cambiar. Ve a <b>Cambios 🔁</b> para ver con quién hacen match.</p><button class="copybtn" id="copyR">📋 Copiar mis repes</button></div>`;
-  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repes</span></div><div class="nums">${b.reps.map(([id,r])=>`<span class="num rep" title="${stickerName(id)}">${stickerCode(id)}${r>1?` ×${r}`:""}</span>`).join("")}</div></div>`;});
+  if(total===0){view().innerHTML=`<div class="empty"><div class="big">🔁</div><h3>Sin repetidas todavía</h3><p>Cuando te salga una repetida, en el Álbum toca <b>+</b> sobre la estampa.</p></div>`;updateHeader();return;}
+  let html=`<div class="listcard"><h3>Tengo ${total} repetidas</h3><p class="sub">Las que te sobran para cambiar. Ve a <b>Cambios 🔁</b> para ver con quién hacen match.</p><button class="copybtn" id="copyR">📋 Copiar mis repetidas</button></div>`;
+  blocks.forEach(b=>{html+=`<div class="listcard miss-team"><div class="mt"><span class="flag">${b.flag}</span>${b.name}${b.group?` · Grupo ${b.group}`:""}<span class="c">${b.reps.reduce((a,x)=>a+x[1],0)} repetidas</span></div><div class="nums">${b.reps.map(([id,r])=>`<span class="num rep" title="${stickerName(id)}">${stickerCode(id)}${r>1?` ×${r}`:""}</span>`).join("")}</div></div>`;});
   view().innerHTML=html; updateHeader();
-  $("#copyR").onclick=()=>copy("REPES PARA CAMBIO (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>stickerCode(id)+(r>1?` (×${r})`:"")).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
+  $("#copyR").onclick=()=>copy("REPETIDAS PARA CAMBIO (Álbum Mundial 26):\n"+blocks.map(b=>`${b.name}: ${b.reps.map(([id,r])=>stickerCode(id)+(r>1?` (×${r})`:"")).join(", ")}`).join("\n")+`\n\nTotal: ${total}`);
 }
 
 // =================== CAMBIOS (amigos) ===================
@@ -624,18 +624,18 @@ function renderMatch(fid){
   const me=friendsCache.find(p=>p.id===USER.id)||{have:DB.have,rep:DB.rep,name:USER.name,color:USER.color};
   const fr=friendsCache.find(p=>p.id===fid); if(!fr)return;
   const myHave=DB.have, myRep=DB.rep, frHave=fr.have||{}, frRep=fr.rep||{};
-  // Le doy: mis repes (rep>0) que el amigo NO tiene
+  // Le doy: mis repetidas (rep>0) que el amigo NO tiene
   const give=[];for(const id in myRep){if(myRep[id]>0 && !frHave[id])give.push(+id);} give.sort((a,b)=>a-b);
-  // Me da: sus repes que yo NO tengo
+  // Me da: sus repetidas que yo NO tengo
   const get=[];for(const id in frRep){if(frRep[id]>0 && !myHave[id])get.push(+id);} get.sort((a,b)=>a-b);
   const c=fr.color||colorFor(fr.name);
   let html=`<button class="backbtn" onclick="route()">‹ Volver a coleccionistas</button>
     <div class="listcard"><h3 style="display:flex;align-items:center;gap:10px"><span class="av" style="background:${c};width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#0c0f1a">${initials(fr.name)}</span>Cambio con ${fr.name}</h3>
-    <p class="sub">${give.length+get.length===0?"Por ahora no hay match. Cuando alguno tenga repes que el otro necesite, aparecen aquí.":`${give.length} para darle · ${get.length} que te puede dar`}</p></div>
+    <p class="sub">${give.length+get.length===0?"Por ahora no hay match. Cuando alguno tenga repetidas que el otro necesite, aparecen aquí.":`${give.length} para darle · ${get.length} que te puede dar`}</p></div>
     <div class="match-cols">
-      <div class="match-col"><h4>Le das<span class="tag give">${give.length}</span></h4><p class="cnt">Tus repes que ${fr.name} necesita</p>
+      <div class="match-col"><h4>Le das<span class="tag give">${give.length}</span></h4><p class="cnt">Tus repetidas que ${fr.name} necesita</p>
         ${give.length?`<div class="nums">${give.map(id=>`<span class="num match" title="${stickerName(id)}">${stickerCode(id)}</span>`).join("")}</div><button class="copybtn" id="cgive">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
-      <div class="match-col"><h4>Te da<span class="tag get">${get.length}</span></h4><p class="cnt">Sus repes que tú necesitas</p>
+      <div class="match-col"><h4>Te da<span class="tag get">${get.length}</span></h4><p class="cnt">Sus repetidas que tú necesitas</p>
         ${get.length?`<div class="nums">${get.map(id=>`<span class="num rep" title="${stickerName(id)}">${stickerCode(id)}</span>`).join("")}</div><button class="copybtn" id="cget">📋 Copiar</button>`:'<p class="cnt">Nada por ahora.</p>'}</div>
     </div>`;
   view().innerHTML=html;
