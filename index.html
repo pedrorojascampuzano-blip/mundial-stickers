@@ -3,15 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#160a36">
+<meta name="theme-color" content="#0c0f1a">
 <title>Mundial 26 · Álbum de Estampas</title>
 <style>
 :root{
-  --bg:#0a0524; --bg2:#160a36; --card:#1d1147; --card2:#261659; --line:#3a2780;
-  --txt:#f3eeff; --mut:#a99cd6;
-  --pink:#ff2d78; --teal:#00d8c8; --yellow:#ffd23f; --purple:#8b3dff; --green:#21d07a;
-  --grn:#21d07a; --red:#ff5d6c; --gold:#ffcb45;
-  --spectrum:linear-gradient(90deg,#ff2d78,#ffd23f,#21d07a,#00d8c8,#8b3dff);
+  /* Branding FIFA World Cup 26: emblema negro+blanco+oro · trío anfitrión CA/MX/US */
+  --bg:#090c14; --bg2:#0f1626; --card:#131b2b; --card2:#1a2438; --line:#2a3650;
+  --txt:#f5f2e9; --mut:#94a1b8;
+  --ca:#e23b3f; --mx:#15924f; --us:#2f6bdf;       /* Canadá / México / Estados Unidos */
+  --gold:#e9c25a; --gold-d:#b8860b;
+  --teal:#3a78e0;  --pink:#e23b3f; --purple:#b8860b; --yellow:#e9c25a; --green:#1fb866;
+  --grn:#1fb866; --red:#e23b3f;
+  --spectrum:linear-gradient(95deg,#b8860b,#f3d784 48%,#e9c25a);  /* oro (trofeo) */
+  --trionda:linear-gradient(90deg,#e23b3f 0%,#e23b3f 30%,#f5f2e9 37%,#15924f 50%,#f5f2e9 63%,#2f6bdf 70%,#2f6bdf 100%);
   --rad:18px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -20,10 +24,11 @@ body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   color:var(--txt); min-height:100vh; -webkit-font-smoothing:antialiased;
   background:
-    radial-gradient(900px 500px at 12% -8%, rgba(255,45,120,.22), transparent 60%),
-    radial-gradient(900px 500px at 95% 4%, rgba(0,216,200,.20), transparent 55%),
-    radial-gradient(700px 500px at 50% 110%, rgba(139,61,255,.25), transparent 60%),
-    linear-gradient(180deg,#160a36,#0a0524 70%);
+    radial-gradient(900px 520px at 50% -12%, rgba(233,194,90,.16), transparent 60%),
+    radial-gradient(680px 480px at 10% 6%, rgba(226,59,63,.07), transparent 55%),
+    radial-gradient(680px 480px at 92% 5%, rgba(47,107,223,.08), transparent 55%),
+    radial-gradient(700px 460px at 50% 112%, rgba(21,146,79,.08), transparent 60%),
+    linear-gradient(180deg,#0f1626,#090c14 72%);
   background-attachment:fixed;
 }
 a{color:var(--teal)}
@@ -31,7 +36,7 @@ a{color:var(--teal)}
 
 /* ===== Header ===== */
 header{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);
-  background:linear-gradient(180deg,rgba(10,5,36,.96),rgba(10,5,36,.74));
+  background:linear-gradient(180deg,rgba(9,12,20,.96),rgba(9,12,20,.72));
   border-bottom:1px solid var(--line)}
 .hbar{max-width:1100px;margin:0 auto;padding:11px 14px;display:flex;align-items:center;gap:12px}
 .brand{display:flex;align-items:center;gap:11px;min-width:0}
@@ -48,7 +53,7 @@ header{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);
 .ringtxt b{font-size:16px;font-variant-numeric:tabular-nums}
 .ringtxt span{display:block;color:var(--mut);font-size:10px}
 .avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:15px;
-  cursor:pointer;color:#0a0524;border:2px solid rgba(255,255,255,.25)}
+  cursor:pointer;color:#0c0f1a;border:2px solid rgba(255,255,255,.25)}
 .synced{font-size:9px;color:var(--mut);text-align:center;margin-top:1px;letter-spacing:.3px}
 .synced.ok{color:var(--green)} .synced.off{color:var(--gold)} .synced.err{color:var(--red)}
 
@@ -57,13 +62,13 @@ nav.tabs{display:flex;gap:6px;max-width:1100px;margin:0 auto;padding:0 10px 10px
 nav.tabs::-webkit-scrollbar{display:none}
 nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--mut);
   padding:8px 15px;border-radius:999px;font-weight:800;font-size:13px;cursor:pointer;transition:.15s}
-nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transparent;box-shadow:0 4px 16px rgba(139,61,255,.4)}
+nav.tabs button.on{background:var(--spectrum);color:#0c0f1a;border-color:transparent;box-shadow:0 4px 16px rgba(233,194,90,.35)}
 
 /* ===== Login ===== */
 .login{max-width:420px;margin:40px auto;padding:0 8px}
 .lcard{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);
   border-radius:24px;padding:30px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);position:relative;overflow:hidden}
-.lcard::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--spectrum)}
+.lcard::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--trionda)}
 .lcard .big{text-align:center;font-size:54px;margin:4px 0 6px}
 .lcard h1{text-align:center;font-size:23px;margin:0 0 2px;font-weight:900}
 .lcard h1 b{background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -76,7 +81,7 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .field .pinrow{display:flex;gap:10px}
 .field .pinrow input{text-align:center;letter-spacing:8px;font-size:22px}
 .btn-xl{width:100%;padding:15px;border:none;border-radius:14px;font-size:16px;font-weight:900;cursor:pointer;
-  background:var(--spectrum);color:#0a0524;box-shadow:0 8px 24px rgba(255,45,120,.32);transition:.15s}
+  background:var(--spectrum);color:#0c0f1a;box-shadow:0 8px 24px rgba(184,134,11,.4);transition:.15s}
 .btn-xl:active{transform:scale(.98)}
 .btn-xl:disabled{opacity:.5}
 .lswitch{text-align:center;margin-top:16px;color:var(--mut);font-size:14px}
@@ -89,7 +94,7 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .users-quick{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
 .users-quick .uq{display:flex;align-items:center;gap:7px;background:rgba(0,0,0,.25);border:1px solid var(--line);
   border-radius:999px;padding:5px 12px 5px 6px;cursor:pointer;font-weight:700;font-size:13px}
-.users-quick .uq .av{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;color:#0a0524}
+.users-quick .uq .av{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;color:#0c0f1a}
 
 /* ===== Stats ===== */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
@@ -112,10 +117,10 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 
 /* ===== Group ===== */
 .group{margin:14px 0;border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;
-  background:linear-gradient(160deg,rgba(38,22,89,.6),rgba(29,17,71,.6))}
+  background:linear-gradient(160deg,rgba(26,36,56,.6),rgba(19,27,43,.6))}
 .ghead{display:flex;align-items:center;gap:13px;padding:15px 16px;cursor:pointer;user-select:none}
 .gtag{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:900;
-  color:#0a0524;font-size:17px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  color:#0c0f1a;font-size:17px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
 .ghead h3{margin:0;font-size:15px;font-weight:800}
 .ghead .gp{margin-left:auto;color:var(--mut);font-size:13px;font-variant-numeric:tabular-nums;font-weight:700}
 .ghead .chev{color:var(--mut);font-size:12px;transition:.2s}
@@ -137,10 +142,10 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .bulk button:hover{border-color:var(--teal);color:var(--txt)}
 .chips{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
 .chip{position:relative;aspect-ratio:1/1.2;border-radius:10px;border:1px solid var(--line);
-  background:linear-gradient(160deg,#241548,#190f3a);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#1a2438,#111827);display:flex;flex-direction:column;align-items:center;justify-content:center;
   cursor:pointer;transition:transform .1s,box-shadow .15s;overflow:hidden}
 .chip .n{font-size:11px;color:var(--mut);font-weight:800}
-.chip .lbl{font-size:7.5px;color:#7d6fb5;margin-top:1px;text-align:center;line-height:1;padding:0 2px}
+.chip .lbl{font-size:7.5px;color:#6f7d96;margin-top:1px;text-align:center;line-height:1;padding:0 2px}
 .chip.have{background:linear-gradient(160deg,#1aa863,#0c6e42);border-color:#2fe08c;box-shadow:0 4px 14px rgba(33,208,122,.3)}
 .chip.have .n{color:#eafff5} .chip.have .lbl{color:#bff3dd}
 .chip .check{position:absolute;top:3px;right:4px;font-size:10px;opacity:0;color:#fff}
@@ -148,8 +153,8 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .chip:active{transform:scale(.92)}
 /* foil look for badge/team/specials */
 .chip.foil{border-width:2px;border-image:var(--spectrum) 1}
-.chip.foil:not(.have){background:linear-gradient(135deg,#2a1a55,#3a2780,#241548)}
-.chip.foil .n{color:var(--yellow)}
+.chip.foil:not(.have){background:linear-gradient(135deg,#1c2944,#2a3650,#15203a)}
+.chip.foil .n{color:var(--gold)}
 .repbadge{position:absolute;bottom:2px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:6px}
 .repbadge button{width:16px;height:16px;border-radius:50%;border:none;font-weight:900;font-size:12px;line-height:1;
   background:rgba(0,0,0,.45);color:#fff;cursor:pointer;display:grid;place-items:center}
@@ -165,7 +170,7 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .miss-team .mt .c{margin-left:auto;color:var(--mut);font-weight:600;font-size:12px}
 .nums{display:flex;flex-wrap:wrap;gap:5px}
 .num{font-size:11px;font-weight:800;padding:3px 8px;border-radius:8px;background:rgba(0,0,0,.3);border:1px solid var(--line);color:var(--mut);font-variant-numeric:tabular-nums}
-.num.rep{background:rgba(0,216,200,.13);border-color:var(--teal);color:var(--teal)}
+.num.rep{background:rgba(58,120,224,.14);border-color:var(--teal);color:var(--teal)}
 .num.match{background:rgba(33,208,122,.16);border-color:var(--green);color:#7ff0b5}
 .copybtn{margin-top:9px;background:rgba(0,0,0,.3);border:1px solid var(--line);color:var(--txt);
   padding:8px 13px;border-radius:10px;font-weight:800;font-size:12px;cursor:pointer}
@@ -177,8 +182,8 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .friend{display:flex;align-items:center;gap:12px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;
   background:rgba(0,0,0,.22);margin-bottom:10px;cursor:pointer;transition:.15s}
 .friend:hover{border-color:var(--teal)}
-.friend.me{border-color:var(--purple);background:rgba(139,61,255,.12)}
-.friend .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:17px;color:#0a0524}
+.friend.me{border-color:var(--purple);background:rgba(233,194,90,.12)}
+.friend .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:17px;color:#0c0f1a}
 .friend .fi{flex:1;min-width:0}
 .friend .fn{font-weight:800;font-size:15px}
 .friend .fbar{height:6px;border-radius:4px;background:rgba(0,0,0,.4);margin-top:5px;overflow:hidden}
@@ -191,7 +196,7 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
 .match-col h4{margin:0 0 3px;font-size:14px}
 .match-col h4 .tag{font-size:10px;padding:2px 7px;border-radius:6px;margin-left:6px;font-weight:800;vertical-align:middle}
 .tag.give{background:rgba(33,208,122,.2);color:#7ff0b5}
-.tag.get{background:rgba(0,216,200,.2);color:var(--teal)}
+.tag.get{background:rgba(58,120,224,.2);color:var(--teal)}
 .match-col .cnt{color:var(--mut);font-size:12px;margin:0 0 10px}
 .backbtn{background:none;border:none;color:var(--teal);font-weight:800;cursor:pointer;font-size:14px;padding:0;margin-bottom:6px}
 
@@ -201,13 +206,13 @@ nav.tabs button.on{background:var(--spectrum);color:#0a0524;border-color:transpa
   font-weight:800;font-size:14px;cursor:pointer;transition:.15s}
 .btn:hover{border-color:var(--teal)}
 .btn.danger{border-color:var(--red);color:var(--red)}
-.btn.primary{background:var(--spectrum);color:#0a0524;border:none}
+.btn.primary{background:var(--spectrum);color:#0c0f1a;border:none}
 .note{color:var(--mut);font-size:13px;line-height:1.55}
 textarea{width:100%;min-height:90px;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:11px;
   color:var(--txt);padding:10px;font-family:ui-monospace,Menlo,monospace;font-size:12px}
 
 .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);opacity:0;
-  background:#0a0524;border:1px solid var(--teal);color:var(--txt);padding:11px 20px;border-radius:13px;
+  background:#0c0f1a;border:1px solid var(--teal);color:var(--txt);padding:11px 20px;border-radius:13px;
   font-weight:800;font-size:14px;z-index:200;transition:.25s;pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 footer{text-align:center;color:var(--mut);font-size:11px;padding:26px 0;line-height:1.6}
@@ -251,7 +256,7 @@ footer{text-align:center;color:var(--mut);font-size:11px;padding:26px 0;line-hei
           <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(0,0,0,.4)" stroke-width="5"/>
           <circle id="ringArc" cx="22" cy="22" r="18" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
           <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#ff2d78"/><stop offset=".5" stop-color="#ffd23f"/><stop offset="1" stop-color="#00d8c8"/></linearGradient></defs>
+            <stop offset="0" stop-color="#b8860b"/><stop offset=".5" stop-color="#f3d784"/><stop offset="1" stop-color="#e9c25a"/></linearGradient></defs>
         </svg>
         <div class="ringtxt"><b id="pct">0%</b><span id="ratio">0 / 980</span></div>
       </div>
@@ -292,8 +297,13 @@ const GROUPS = [
   ["K",[["Colombia","🇨🇴"],["RD del Congo","🇨🇩"],["Portugal","🇵🇹"],["Uzbekistán","🇺🇿"]]],
   ["L",[["Croacia","🇭🇷"],["Inglaterra","🏴󠁧󠁢󠁥󠁮󠁧󠁿"],["Ghana","🇬🇭"],["Panamá","🇵🇦"]]],
 ];
-const GTAG_GRAD={A:"#ff2d78",B:"#ff7a3d",C:"#ffd23f",D:"#a7e041",E:"#21d07a",F:"#00d8c8",
-  G:"#33b6ff",H:"#5b7bff",I:"#8b3dff",J:"#c44dff",K:"#ff4dc4",L:"#ff5d6c"};
+// tags de grupo en oro (emblema), con sutil variación cálida para distinguirlos
+const GTAG_GRAD={A:"linear-gradient(135deg,#b8860b,#f3d784)",B:"linear-gradient(135deg,#a9790a,#ecca6e)",
+  C:"linear-gradient(135deg,#b8860b,#f3d784)",D:"linear-gradient(135deg,#a9790a,#ecca6e)",
+  E:"linear-gradient(135deg,#b8860b,#f3d784)",F:"linear-gradient(135deg,#a9790a,#ecca6e)",
+  G:"linear-gradient(135deg,#b8860b,#f3d784)",H:"linear-gradient(135deg,#a9790a,#ecca6e)",
+  I:"linear-gradient(135deg,#b8860b,#f3d784)",J:"linear-gradient(135deg,#a9790a,#ecca6e)",
+  K:"linear-gradient(135deg,#b8860b,#f3d784)",L:"linear-gradient(135deg,#a9790a,#ecca6e)"};
 const PER_TEAM=20, SPECIALS=20;
 function slotLabel(i){ if(i===0)return"Escudo"; if(i===1)return"Equipo"; return"Jug. "+(i-1); }
 const SPECIAL_NAMES=["Logo Mundial","Mascota","Trofeo","Balón oficial","Sedes","FIFA","Estadio","Portada","Portada","Portada","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","FIFA Museum","Ilustración","Ilustración","Ilustración","Ilustración","Ilustración"];
@@ -315,7 +325,7 @@ let USER=null;          // {id,name,pin,color,guest}
 let DB={have:{},rep:{}};
 let cloudOK=null;       // null unknown, true online, false offline/error
 
-function colorFor(name){ const c=["#ff2d78","#00d8c8","#ffd23f","#8b3dff","#21d07a","#ff7a3d","#33b6ff","#ff4dc4"];
+function colorFor(name){ const c=["#e9c25a","#e23b3f","#15924f","#2f6bdf","#b8860b","#c0703a","#3a78e0","#1fb866"];
   let h=0; for(const ch of name) h=(h*31+ch.charCodeAt(0))>>>0; return c[h%c.length]; }
 function initials(name){ const p=name.trim().split(/\s+/); return ((p[0]?.[0]||"")+(p[1]?.[0]||"")).toUpperCase()||"?"; }
 
@@ -600,7 +610,7 @@ function renderMatch(fid){
   const get=[];for(const id in frRep){if(frRep[id]>0 && !myHave[id])get.push(+id);} get.sort((a,b)=>a-b);
   const c=fr.color||colorFor(fr.name);
   let html=`<button class="backbtn" onclick="route()">‹ Volver a coleccionistas</button>
-    <div class="listcard"><h3 style="display:flex;align-items:center;gap:10px"><span class="av" style="background:${c};width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#0a0524">${initials(fr.name)}</span>Cambio con ${fr.name}</h3>
+    <div class="listcard"><h3 style="display:flex;align-items:center;gap:10px"><span class="av" style="background:${c};width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#0c0f1a">${initials(fr.name)}</span>Cambio con ${fr.name}</h3>
     <p class="sub">${give.length+get.length===0?"Por ahora no hay match. Cuando alguno tenga repes que el otro necesite, aparecen aquí.":`${give.length} para darle · ${get.length} que te puede dar`}</p></div>
     <div class="match-cols">
       <div class="match-col"><h4>Le das<span class="tag give">${give.length}</span></h4><p class="cnt">Tus repes que ${fr.name} necesita</p>
@@ -621,6 +631,15 @@ function renderAjustes(){
     <p class="note">${guest?"Estás en <b>modo invitado</b> (solo este dispositivo, sin nube). Crea una cuenta para sincronizar y hacer cambios con amigos.":`Conectado como <b>${USER.name}</b>. Tu progreso se sincroniza en la nube — entra con tu nombre y PIN desde cualquier celular.`}</p>
     <div class="row"><button class="btn ${guest?"primary":""}" onclick="logout()">${guest?"Crear cuenta / entrar":"Cambiar de cuenta / salir"}</button></div>
   </div>
+  <div class="listcard"><h3>Captura rápida por números 🔢</h3>
+    <p class="note">Escribe los números de estampa separados por coma, espacio o salto de línea (ej. <b>45, 320, 700</b>). Sirve para cargar rápido tu álbum sin ir una por una.</p>
+    <textarea id="qnums" placeholder="45, 320, 700, 812 ..."></textarea>
+    <div class="row">
+      <button class="btn" id="qhave">✓ Estas las tengo</button>
+      <button class="btn primary" id="qmiss">Me faltan estas (tengo el resto)</button>
+    </div>
+    <p class="note" style="margin-top:4px">El botón dorado es para cuando <b>ya casi lo llenas</b>: marca todo como pegado <i>menos</i> las que escribas.</p>
+  </div>
   <div class="listcard"><h3>Respaldo manual</h3>
     <p class="note">Exporta un código con tu progreso (extra al respaldo en la nube).</p>
     <div class="row"><button class="btn primary" id="exp">⬇️ Exportar</button><button class="btn" id="imp">⬆️ Importar</button></div>
@@ -630,6 +649,23 @@ function renderAjustes(){
     <p class="note"><b>${TOTAL}</b> estampas · <b>48</b> selecciones en 12 grupos (A–L) · 20 por equipo (escudo + foto + 18 jugadores) + 20 especiales. Colección oficial Panini FIFA World Cup 2026™.</p></div>
   <div class="listcard"><h3>Zona de peligro</h3><p class="note">Borra tu progreso ${guest?"local":"(local y en la nube)"}.</p>
     <button class="btn danger" id="reset">🗑️ Reiniciar mi álbum</button></div>`;
+  // ---- captura rápida por números ----
+  const parseNums=txt=>{ const set=new Set(); (txt.match(/\d+/g)||[]).forEach(s=>{const n=+s; if(n>=1&&n<=TOTAL)set.add(n);}); return [...set]; };
+  $("#qhave").onclick=()=>{
+    const ids=parseNums($("#qnums").value);
+    if(!ids.length)return toast("Escribe al menos un número (1–"+TOTAL+")");
+    ids.forEach(id=>setHave(id,true));
+    toast("Agregadas "+ids.length+" ✓"); $("#qnums").value=""; updateHeader();
+  };
+  $("#qmiss").onclick=()=>{
+    const ids=parseNums($("#qnums").value);
+    if(!ids.length)return toast("Escribe las que te faltan (1–"+TOTAL+")");
+    if(!confirm("Voy a marcar las "+(TOTAL-ids.length)+" estampas restantes como que SÍ las tienes, y dejar como faltantes solo las "+ids.length+" que escribiste. ¿Continúo?"))return;
+    const miss=new Set(ids);
+    const rep={...DB.rep}; const have={};
+    for(let id=1;id<=TOTAL;id++){ if(!miss.has(id)) have[id]=1; else delete rep[id]; }
+    DB={have,rep}; save(); toast("Listo: te faltan "+ids.length); updateHeader();
+  };
   $("#exp").onclick=()=>{$("#io").value=btoa(unescape(encodeURIComponent(JSON.stringify(DB))));copy($("#io").value);};
   $("#imp").onclick=()=>{try{const raw=$("#io").value.trim();if(!raw)return toast("Pega un código");const d=JSON.parse(decodeURIComponent(escape(atob(raw))));if(!d.have)throw 0;DB={have:d.have||{},rep:d.rep||{}};save();toast("¡Importado!");updateHeader();}catch(e){toast("Código inválido");}};
   $("#reset").onclick=()=>{if(confirm("¿Seguro? Borra TODAS tus estampas marcadas.")){DB={have:{},rep:{}};save();toast("Reiniciado");updateHeader();}};
