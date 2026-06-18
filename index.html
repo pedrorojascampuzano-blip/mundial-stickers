@@ -501,6 +501,7 @@ function copy(txt){
 
 // =================== ALBUM ===================
 let openGroups={}, searchTerm="", sortMode="album"; // album | alpha
+const norm=s=>(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); // búsqueda sin acentos
 function orderBlocks(blocks){ // especiales siempre primero; equipos según sortMode
   const sp=blocks.filter(b=>!b.group), teams=blocks.filter(b=>b.group);
   if(sortMode==="alpha") teams.sort((a,b)=>a.name.localeCompare(b.name,"es"));
@@ -523,8 +524,8 @@ function renderAlbum(){
     <div class="legend"><span><i class="dot h"></i>La tengo</span><span><i class="dot f"></i>Me falta</span><span><i class="dot r"></i>Repetidas: toca + / −</span></div>`;
   html+=specialBlock();
   GROUPS.forEach(([g])=>{
-    const q=searchTerm.toLowerCase();
-    const ts=groupTeams(g).filter(t=>!q||t.name.toLowerCase().includes(q)||((PLAYERS[t.key]&&PLAYERS[t.key].names)||[]).some(n=>n&&n.toLowerCase().includes(q)));
+    const q=norm(searchTerm);
+    const ts=groupTeams(g).filter(t=>!q||norm(t.name).includes(q)||((PLAYERS[t.key]&&PLAYERS[t.key].names)||[]).some(n=>n&&norm(n).includes(q)));
     if(searchTerm&&ts.length===0)return;
     const total=groupTeams(g).length*PER_TEAM, got=groupTeams(g).reduce((a,t)=>a+teamHave(t),0);
     const open=searchTerm?true:!!openGroups[g];
@@ -537,7 +538,7 @@ function renderAlbum(){
   view().innerHTML=html; bindAlbum(); updateHeader();
 }
 function specialBlock(){
-  if(searchTerm&&!"especiales especial fifa logo trofeo mascota".includes(searchTerm.toLowerCase()))return"";
+  if(searchTerm&&!"especiales especial fifa logo trofeo mascota".includes(norm(searchTerm)))return"";
   let got=0;for(let i=1;i<=SPECIALS;i++)if(has(i))got++;
   const open=searchTerm?true:(openGroups.SP!==false);
   let chips="";for(let i=1;i<=SPECIALS;i++)chips+=chipHTML(i,"FWC "+i,SPECIAL_LABELS[i-1]||"Especial","special");
